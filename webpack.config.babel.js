@@ -42,10 +42,10 @@ export default {
     // 参考 https://webpack.js.org/configuration/module/#module-rules
     rules: [
       {
-        test: /.jsx?$/,
-        use: 'babel-loader',
+        test: /\.jsx?$/,
+        loader: 'babel-loader',
         include: [ path.resolve(__dirname, 'src') ],
-      }
+      },
     ]
   },
 
