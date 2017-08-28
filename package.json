@@ -8,6 +8,7 @@
     "author": "Seven Du <shiweidu@outlook.com>",
     "license": "MIT",
     "dependencies": {
+        "axios": "^0.16.2",
         "material-ui": "next",
         "material-ui-icons": "^1.0.0-beta.5",
         "react": "^15.6.1",

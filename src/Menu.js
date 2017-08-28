@@ -9,6 +9,8 @@ import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
 import Card, { CardHeader, CardMedia, CardContent, CardActions } from 'material-ui/Card';
 import Avatar from 'material-ui/Avatar';
 import Divider from 'material-ui/Divider';
+import Button from 'material-ui/Button';
+import Collapse from 'material-ui/transitions/Collapse';
 
 const styles = () => ({
   list: {
@@ -31,7 +33,7 @@ class Menu extends Component {
 
     return (
       <Drawer
-        open={false}
+        open={true}
         anchor="left"
         docked={width !== 'xs'}
       >
@@ -48,6 +50,21 @@ class Menu extends Component {
           <ListItem button component={Link} to="/demo">
             <ListItemText primary="Chelsea Otakan" />
           </ListItem>
+
+          <ListItem>
+            <Button>哈哈</Button>
+            <Collapse in={true} transitionDuration="auto" unmountOnExit>
+              <List>
+                <ListItem button>
+                  <ListItemText primary="哈哈2" />
+                </ListItem>
+                <ListItem button>
+                  <ListItemText primary="哈哈3" />
+                </ListItem>
+              </List>
+            </Collapse>
+          </ListItem>
+
         </List>
       </Drawer>
     );
