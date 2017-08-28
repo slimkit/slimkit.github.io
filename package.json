@@ -8,6 +8,8 @@
     "author": "Seven Du <shiweidu@outlook.com>",
     "license": "MIT",
     "dependencies": {
+        "material-ui": "next",
+        "material-ui-icons": "^1.0.0-beta.5",
         "react": "^15.6.1",
         "react-dom": "^15.6.1",
         "react-router": "^4.2.0",
