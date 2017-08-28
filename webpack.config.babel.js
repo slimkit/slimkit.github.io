@@ -44,13 +44,10 @@ export default {
       {
         test: /.jsx?$/,
         use: 'babel-loader',
-        include: [ resolve.resolve(__dirname, 'src') ],
-        options: {
-          presets: [ 'es2015' ]
-        }
+        include: [ path.resolve(__dirname, 'src') ],
       }
     ]
-  }
+  },
 
   // 插件配置
   // 参考 https://webpack.js.org/configuration/plugins/#plugins
