@@ -28,6 +28,6 @@
         "dev": "yarn clean-assets && cross-env NODE_ENV=development webpack --progress --hide-modules --colors",
         "watch": "yarn dev -- --watch",
         "build": "yarn clean-assets && cross-env NODE_ENV=production webpack --display-error-details --progress --colors",
-        "serve": "yarn clean-assets && cross-env NODE_ENV=development webpack-dev-server --inline --hot"
+        "serve": "yarn clean-assets && cross-env NODE_ENV=development webpack-dev-server --progress --hot"
     }
 }

@@ -89,11 +89,34 @@ export default {
   // devServer 配置
   // 参考 https://webpack.js.org/configuration/dev-server/
   devServer: {
-    contentBase: path.join(__dirname, 'assets'), // // boolean | string | array, static file location
+    publicPath: '/assets/',
+    // boolean | string | array, static file location
+    contentBase: [
+      path.join(__dirname, 'assets'),
+    ],
     compress: true, // enable gzip compression
     historyApiFallback: true, // true for index.html upon 404, object for multiple paths
     hot: true, // hot module replacement. Depends on HotModuleReplacementPlugin
     https: false, // true for self-signed, object for cert authority
     noInfo: true, // only errors & warns on hot reload
+    setup(app) {
+      // Entry.
+      app.get('/', function (request, response) {
+        response.sendFile(path.resolve(__dirname, 'index.html'), {
+          headers: {
+            'Content-Type': 'text/html; charset=UTF-8',
+          }
+        });
+      });
+
+      // 404
+      app.get('/*', function (request, response, next) {
+        if (request.path.match('/assets')) {
+          return next();
+        }
+
+        response.sendFile(path.resolve(__dirname, '404.html'));
+      });
+    },
   }
 };
