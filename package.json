@@ -18,7 +18,15 @@
         "babel-loader": "^7.1.2",
         "babel-preset-es2015": "^6.24.1",
         "cross-env": "^5.0.5",
+        "trash": "^4.0.1",
         "webpack": "^3.5.5",
         "webpack-dev-server": "^2.7.1"
+    },
+    "scripts": {
+        "clean-assets": "trash assets/app.js assets/vendor.js",
+        "dev": "npm run clean-assets && cross-env NODE_ENV=development webpack --progress --hide-modules --colors",
+        "watch": "npm run dev -- --watch",
+        "build": "npm run clean-assets && cross-env NODE_ENV=production webpack --display-error-details --progress --colors",
+        "serve": "npm run clean-assets && cross-env NODE_ENV=development webpack-dev-server --inline --hot"
     }
 }
