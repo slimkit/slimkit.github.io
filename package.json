@@ -1,0 +1,9 @@
+{
+  "name": "plus-docs",
+  "version": "1.0.0",
+  "description": "ThinkSNS+ Documentation",
+  "main": "index.js",
+  "repository": "https://github.com/slimkit/plus-docs.git",
+  "author": "Seven Du <shiweidu@outlook.com>",
+  "license": "MIT"
+}
