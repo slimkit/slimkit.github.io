@@ -32,6 +32,7 @@ export default {
   output: {
     filename: 'app.js',
     path: path.join(__dirname, 'assets'),
+    publicPath: '/assets/',
   },
 
   // 模块配置
@@ -111,7 +112,8 @@ export default {
 
       // 404
       app.get('/*', function (request, response, next) {
-        if (request.path.match('/assets')) {
+        console.log(request.path, request.path.match('.json'));
+        if (request.path.match('/assets') || request.path.match('.json')) {
           return next();
         }
 

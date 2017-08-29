@@ -12,7 +12,8 @@ import Typography from 'material-ui/Typography';
 import MenuIcon from 'material-ui-icons/Menu';
 
 // Components
-import Menu from './Menu';
+// import Menu from './Menu';
+import AppDrawer from './AppDrawer';
 
 const styles = (theme) => {
   const xs = `${theme.breakpoints.up('xs')} and (orientation: landscape)`;
@@ -48,14 +49,20 @@ const styles = (theme) => {
 };
 
 class App extends Component {
+
+  state = {
+    open: false,
+  }
+
   render() {
     const { classes } = this.props;
+    const { open } = this.state;
 
     return (
       <div className={classes.root}>
         <AppBar className={classes.appbar} position="fixed">
           <Toolbar>
-            <IconButton color="contrast" aria-label="Menu">
+            <IconButton color="contrast" aria-label="Menu" onClick={() => this.onRequestOpen()}>
               <MenuIcon />
             </IconButton>
             <Typography type="title" color="inherit" className={classes.flex}>
@@ -63,9 +70,20 @@ class App extends Component {
             </Typography>
           </Toolbar>
         </AppBar>
-        <Menu />
+        <AppDrawer
+          open={open}
+          onRequestClose={() => this.onRequestClose()}
+        />
       </div>
     );
+  }
+
+  onRequestOpen() {
+    this.setState({ open: true });
+  }
+
+  onRequestClose() {
+    this.setState({ open: false });
   }
 }
 
