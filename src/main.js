@@ -13,13 +13,11 @@ import { MuiThemeProvider } from 'material-ui/styles';
 import App from './App';
 
 render(
-  (
-    <BrowserRouter>
-      <MuiThemeProvider theme={createMuiTheme()}>
-        <App />
-      </MuiThemeProvider>
-    </BrowserRouter>
-  ),
+  (<BrowserRouter>
+    <MuiThemeProvider theme={createMuiTheme()}>
+      <App />
+    </MuiThemeProvider>
+  </BrowserRouter>),
   document.querySelector('#app')
 );
 

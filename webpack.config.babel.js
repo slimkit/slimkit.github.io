@@ -112,7 +112,6 @@ export default {
 
       // 404
       app.get('/*', function (request, response, next) {
-        console.log(request.path, request.path.match('.json'));
         if (request.path.match('/assets') || request.path.match('.json')) {
           return next();
         }

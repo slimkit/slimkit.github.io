@@ -1,90 +1,147 @@
 import React, { Component } from 'react';
 
+// React Router.
+import withRouter from 'react-router/withRouter';
+import Switch from 'react-router-dom/Switch';
+import Route from 'react-router-dom/Route';
+
 // Material UI
 import withStyles from 'material-ui/styles/withStyles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
-import { styles as toolbarStyles } from 'material-ui/Toolbar/Toolbar';
-import IconButton from 'material-ui/IconButton';
+import { styles as ToolbarStyles } from 'material-ui/Toolbar/Toolbar';
+import Tabs, { Tab } from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
+import IconButton from 'material-ui/IconButton';
 
-// Material Icon
-import MenuIcon from 'material-ui-icons/Menu';
+// Icons
+import GitHubIcon from './icons/GitHub';
 
-// Components
-// import Menu from './Menu';
-import AppDrawer from './AppDrawer';
+// Component
+import AppHome from './AppHome';
 
-const styles = (theme) => {
+const styles = theme => {
+
+  // Get ToolBar min height.
   const xs = `${theme.breakpoints.up('xs')} and (orientation: landscape)`;
   const sm = theme.breakpoints.up('sm');
   const { root: {
-    minHeight: rootMarginTop,
+    minHeight: ToolbarMinHeight,
     [xs]: {
-      minHeight: rootMarginTop_xs,
+      minHeight: ToolbarMinHeightXS,
     },
     [sm]: {
-      minHeight: rootMarginTop_sm,
+      minHeight: ToolbarMinHeightSM,
     }
-  }} = toolbarStyles(theme);
+  }} = ToolbarStyles(theme);
 
   return {
-    root: {
-      width: '100%',
-      marginTop: rootMarginTop,
-      [xs]: {
-        marginTop: rootMarginTop_xs,
-      },
-      [sm]: {
-        marginTop: rootMarginTop_sm,
-      }
-    },
     flex: {
       flex: 1
     },
-    appbar: {
-      background: 'linear-gradient(175deg, #7262d1, #48d7e4)'
+    root: {
+      width: '100%',
+      marginTop: ToolbarMinHeight,
+      [xs]: {
+        marginTop: ToolbarMinHeightXS
+      },
+      [sm]: {
+        marginTop: ToolbarMinHeightSM
+      }
+    },
+    tabItem: {
+      height: ToolbarMinHeight,
+      [xs]: {
+        height: ToolbarMinHeightXS
+      },
+      [sm]: {
+        height: ToolbarMinHeightSM
+      }
+    },
+    homeRoot: {
+      marginTop: 0,
+      [xs]: { marginTop: 0 },
+      [sm]: { marginTop: 0 }
+    },
+    homeAppBar: {
+      boxShadow: 'none',
+      backgroundColor: 'transparent'
     }
   };
 };
 
 class App extends Component {
 
-  state = {
-    open: false,
-  }
-
+  /**
+   * Render the component.
+   *
+   * @return {Node}
+   * @author Seven Du <shiweidu@outlook.com>
+   */
   render() {
     const { classes } = this.props;
-    const { open } = this.state;
+    console.log(this.props);
 
     return (
-      <div className={classes.root}>
-        <AppBar className={classes.appbar} position="fixed">
+      <div className={this.getRootClassName()}>
+        <AppBar position="fixed" className={this.getAppBarClassName()}>
           <Toolbar>
-            <IconButton color="contrast" aria-label="Menu" onClick={() => this.onRequestOpen()}>
-              <MenuIcon />
+
+            <Tabs value="demo" onChange={() => {}}>
+              <Tab className={classes.tabItem} label="文档" value="2" />
+              <Tab className={classes.tabItem} label="核心 API" value="3" />
+            </Tabs>
+
+            <Typography type="title" color="inherit" className={classes.flex} />
+            
+            <IconButton
+              component="a"
+              href="https://github.com/slimkit/thinksns-plus"
+              aria-label="访问 ThinkSNS+ 仓库"
+              alt="访问 ThinkSNS+ 仓库"
+              target="_blank"
+            >
+              <GitHubIcon color="#fff" />
             </IconButton>
-            <Typography type="title" color="inherit" className={classes.flex}>
-              Title
-            </Typography>
+
           </Toolbar>
         </AppBar>
-        <AppDrawer
-          open={open}
-          onRequestClose={() => this.onRequestClose()}
-        />
+
+        <Switch>
+          <Route exact path="/" component={AppHome} />
+        </Switch>
+
       </div>
     );
   }
 
-  onRequestOpen() {
-    this.setState({ open: true });
+  /**
+   * Get root class name.
+   *
+   * @return {String}
+   * @author Seven Du <shiweidu@outlook.com>
+   */
+  getRootClassName() {
+    const { classes, match } = this.props;
+
+    return classes.root + (match.path === '/' ? ` ${classes.homeRoot}` : '');
   }
 
-  onRequestClose() {
-    this.setState({ open: false });
+  /**
+   * Get app bar component class name.
+   *
+   * @return {String|void}
+   * @author Seven Du <shiweidu@outlook.com>
+   */
+  getAppBarClassName() {
+    const { classes, match } = this.props;
+
+    if (match.path === '/') {
+      return classes.homeAppBar;
+    }
   }
 }
 
-export default withStyles(styles)(App);
+export default withStyles(styles, { name: 'app' }) (
+  withRouter(App)
+);
