@@ -21,6 +21,7 @@ import GitHubIcon from './icons/GitHub';
 // Component
 import NoMatch from './NoMatch';
 import AppMenu from './AppMenu';
+import Footer from './Footer';
 import AppHome from './AppHome';
 import Core from './core';
 
@@ -102,6 +103,8 @@ class App extends Component {
           <Route path="/core" component={Core} />
           <Route component={NoMatch} />
         </Switch>
+
+        <Footer />
 
       </div>
     );
