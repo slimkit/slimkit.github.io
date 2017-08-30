@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import withRouter from 'react-router/withRouter';
 import Switch from 'react-router-dom/Switch';
 import Route from 'react-router-dom/Route';
+import Link from 'react-router-dom/Link';
 
 // Material UI
 import withStyles from 'material-ui/styles/withStyles';
@@ -19,6 +20,7 @@ import GitHubIcon from './icons/GitHub';
 
 // Component
 import NoMatch from './NoMatch';
+import AppMenu from './AppMenu';
 import AppHome from './AppHome';
 
 const styles = theme => {
@@ -50,15 +52,6 @@ const styles = theme => {
         marginTop: ToolbarMinHeightSM
       }
     },
-    tabItem: {
-      height: ToolbarMinHeight,
-      [xs]: {
-        height: ToolbarMinHeightXS
-      },
-      [sm]: {
-        height: ToolbarMinHeightSM
-      }
-    },
     homeRoot: {
       marginTop: 0,
       [xs]: { marginTop: 0 },
@@ -87,15 +80,9 @@ class App extends Component {
       <div className={this.getRootClassName()}>
         <AppBar position="fixed" className={this.getAppBarClassName()}>
           <Toolbar>
-
-            <Tabs value="1" onChange={() => {}}>
-              <Tab className={classes.tabItem} label="ThinkSNS+" value="1" />
-              <Tab className={classes.tabItem} label="文档" value="2" />
-              <Tab className={classes.tabItem} label="核心 API" value="3" />
-            </Tabs>
-
+            <AppMenu />
             <Typography type="title" color="inherit" className={classes.flex} />
-            
+
             <IconButton
               component="a"
               href="https://github.com/slimkit/thinksns-plus"
