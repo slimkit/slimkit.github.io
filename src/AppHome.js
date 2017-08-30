@@ -60,7 +60,8 @@ const styles = theme => ({
     textAlign: 'center',
   },
   buttonBox: {
-    marginTop: 24
+    marginTop: 24,
+    textAlign: 'center'
   },
   button: {
     margin: theme.spacing.unit
