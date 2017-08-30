@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from 'react-router-dom/Link';
 
 // Material UI
 import withStyles from 'material-ui/styles/withStyles';
@@ -8,6 +9,7 @@ import Button from 'material-ui/Button';
 // Icons
 import CloudDownloadIcon from 'material-ui-icons/CloudDownload';
 import StarIcon from 'material-ui-icons/Star';
+import MoodIcon from 'material-ui-icons/Mood';
 
 // axios
 import { get as getRequest } from 'axios';
@@ -101,6 +103,9 @@ class AppHome extends Component {
             </Button>
             <Button className={classes.button} raised color="accent" href="https://github.com/slimkit/thinksns-plus/stargazers">
               <StarIcon /> &nbsp; Star&nbsp;{this.getStarCount()}
+            </Button>
+            <Button raised color="contrast" className={classes.button} component={Link} to="/core">
+              <MoodIcon /> &nbsp; 阅读文档
             </Button>
           </div>
         </div>

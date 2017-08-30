@@ -55,6 +55,7 @@ class AppMenu extends Component {
         <Tab className={classes.tab} label="ThinkSNS+" value="/" component={Link} to="/" />
         <Tab className={classes.tab} label="核心" value="/core" component={Link} to="/core" />
         <Tab className={classes.tab} label="REST API v2" value="/v2" component={Link} to="/v2" />
+        <Tab className={classes.tab} label="生态" value="/package" component={Link} to="/package" />
       </Tabs>
     );
   }
@@ -62,7 +63,7 @@ class AppMenu extends Component {
   getTabsValue() {
     const { location: { pathname } } = this.props;
 
-    return ['/', '/core', '/v2'].reduce((reduce, item) => {
+    return ['/', '/core', '/v2', '/package'].reduce((reduce, item) => {
 
       let match;
       if ((match = matchPath(pathname, { path: item })) !== null) {
