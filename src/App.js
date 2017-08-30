@@ -22,6 +22,7 @@ import GitHubIcon from './icons/GitHub';
 import NoMatch from './NoMatch';
 import AppMenu from './AppMenu';
 import AppHome from './AppHome';
+import Core from './core';
 
 const styles = theme => {
 
@@ -98,6 +99,7 @@ class App extends Component {
 
         <Switch>
           <Route exact path="/" component={AppHome} />
+          <Route path="/core" component={Core} />
           <Route component={NoMatch} />
         </Switch>
 
