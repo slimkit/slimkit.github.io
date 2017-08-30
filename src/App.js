@@ -18,6 +18,7 @@ import IconButton from 'material-ui/IconButton';
 import GitHubIcon from './icons/GitHub';
 
 // Component
+import NoMatch from './NoMatch';
 import AppHome from './AppHome';
 
 const styles = theme => {
@@ -87,7 +88,8 @@ class App extends Component {
         <AppBar position="fixed" className={this.getAppBarClassName()}>
           <Toolbar>
 
-            <Tabs value="demo" onChange={() => {}}>
+            <Tabs value="1" onChange={() => {}}>
+              <Tab className={classes.tabItem} label="ThinkSNS+" value="1" />
               <Tab className={classes.tabItem} label="文档" value="2" />
               <Tab className={classes.tabItem} label="核心 API" value="3" />
             </Tabs>
@@ -109,6 +111,7 @@ class App extends Component {
 
         <Switch>
           <Route exact path="/" component={AppHome} />
+          <Route component={NoMatch} />
         </Switch>
 
       </div>
@@ -124,7 +127,11 @@ class App extends Component {
   getRootClassName() {
     const { classes, match } = this.props;
 
-    return classes.root + (match.path === '/' ? ` ${classes.homeRoot}` : '');
+    if (match.path === '/'  && match.isExact === true) {
+      return `${classes.root} ${classes.homeRoot}`;
+    }
+
+    return classes.root;
   }
 
   /**
@@ -136,7 +143,7 @@ class App extends Component {
   getAppBarClassName() {
     const { classes, match } = this.props;
 
-    if (match.path === '/') {
+    if (match.path === '/' && match.isExact === true) {
       return classes.homeAppBar;
     }
   }

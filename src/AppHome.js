@@ -13,7 +13,15 @@ const styles = () => ({
     minHeight: '100vh',
     alignItems: 'center',
     justifyContent: 'center',
-    background: '#59b6d7',
+    fallbacks: [
+      { background: '#59b6d7' },
+      { background: '-moz-linear-gradient(135deg, #7262d1, #48d7e4)' },
+      { background: '-webkit-gradient(linear, left top, right bottom, color-stop(0%, #7262d1), color-stop(100%, #48d7e4))' },
+      { background: '-webkit-linear-gradient(315deg, #7262d1, #48d7e4)' },
+      { background: '-o-linear-gradient(135deg, #7262d1, #48d7e4)' },
+      { background: '-ms-linear-gradient(135deg, #7262d1, #48d7e4)' },
+      { background: 'linear-gradient(135deg, #7262d1, #48d7e4)' }
+    ]
   }
 });
 
