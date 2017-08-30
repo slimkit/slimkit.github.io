@@ -49,10 +49,9 @@ class AppMenu extends Component {
   render() {
 
     const { classes } = this.props;
-    console.log(this.getTabsValue());
 
     return (
-      <Tabs value={this.getTabsValue()} onChange={() => {}}>
+      <Tabs value={this.getTabsValue()} onChange={() => {}} scrollButtons="on" scrollable={false}>
         <Tab className={classes.tab} label="ThinkSNS+" value="/" component={Link} to="/" />
         <Tab className={classes.tab} label="核心" value="/core" component={Link} to="/core" />
         <Tab className={classes.tab} label="REST API v2" value="/v2" component={Link} to="/v2" />

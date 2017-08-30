@@ -73,8 +73,8 @@ class App extends Component {
    * @author Seven Du <shiweidu@outlook.com>
    */
   render() {
+
     const { classes } = this.props;
-    console.log(this.props);
 
     return (
       <div className={this.getRootClassName()}>
