@@ -4,11 +4,31 @@ import DocsMenu from './DocsMenu';
 
 const styles = theme => ({
   root: {
-    width: '100%'
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row'
   },
   menu: {
     width: 256,
-    paddingLeft: theme.spacing.unit * 2
+    paddingTop: theme.spacing.unit * 4,
+    paddingLeft: theme.spacing.unit * 2,
+    display: 'flex',
+    justifyContent: 'flex-end',
+    boxSizing: 'border-box',
+    flexShrink: 0,
+  },
+  divider: {
+    width: 1,
+    height: 'auto',
+    background: '#eaeaea',
+    marginLeft: theme.spacing.unit
+  },
+  docs: {
+    width: '100%',
+    flexShrink: 1,
+    paddingTop: theme.spacing.unit * 3,
+    paddingRight: theme.spacing.unit * 3,
+    paddingLeft: theme.spacing.unit * 3
   }
 });
 
@@ -53,7 +73,10 @@ class Main extends Component {
         
         <div className={classes.menu}>
           <DocsMenu tree={tree} prefix="" />
+          <span className={classes.divider} />
         </div>
+
+        <div className={classes.docs}>Markdown.</div>
 
       </div>
     );
