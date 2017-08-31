@@ -25,6 +25,8 @@ const styles = () => ({
 class Footer extends Component {
   render() {
 
+    return null;
+
     const { classes } = this.props;
 
     return (
