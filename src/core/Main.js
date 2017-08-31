@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import Redirect from 'react-router/Redirect';
+import Switch from 'react-router-dom/Switch';
+import Route from 'react-router-dom/Route';
 import withStyles from 'material-ui/styles/withStyles';
 import DocsMenu from './DocsMenu';
+import DocsMarkdown from './DocsMarkdown';
 
 const styles = theme => ({
   root: {
@@ -76,7 +80,16 @@ class Main extends Component {
           <span className={classes.divider} />
         </div>
 
-        <div className={classes.docs}>Markdown.</div>
+        <div className={classes.docs}>
+          <Switch>
+            <Route strict exact path="/core" render={() => (
+              <Redirect to="/core/latest/" />
+            )} />
+
+            <Route path="/core/:version([A-Za-z0-9_\.]+?)/:path*" component={DocsMarkdown} />
+
+          </Switch>
+        </div>
 
       </div>
     );
@@ -84,3 +97,5 @@ class Main extends Component {
 }
 
 export default withStyles(styles)(Main);
+
+// <Route strict path="/core[/:version([A-Za-z0-9_\.]+?)[/:path(.*?)]]" component={DocsMarkdown} />
