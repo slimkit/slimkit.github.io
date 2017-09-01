@@ -25,12 +25,14 @@ export default {
 
   // 入口配置
   // 参考 https://webpack.js.org/configuration/entry-context/#entry
-  entry: path.resolve(__dirname, 'src/main.js'),
+  entry: {
+    app: path.resolve(__dirname, 'src/main.js')
+  },
 
   // 输出配置
   // 参考 https://webpack.js.org/configuration/output
   output: {
-    filename: 'app.js',
+    filename: '[name].js',
     path: path.join(__dirname, 'assets'),
     publicPath: '/assets/',
   },
@@ -62,7 +64,12 @@ export default {
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      filename: 'vendor.js',
+      // filename: 'vendor.js',
+      minChunks: ({ resource }) => (
+        resource &&
+        /\.jsx?$/.test(resource) &&
+        resource.indexOf(path.join(__dirname, 'node_modules')) === 0
+      )
     }),
 
     // 根据环境变量选择插件
