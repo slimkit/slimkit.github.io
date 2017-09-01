@@ -22,7 +22,8 @@ import GitHubIcon from './icons/GitHub';
 import NoMatch from './NoMatch';
 import AppMenu from './AppMenu';
 import Footer from './Footer';
-import AppHome from './AppHome';
+import AppHome from './containers/AppHome';
+// import AppHome from './AppHome';
 import Core from './core';
 
 const styles = theme => {

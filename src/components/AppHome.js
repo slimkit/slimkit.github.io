@@ -11,9 +11,6 @@ import CloudDownloadIcon from 'material-ui-icons/CloudDownload';
 import StarIcon from 'material-ui-icons/Star';
 import MoodIcon from 'material-ui-icons/Mood';
 
-// axios
-import { get as getRequest } from 'axios';
-
 const styles = theme => ({
   root: {
     flex: '1 0 100%'
@@ -81,12 +78,9 @@ const styles = theme => ({
 
 class AppHome extends Component {
 
-  state = {
-    starCount: 0
-  };
-
   render() {
 
+    console.log(this.props);
     const { classes } = this.props;
 
     return (
@@ -114,35 +108,23 @@ class AppHome extends Component {
   }
 
   getStarCount() {
-    const { starCount } = this.state;
+    const { count } = this.props;
 
-    if (! starCount) {
+    if (! count) {
       return '';
     }
 
-    if (starCount >= 10000000) {
-      return Math.round(starCount / 10000000) + 'KW';
-    } else if (starCount >= 100000) {
-      return Math.round(starCount / 10000) + 'W';
-    } else if (starCount >= 1000) {
-      return Math.round(starCount / 1000) + 'K';
+    if (count >= 10000000) {
+      return Math.round(count / 10000000) + 'KW';
+    } else if (count >= 100000) {
+      return Math.round(count / 10000) + 'W';
+    } else if (count >= 1000) {
+      return Math.round(count / 1000) + 'K';
     }
 
-    return parseInt(starCount);
+    return parseInt(count);
 
-  }
-
-  componentDidMount() {
-    getRequest(
-      'https://api.github.com/repos/slimkit/thinksns-plus'
-    ).then(({ data: { stargazers_count } }) => {
-
-      this.setState({ starCount: stargazers_count });
-
-    });
   }
 }
 
-export default withStyles(styles, {
-  name: 'AppHome',
-})(AppHome);
+export default withStyles(styles)(AppHome);
