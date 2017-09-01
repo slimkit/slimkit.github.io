@@ -13,8 +13,11 @@
         "material-ui-icons": "^1.0.0-beta.5",
         "react": "^15.6.1",
         "react-dom": "^15.6.1",
+        "react-redux": "^5.0.6",
         "react-router": "^4.2.0",
-        "react-router-dom": "^4.2.2"
+        "react-router-dom": "^4.2.2",
+        "redux": "^3.7.2",
+        "redux-thunk": "^2.2.0"
     },
     "devDependencies": {
         "babel-core": "^6.26.0",
@@ -28,10 +31,10 @@
         "webpack-dev-server": "^2.7.1"
     },
     "scripts": {
-        "clean-assets": "trash assets/app.js* assets/vendor.js*",
+        "clean-assets": "trash assets/app.js* assets/vendor.js* assets/manifest.js*",
         "dev": "yarn clean-assets && cross-env NODE_ENV=development webpack --progress --hide-modules --colors",
         "watch": "yarn dev -- --watch",
         "build": "yarn clean-assets && cross-env NODE_ENV=production webpack --display-error-details --progress --colors",
-        "serve": "yarn clean-assets && cross-env NODE_ENV=development webpack-dev-server --progress --hot"
+        "serve": "yarn clean-assets && cross-env NODE_ENV=development webpack-dev-server --progress --colors --hot"
     }
 }
