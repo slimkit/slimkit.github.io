@@ -97,5 +97,3 @@ class Main extends Component {
 }
 
 export default withStyles(styles)(Main);
-
-// <Route strict path="/core[/:version([A-Za-z0-9_\.]+?)[/:path(.*?)]]" component={DocsMarkdown} />
