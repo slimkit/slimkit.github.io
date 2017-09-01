@@ -72,6 +72,12 @@ export default {
       )
     }),
 
+    //  split manifest js into its own file
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest',
+      chunks: ['vendor']
+    }),
+
     // 根据环境变量选择插件
     ...(isProd ? [ // 生产环境
 
