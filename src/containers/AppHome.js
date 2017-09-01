@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import fetchGitHubStar, { NAME as githubStarName } from '../actions/githubStar';
 import AppHomeComponent from '../components/AppHome';
 
@@ -11,6 +12,11 @@ const mapStateToProps = state => {
 };
 
 class AppHome extends Component {
+
+  static propTypes = {
+    count: PropTypes.number.isRequired
+  }
+
   render() {
     
     const { count } = this.props;

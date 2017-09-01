@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Link from 'react-router-dom/Link';
 
 // Material UI
@@ -78,9 +79,13 @@ const styles = theme => ({
 
 class AppHome extends Component {
 
+  static PropTypes = {
+    count: PropTypes.number.isRequired,
+    classes: PropTypes.object.isRequired
+  }
+
   render() {
 
-    console.log(this.props);
     const { classes } = this.props;
 
     return (
