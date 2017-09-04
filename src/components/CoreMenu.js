@@ -14,26 +14,6 @@ import ListIcon from 'material-ui-icons/List';
 
 import CoreMenuRender from './CoreMenuRender';
 
-const symmary = [
-    {
-        "name": "什么是 ThinkSNS+",
-        "path": "",
-        "markdown": "/readme.md"
-    },
-    {
-        "name": "快速开始",
-        "path": "getting-started",
-        "items": [
-            {
-                "name": "安装 ThinkSNS+",
-                "path": "installed",
-                "markdown": "/getting-started/installed.md"
-            }
-        ]
-    }
-];
-
-
 class CoreMenu extends Component {
 
   state = {
@@ -43,7 +23,7 @@ class CoreMenu extends Component {
   render() {
 
     console.log(this.props);
-    const { version, versions } = this.props;
+    const { version, versions, summary } = this.props;
     const { versionSelect } = this.state;
 
     return (
@@ -63,7 +43,7 @@ class CoreMenu extends Component {
 
         <Divider />
 
-        {symmary.map((item, key) => (
+        {summary.map((item, key) => (
           <CoreMenuRender key={key} tree={item} prefix={`/core/${version}`} />
         ))}
 

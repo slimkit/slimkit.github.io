@@ -38,16 +38,17 @@ class CoreMain extends Component {
   static propTypes = {
     version: PropTypes.any.isRequired,
     classes: PropTypes.object.isRequired,
+    summary: PropTypes.array.isRequired
   }
 
   render() {
 
-    const { version, classes } = this.props;
+    const { version, classes, summary } = this.props;
 
     return (
       <div className={classes.root}>
         <div className={classes.menu}>
-          <CoreMenu version={version} />
+          <CoreMenu version={version} summary={summary} />
           <span className={classes.divider} />
         </div>
         <div className={classes.docs}>xxx</div>
