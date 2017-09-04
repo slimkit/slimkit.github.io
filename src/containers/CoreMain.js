@@ -13,7 +13,6 @@ class CoreMain extends Component {
   render() {
 
     const { match: { params: { version = 'latest' } } } = this.props;
-    console.log(this.props);
 
     return (
       <div>
