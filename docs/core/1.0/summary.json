@@ -1,0 +1,18 @@
+[
+    {
+        "name": "什么是 ThinkSNS+",
+        "path": "",
+        "markdown": "/readme.md"
+    },
+    {
+        "name": "快速开始",
+        "path": "getting-started",
+        "items": [
+            {
+                "name": "安装 ThinkSNS+",
+                "path": "installed",
+                "markdown": "/getting-started/installed.md"
+            }
+        ]
+    }
+]
