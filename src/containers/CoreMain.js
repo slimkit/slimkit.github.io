@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import withRouter from 'react-router/withRouter';
 import Route from 'react-router-dom/Route';
-import CoreMenu from './CoreMenu';
+import CoreMainComponent from '../components/CoreMain';
 
 class CoreMain extends Component {
 
@@ -15,9 +15,7 @@ class CoreMain extends Component {
     const { match: { params: { version = 'latest' } } } = this.props;
 
     return (
-      <div>
-        <CoreMenu version={version} />
-      </div>
+      <CoreMainComponent version={version} />
     );
   }
 }
