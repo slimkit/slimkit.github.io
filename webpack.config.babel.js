@@ -11,6 +11,7 @@
 
 import webpack from 'webpack';
 import path from 'path';
+import fs from 'fs';
 
 // 环境变量
 const NODE_ENV = process.env.NODE_ENV || 'development';
@@ -121,6 +122,17 @@ export default {
             'Content-Type': 'text/html; charset=UTF-8',
           }
         });
+      });
+
+      // docs
+      app.get('/docs/*', function (request, response) {
+        const filename = path.resolve(__dirname + request.path);
+
+        if (! fs.existsSync(filename)) {
+          response.sendStatus(404);
+        } else {
+          response.sendFile(filename);
+        }
       });
 
       // 404
