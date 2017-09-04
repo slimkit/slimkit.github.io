@@ -24,7 +24,8 @@ import AppMenu from './AppMenu';
 import Footer from './Footer';
 import AppHome from './containers/AppHome';
 // import AppHome from './AppHome';
-import Core from './core';
+// import Core from './core';
+import Core from './containers/Core';
 
 const styles = theme => {
 
