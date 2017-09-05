@@ -17,7 +17,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests, CreateJsonResponseData;
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests, CreateJsonResponseData, CreateJsonResponseData, CreateJsonResponseData, CreateJsonResponseData, CreateJsonResponseData, CreateJsonResponseData, CreateJsonResponseData, CreateJsonResponseData;
 }
 ```
 
