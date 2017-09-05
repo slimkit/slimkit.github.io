@@ -38,6 +38,18 @@ class CoreMain extends Component {
       fetchSummary(version)
     );
   }
+
+  componentDidUpdate(props) {
+
+    const { match: { params: { version: newVersion } }, dispatch } = this.props;
+    const { params: { version: oldVersion } } = props.match;
+
+    if (oldVersion !== newVersion) {
+      dispatch(
+        fetchSummary(newVersion)
+      );
+    }
+  }
 }
 
 export default withRouter(
