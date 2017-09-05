@@ -32,7 +32,6 @@ class CoreMenu extends Component {
 
   render() {
 
-    console.log(this.props);
     const { version, versions, summary, classes } = this.props;
     const { versionSelect } = this.state;
 

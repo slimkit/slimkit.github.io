@@ -24,10 +24,10 @@ class CoreMain extends Component {
 
   render() {
 
-    const { match: { params: { version = 'latest' } }, summary = [] } = this.props;
+    const { match: { params: { version = 'latest' }, url }, summary = [] } = this.props;
 
     return (
-      <CoreMainComponent version={version} summary={summary} />
+      <CoreMainComponent version={version} summary={summary} url={url} />
     );
   }
 

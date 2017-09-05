@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Route from 'react-router-dom/Route';
 import withStyles from 'material-ui/styles/withStyles';
 import CoreMenu from '../containers/CoreMenu';
+import CoreDocs from '../containers/CoreDocs';
 
 const styles = theme => ({
   root: {
@@ -38,12 +40,13 @@ class CoreMain extends Component {
   static propTypes = {
     version: PropTypes.any.isRequired,
     classes: PropTypes.object.isRequired,
-    summary: PropTypes.array.isRequired
+    summary: PropTypes.array.isRequired,
+    url: PropTypes.string.isRequired,
   }
 
   render() {
 
-    const { version, classes, summary } = this.props;
+    const { version, classes, summary, url } = this.props;
 
     return (
       <div className={classes.root}>
@@ -51,7 +54,11 @@ class CoreMain extends Component {
           <CoreMenu version={version} summary={summary} />
           <span className={classes.divider} />
         </div>
-        <div className={classes.docs}>xxx</div>
+        <div className={classes.docs}>
+          <Route path={`${url}/:path*`} render={() => (
+            <CoreDocs version={version} />
+          )} />
+        </div>
       </div>
     );
   }
