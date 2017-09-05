@@ -2,14 +2,24 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Route from 'react-router-dom/Route';
 import withStyles from 'material-ui/styles/withStyles';
+import Drawer from 'material-ui/Drawer';
 import CoreMenu from '../containers/CoreMenu';
 import CoreDocs from '../containers/CoreDocs';
 
 const styles = theme => ({
   root: {
     width: '100%',
-    display: 'flex',
-    flexDirection: 'row'
+    boxSizing: 'border-box',
+    paddingLeft: 256,
+    position: 'relative',
+  },
+  docs: {
+    width: '100%',
+    flexShrink: 1,
+    paddingTop: theme.spacing.unit * 3,
+    paddingRight: theme.spacing.unit * 3,
+    paddingLeft: theme.spacing.unit * 3,
+    boxSizing: 'border-box',
   },
   menu: {
     width: 256,
@@ -19,6 +29,8 @@ const styles = theme => ({
     justifyContent: 'space-between',
     boxSizing: 'border-box',
     flexShrink: 0,
+    position: 'absolute',
+    left: 0
   },
   divider: {
     width: 1,
@@ -26,13 +38,6 @@ const styles = theme => ({
     background: '#eaeaea',
     marginLeft: theme.spacing.unit
   },
-  docs: {
-    width: '100%',
-    flexShrink: 1,
-    paddingTop: theme.spacing.unit * 3,
-    paddingRight: theme.spacing.unit * 3,
-    paddingLeft: theme.spacing.unit * 3
-  }
 });
 
 class CoreMain extends Component {
@@ -50,15 +55,18 @@ class CoreMain extends Component {
 
     return (
       <div className={classes.root}>
+          
         <div className={classes.menu}>
           <CoreMenu version={version} summary={summary} />
           <span className={classes.divider} />
         </div>
+
         <div className={classes.docs}>
           <Route path={`${url}/:path*`} render={() => (
             <CoreDocs version={version} />
           )} />
         </div>
+
       </div>
     );
   }
