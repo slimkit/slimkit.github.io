@@ -13,7 +13,7 @@ renderer.heading = (text, level) => {
     .replace(/=&gt;|&lt;| \/&gt;|<code>|<\/code>/g, '')
     .replace(/[^\w]+/g, '-');
 
-  let match = text.toLowerCase().match(/(\W+) \{\#(\w+)\}/);
+  let match = text.match(/(.*?) \{\#(.*?)\}/);
   if (match != null) {
     text = match[1];
     escapedText = match[2];
@@ -21,7 +21,8 @@ renderer.heading = (text, level) => {
 
   return (`
     <h${level}>
-      <a class="anchor-link" id="${escapedText}" name="${escapedText}"></a> ${text}
+      <a name="${escapedText}"></a>
+      ${text}
       <a class="anchor-link-style" href="#${escapedText}">#</a>
     </h${level}>
   `);
