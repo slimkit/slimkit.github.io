@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from 'react-router-dom/Link';
 
 // Material UI
 import List from 'material-ui/List/List';
@@ -20,7 +21,7 @@ class CoreMenuRender extends Component
 
     if (! tree.items) {
       return (
-        <ListItem button component="div" href={`${prefix}/${tree.path}`}>
+        <ListItem button component={Link} to={`${prefix}/${tree.path}`}>
           <ListItemText primary={tree.name} />
         </ListItem>
       );

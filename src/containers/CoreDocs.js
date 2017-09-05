@@ -42,7 +42,7 @@ class CoreDocs extends Component {
 
     const { [markdownPath]: markdown } = this.props.docs;
 
-    if (! markdown) {
+    if (markdown === undefined) {
       const { dispatch } = this.props;
       dispatch(
         fetchDocsItem(markdownPath)
