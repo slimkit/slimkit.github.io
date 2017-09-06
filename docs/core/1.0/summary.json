@@ -12,6 +12,11 @@
                 "name": "安装 ThinkSNS+",
                 "path": "installed",
                 "markdown": "/getting-started/installed.md"
+            },
+            {
+                "name": "贡献指南",
+                "path": "contributions",
+                "markdown": "/getting-started/contributions.md"
             }
         ]
     }
