@@ -32,7 +32,7 @@ class CoreMenu extends Component {
 
   render() {
 
-    const { version, versions, summary, classes } = this.props;
+    const { version, versions, summary, classes, pathname } = this.props;
     const { versionSelect } = this.state;
 
     return (
@@ -58,7 +58,7 @@ class CoreMenu extends Component {
         <Divider />
 
         {summary.map((item, key) => (
-          <CoreMenuRender key={key} tree={item} prefix={`/core/${version}`} />
+          <CoreMenuRender key={key} tree={item} prefix={`/core/${version}`} pathname={pathname} />
         ))}
 
       </List>

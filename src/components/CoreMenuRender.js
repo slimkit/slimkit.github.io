@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { matchPath } from 'react-router';
 import Link from 'react-router-dom/Link';
 
 // Material UI
@@ -16,7 +17,7 @@ class CoreMenuRender extends Component
   state = { expand: false };
 
   render() {
-    const { tree, prefix } = this.props;
+    const { tree, prefix, pathname } = this.props;
     const { expand } = this.state;
 
     if (! tree.items) {
@@ -38,7 +39,7 @@ class CoreMenuRender extends Component
         <Collapse transitionDuration="auto" unmountOnExit in={expand}>
           <List style={{ paddingLeft: 16 }}>
             {tree.items.map((item, key) => (
-              <CoreMenuRender key={key} tree={item} prefix={`${prefix}/${tree.path}`} />
+              <CoreMenuRender key={key} tree={item} prefix={`${prefix}/${tree.path}`} pathname={pathname} />
             ))}
           </List>
         </Collapse>
@@ -49,6 +50,15 @@ class CoreMenuRender extends Component
 
   handleExpandClick() {
     this.setState({ expand: ! this.state.expand });
+  }
+
+  componentDidMount() {
+    const { tree, prefix, pathname } = this.props;
+    const path = `${prefix}/${tree.path}`;
+
+    if (matchPath(pathname, { path })) {
+      this.setState({ expand: true });
+    }
   }
 }
 

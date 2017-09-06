@@ -18,15 +18,16 @@ class CoreMenu extends Component {
     dispatch: PropTypes.func.isRequired,
     version: PropTypes.any.isRequired,
     versions: PropTypes.array.isRequired,
-    summary: PropTypes.array.isRequired
+    summary: PropTypes.array.isRequired,
+    location: PropTypes.object.isRequired
   }
 
   render() {
 
-    const { version, versions, summary } = this.props;
+    const { version, versions, summary, location: { pathname } } = this.props;
 
     return (
-      <CoreMenuComponent {...{ version, versions, summary }} />
+      <CoreMenuComponent {...{ version, versions, summary, pathname }} />
     );
   }
 
