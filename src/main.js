@@ -17,7 +17,7 @@ import store from './createStore';
 import App from './App';
 
 render(
-  (<BrowserRouter>
+  (<BrowserRouter basename={document.querySelector('#basename').href}>
     <ReduxProvider store={store}>
       <MuiThemeProvider theme={createMuiTheme()}>
         <App />
