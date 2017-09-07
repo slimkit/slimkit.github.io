@@ -10,7 +10,7 @@
         "markdown": "/bootstrappers.md"
     },
     {
-        "name": "核心 APIs",
+        "name": "核心 API",
         "path": "core",
         "items": [
             {
