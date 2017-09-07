@@ -77,7 +77,13 @@ class RestFulVersion2Docs extends Component {
       return false;
     }
 
-    return `/docs/v2${markdownPath1 ? markdownPath1 : markdownPath2}`;
+    const url = markdownPath1 ? markdownPath1 : markdownPath2;
+
+    if (url.match(/https?:\/\//) === null) {
+      return `/docs/v2/${url}`;
+    }
+
+    return url;
   }
 
   getPath() {
