@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { matchPath } from 'react-router';
 import Link from 'react-router-dom/Link';
 
@@ -12,9 +13,15 @@ import Collapse from 'material-ui/transitions/Collapse';
 import ExpandLessIcon from 'material-ui-icons/ExpandLess';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 
-class CoreMenuRender extends Component
+class MenuRender extends Component
 {
-  state = { expand: false };
+  static propTypes = {
+    tree: PropTypes.object.isRequired,
+    pathname: PropTypes.string.isRequired,
+    prefix: PropTypes.string.isRequired
+  }
+
+  state = { expand: false }
 
   render() {
     const { tree, prefix, pathname } = this.props;
@@ -39,7 +46,7 @@ class CoreMenuRender extends Component
         <Collapse transitionDuration="auto" unmountOnExit in={expand}>
           <List style={{ paddingLeft: 16 }}>
             {tree.items.map((item, key) => (
-              <CoreMenuRender key={key} tree={item} prefix={`${prefix}/${tree.path}`} pathname={pathname} />
+              <MenuRender key={key} tree={item} prefix={`${prefix}/${tree.path}`} pathname={pathname} />
             ))}
           </List>
         </Collapse>
@@ -62,4 +69,4 @@ class CoreMenuRender extends Component
   }
 }
 
-export default CoreMenuRender;
+export default MenuRender;

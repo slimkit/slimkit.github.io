@@ -26,6 +26,7 @@ import AppHome from './containers/AppHome';
 // import AppHome from './AppHome';
 // import Core from './core';
 import Core from './containers/Core';
+import RestFulVersion2 from './containers/RestFulVersion2';
 
 const styles = theme => {
 
@@ -103,6 +104,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={AppHome} />
           <Route path="/core" component={Core} />
+          <Route path="/v2" component={RestFulVersion2} />
           <Route component={NoMatch} />
         </Switch>
 

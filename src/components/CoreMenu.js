@@ -16,7 +16,7 @@ import ListIcon from 'material-ui-icons/List';
 import ExpandLessIcon from 'material-ui-icons/ExpandLess';
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore';
 
-import CoreMenuRender from './CoreMenuRender';
+import MenuRender from './MenuRender';
 
 const styles = theme => ({
   nested: {
@@ -58,7 +58,7 @@ class CoreMenu extends Component {
         <Divider />
 
         {summary.map((item, key) => (
-          <CoreMenuRender key={key} tree={item} prefix={`/core/${version}`} pathname={pathname} />
+          <MenuRender key={key} tree={item} prefix={`/core/${version}`} pathname={pathname} />
         ))}
 
       </List>
