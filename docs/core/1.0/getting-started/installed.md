@@ -227,8 +227,6 @@ Caddy 是一个小巧精悍的 http 软件，在开发环境，测试环境等�
 
 ```
 rewrite { 
-    r .*
-    ext /
-    to /index.php?{query}
+    to {path} {path}/ /index.php?{query}
 }
 ```
