@@ -10,7 +10,7 @@
         "markdown": "/bootstrappers.md"
     },
     {
-        "name": "核心 API",
+        "name": "🤖️ 核心 API",
         "path": "core",
         "items": [
             {
@@ -125,5 +125,10 @@
                 "markdown": "/core/ad.md"
             }
         ]
+    },
+    {
+        "name": "📦 动态应用",
+        "path": "package-feed",
+        "items": []
     }
 ]
