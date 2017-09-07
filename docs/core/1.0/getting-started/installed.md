@@ -165,7 +165,7 @@ php artisan key:generate
 ```
 2. 发布拓展包资源：
 ```shell
-php artisan vendor:publish
+php artisan vendor:publish --all
 ```
 3. 迁移数据表：
 ```shell
