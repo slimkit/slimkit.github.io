@@ -1,4 +1,4 @@
-# API 概述 {#menu}
+# API 概述
 
 - [选择版本](#current-version)
 - [媒体类型](#media-types)

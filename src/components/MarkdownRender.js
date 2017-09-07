@@ -11,7 +11,7 @@ renderer.heading = (text, level) => {
   let escapedText = text
     .toLowerCase()
     .replace(/=&gt;|&lt;| \/&gt;|<code>|<\/code>/g, '')
-    .replace(/[^\w]+/g, '-');
+    .replace(' ', '-');
 
   let match = text.match(/(.*?) \{\#(.*?)\}/);
   if (match != null) {
