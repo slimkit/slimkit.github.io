@@ -10,120 +10,18 @@
         "markdown": "/bootstrappers.md"
     },
     {
-        "name": "🤖️ 核心 API",
+        "name": "核心 API",
         "path": "core",
-        "items": [
-            {
-                "name": "验证码",
-                "path": "verification-code",
-                "markdown": "/core/verification-code.md"
-            },
-            {
-                "name": "位置",
-                "path": "locations",
-                "markdown": "/core/locations.md"
-            },
-            {
-                "name": "全局标签",
-                "path": "tags",
-                "markdown": "/core/tags.md"
-            },
-            {
-                "name": "用户",
-                "path": "users",
-                "items": [
-                    {
-                        "name": "用户操作",
-                        "path": "",
-                        "markdown": "/core/users/readme.md"
-                    },
-                    {
-                        "name": "授权",
-                        "path": "authorization",
-                        "markdown": "/core/users/authorization.md"
-                    },
-                    {
-                        "name": "注册",
-                        "path": "register",
-                        "markdown": "/core/users/register.md"
-                    },
-                    {
-                        "name": "用户收到的评论",
-                        "path": "comments",
-                        "markdown": "/core/users/comments.md"
-                    },
-                    {
-                        "name": "用户收到的喜欢",
-                        "path": "likes",
-                        "markdown": "/core/users/likes.md"
-                    },
-                    {
-                        "name": "关注",
-                        "path": "followers",
-                        "markdown": "/core/users/followers.md"
-                    },
-                    {
-                        "name": "标签",
-                        "path": "tags",
-                        "markdown": "/core/users/tags.md"
-                    },
-                    {
-                        "name": "身份认证",
-                        "path": "certification",
-                        "markdown": "/core/users/certification.md"
-                    },
-                    {
-                        "name": "找人",
-                        "path": "find-users",
-                        "markdown": "/core/users/find-users.md"
-                    },
-                    {
-                        "name": "排行",
-                        "path": "rank",
-                        "markdown": "/core/users/rank.md"
-                    },
-                    {
-                        "name": "意见反馈",
-                        "path": "feedback",
-                        "markdown": "/core/users/feedback.md"
-                    },
-                    {
-                        "name": "打赏",
-                        "path": "reward",
-                        "markdown": "/core/users/reward.md"
-                    }
-                ]
-            },
-            {
-                "name": "消息通知",
-                "path": "notifications",
-                "markdown": "/core/notifications.md"
-            },
-            {
-                "name": "钱包",
-                "path": "wallet",
-                "markdown": "/core/wallet.md"
-            },
-            {
-                "name": "文件",
-                "path": "files",
-                "markdown": "/core/files.md"
-            },
-            {
-                "name": "支付能力",
-                "path": "purchase",
-                "markdown": "/core/purchase.md"
-            },
-            {
-                "name": "关于我们",
-                "path": "aboutus",
-                "markdown": "/core/aboutus.md"
-            },
-            {
-                "name": "广告位",
-                "path": "ad",
-                "markdown": "/core/ad.md"
-            }
-        ]
+        "include": "/docs/v2/core/summary.json"
+    },
+    {
+        "name": "动态应用",
+        "path": "package-feed",
+        "include": "https://raw.githubusercontent.com/slimkit/plus-component-feed/master/docs/api2/summary.json"
+    },
+    {
+        "name": "签到应用",
+        "path": "package-checkin",
+        "include": "https://raw.githubusercontent.com/slimkit/plus-checkin/master/docs/summary.json"
     }
 ]
