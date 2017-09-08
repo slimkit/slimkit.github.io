@@ -15,16 +15,12 @@ import Tabs, { Tab } from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
 import IconButton from 'material-ui/IconButton';
 
-// Icons
-import GitHubIcon from './icons/GitHub';
-
 // Component
 import NoMatch from './NoMatch';
+import AppBarWrapper from './AppBarWrapper';
 import AppMenu from './AppMenu';
 import Footer from './Footer';
 import AppHome from './containers/AppHome';
-// import AppHome from './AppHome';
-// import Core from './core';
 import Core from './containers/Core';
 import RestFulVersion2 from './containers/RestFulVersion2';
 
@@ -79,26 +75,12 @@ class App extends Component {
    */
   render() {
 
-    const { classes } = this.props;
+    const { classes, location: { pathname } } = this.props;
 
     return (
       <div className={this.getRootClassName()}>
         <AppBar position="fixed" className={this.getAppBarClassName()}>
-          <Toolbar>
-            <AppMenu />
-            <Typography type="title" color="inherit" className={classes.flex} />
-
-            <IconButton
-              component="a"
-              href="https://github.com/slimkit/thinksns-plus"
-              aria-label="访问 ThinkSNS+ 仓库"
-              alt="访问 ThinkSNS+ 仓库"
-              target="_blank"
-            >
-              <GitHubIcon color="#fff" />
-            </IconButton>
-
-          </Toolbar>
+          <AppBarWrapper pathname={pathname} />
         </AppBar>
 
         <Switch>
@@ -145,6 +127,6 @@ class App extends Component {
   }
 }
 
-export default withStyles(styles, { name: 'app' }) (
+export default withStyles(styles) (
   withRouter(App)
 );

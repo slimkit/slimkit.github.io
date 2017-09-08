@@ -78,7 +78,6 @@ class DocsMain extends Component {
   render() {
 
     const { classes, children, menu, width } = this.props;
-    console.log(width);
 
     return (
       <div className={width === 'xs' ? `${classes.root} ${classes.noLetfRoot}` : classes.root}>

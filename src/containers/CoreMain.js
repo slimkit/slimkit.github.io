@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import withRouter from 'react-router/withRouter';
 import Route from 'react-router-dom/Route';
 import CoreMainComponent from '../components/CoreMain';
+import CoreMenu from './CoreMenu';
 import fetchSummary, { NAME as summaryName } from '../actions/coreSummary';
 
 const mapStateToProps = state => {
@@ -24,7 +25,13 @@ class CoreMain extends Component {
 
   render() {
 
-    const { match: { params: { version = 'latest' }, url }, summary = [] } = this.props;
+    const { match: { params: { version = 'latest' }, url }, summary = [], xs = false } = this.props;
+
+    if (xs) {
+      return (
+        <CoreMenu version={version} summary={summary} />
+      );
+    }
 
     return (
       <CoreMainComponent version={version} summary={summary} url={url} />

@@ -21,10 +21,10 @@ class RestFulVersion2 extends Component {
 
   render() {
 
-    const { summary, location: { pathname } } = this.props;
+    const { summary, location: { pathname }, xs = false } = this.props;
 
     return (
-      <ApiDocs summary={summary} pathname={pathname ? pathname : '/v2/'} />
+      <ApiDocs summary={summary} pathname={pathname ? pathname : '/v2/'} xs={xs} />
     );
   }
 

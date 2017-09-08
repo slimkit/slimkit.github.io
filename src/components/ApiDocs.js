@@ -15,7 +15,17 @@ class ApiDocs extends Component {
 
   render() {
 
-    const { summary, pathname } = this.props;
+    const { summary, pathname, xs } = this.props;
+
+    if (xs) {
+      return (
+        <List component="div">
+          {summary.map((item, key) => (
+            <MenuRender key={key} tree={item} prefix='/v2' pathname={pathname} />
+          ))}
+        </List>
+      );
+    }
 
     return (
       <DocsMain
