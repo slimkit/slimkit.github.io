@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'material-ui/styles/withStyles';
+import withWidth from 'material-ui/utils/withWidth';
 import { styles as ToolbarStyles } from 'material-ui/Toolbar/Toolbar';
 
 const styles = theme => {
@@ -20,10 +21,14 @@ const styles = theme => {
 
   return {
     root: {
+      position: 'relative',
       width: '100%',
       boxSizing: 'border-box',
       paddingLeft: 256,
-      position: 'relative',
+      paddingBottom: theme.spacing.unit * 4,
+    },
+    noLetfRoot: {
+      paddingLeft: 0,
     },
     docs: {
       width: '100%',
@@ -67,19 +72,23 @@ class DocsMain extends Component {
       PropTypes.node.isRequired,
       PropTypes.element.isRequired
     ]),
+    width: PropTypes.string.isRequired
   }
 
   render() {
 
-    const { classes, children, menu } = this.props;
+    const { classes, children, menu, width } = this.props;
+    console.log(width);
 
     return (
-      <div className={classes.root}>
-          
-        <div className={classes.menu}>
-          {menu}
-          <span className={classes.divider} />
-        </div>
+      <div className={width === 'xs' ? `${classes.root} ${classes.noLetfRoot}` : classes.root}>
+
+        {width !== 'xs' ? (
+          <div className={classes.menu}>
+            {menu}
+            <span className={classes.divider} />
+          </div>
+        ) : null}
 
         <div className={classes.docs}>
           {children}
@@ -90,5 +99,7 @@ class DocsMain extends Component {
   }
 }
 
-export default withStyles(styles)(DocsMain);
+export default withStyles(styles)(
+  withWidth()(DocsMain)
+);
 
