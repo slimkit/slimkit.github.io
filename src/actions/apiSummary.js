@@ -45,12 +45,14 @@ const addIncludePrefix = (prefix, summay) => summay.map((item) => {
 const repInclude = (summary, include, itemSummary) => {
   return summary.map(item => {
 
-    const { basename, summary = [] } = itemSummary;
+    const { name, path } = item;
+    const { basename, markdown, summary = [] } = itemSummary;
+
+    if (markdown && item.include === include) {
+      return { name, path, markdown: basename + markdown };
+    }
 
     if (item.include === include) {
-
-      const { name, path } = item;
-
       return { name, path, items: addIncludePrefix(basename, summary) };
     }
 
@@ -63,16 +65,11 @@ const repInclude = (summary, include, itemSummary) => {
 };
 
 const fetchInclude = (paths, summary, dispatch) => {
-
   paths.forEach(path => includeSummary(path, itemSummary => {
     dispatch(setSummary(
-      repInclude(summary, path, itemSummary)
+      summary = repInclude(summary, path, itemSummary)
     ));
   }));
-
-  // paths.forEach(path => includeSummary(path, itemSummary => dispatch(
-  //   setSummary(summary, path, itemSummary)
-  // )));
 };
 
 export default () => dispatch => request.get(

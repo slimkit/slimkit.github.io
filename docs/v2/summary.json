@@ -125,10 +125,5 @@
                 "markdown": "/core/ad.md"
             }
         ]
-    },
-    {
-        "name": "📦 动态应用",
-        "path": "package-feed",
-        "items": []
     }
 ]
