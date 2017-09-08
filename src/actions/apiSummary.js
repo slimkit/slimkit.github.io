@@ -6,9 +6,7 @@ export const SET = 'API/SUMMARY/SET';
 export const setSummary = summary => ({ type: SET, summary });
 
 const includeSummary = (path, call) => {
-  request.get(path)
-    .then(({ data: summary }) => call(summary))
-    .catch(() => call([]));
+  request.get(path).then(({ data: summary }) => call(summary)).catch(() => call([]));
 };
 
 const includes = (summary, paths = []) => {
