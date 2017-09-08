@@ -18,6 +18,14 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 const isHot = process.argv.includes('--hot');
 const isProd = NODE_ENV === 'production';
 
+// 按照不同环境，写入入口文件。
+((source, target) => {
+  fs.writeFileSync(target, fs.readFileSync(source));
+})(
+  path.resolve(__dirname, isHot ? 'index.hot.html' : 'index.build.html'),
+  path.join(__dirname, 'index.html')
+);
+
 export default {
 
   // devtool
