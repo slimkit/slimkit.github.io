@@ -23,5 +23,10 @@
         "name": "签到应用",
         "path": "package-checkin",
         "include": "https://raw.githubusercontent.com/slimkit/plus-checkin/master/docs/summary.json"
+    },
+    {
+        "name": "问答应用",
+        "path": "package-question",
+        "include": "/docs/package-question/summary.json"
     }
 ]
