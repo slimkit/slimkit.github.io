@@ -98,9 +98,33 @@ Status: 200 OK
     },
 }
 ```
-### 参数详解
+## 参数详解
 
-IM
 | 参数名 | 参数含义 | 枚举 | 备注 |
-| :---: | :---: | :---: | :---: |
-| im | 聊天相关 | :---: | :---: | 
+| :----: | :----: | :----: | :----: |
+| im | 聊天相关 | ------ | ------ | 
+| im:serve | 聊天服务器地址 | ------ | 需要im扩展以及IM服务端配合使用 |
+| im:helper | 聊天助手 | ------ | ------ |
+| wallet | 钱包相关 | ------ | ------ |
+| wallet:ratio | 显示金额与服务端金额的转换比例 | ------ | 显示金额 = 服务端金额 / wallet:ratio |
+| ad | 广告位相关 | ------ | ------ |
+| site | 系统配置相关 | ------ | 类型：json对象 |
+| site.status | 站点开关 | true: 开启，false: 关闭 | 类型：boolearn，如果关闭，各个端开关无效 |
+| site.off_reason | 关闭原因 | ------ | 类型：字符串， site.status为false时显示 |
+| site.app.staus | app是否关闭 | true：开启，false：关闭 | 类型：Boolean，site.status 为false时无效 |
+| site.h5.status | 移动网页是否关闭 | true：开启，false：关闭 | 类型：Boolean，site.status 为false时无效 |
+| site.gold:status | 是否开启积分系统 | true：开启，false：关闭 | 控制前端展示相应的积分模块，类型：Boolean |
+| site.reward.status | 是否开启打赏 | true：开启，false：关闭 | 控制平台的打赏开关， 类型：Boolean |
+| site.gold_name | 积分的展示名称 | ------ | 积分在前端显示的名称 |
+| site.gold_name.name | 积分昵称 | ------ | ------ |
+| site.gold_name.unit | 积分昵称的单位 | ------ | ------ |
+| site.reserved_nickname | 站点预留昵称 | ------ | 注册时不能够使用的昵称，用半角逗号分隔 |
+| site.user_invite_template | 邀请注册的短信模板 | ------ | 类型：string |
+| registerSettings | 注册相关 | ------ | ------ |
+| registerSettings.open | 是否开放注册 | true：开放，false：关闭 | ------ |
+| registerSettings.showTerms | 注册时展示服务条款及隐私政策 | true：展示，false：不展示 | 类型：Boolean |
+| registerSettings.registerMode | 注册方式 | all：开放注册，invited：邀请注册， thirdPart：第三方注册 | 注册方式控制类型：string |
+| registerSettings.completeData | 注册完成后是否需要立即完善资料 | true：需要，false：不需要 | 类型：Boolean |
+| registerSettings.accountType | 注册账号类型 | all：邮箱和手机号，mobile-only：仅手机，mail-only：仅邮箱 | 类型：string |
+| registerSettings.content | 用户服务条款及隐私政策 | ------ | 类型：string，格式：markdown |
+
