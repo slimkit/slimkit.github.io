@@ -65,6 +65,41 @@ Status: 200 OK
             "type":"user:id",
             "data":"1"
         }
-    ]
+    ],
+    "site": {
+        "status": true,
+        "off_reason": "站点维护中请稍后再访问",
+        "app": {
+            "status": true
+        },
+        "h5": {
+            "status": true
+        },
+        "reserved_nickname": "root,admin",
+        "client_email": "admin@123.com",
+        "gold": {
+            "status": true
+        },
+        "reward": {
+            "status": true
+        },
+        "user_invite_template": "我发现了一个全平台社交系统ThinkSNS+，快来加入吧：http://t.cn/RpFfbbi",
+        "gold_name": {
+            "name": "金币",
+            "unit": "枚"
+        }
+    },
+    "registerSettings": {
+        "showTerms": false,
+        "registerMode": "all",
+        "completeData": true,
+        "accountType": "all",
+        "content": "# 服务条款及隐私政策"
+    },
 }
 ```
+### 参数详解
+| im
+| 参数名 | 参数含义 | 枚举 | 备注 |
+| --- | --- | --- | --- |
+| im | 聊天相关 | --- | --- | 
