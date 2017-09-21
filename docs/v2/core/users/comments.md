@@ -58,7 +58,7 @@ Status: 200 OK
 | id | 评论 ID。|
 | user_id | 发布评论的人。|
 | target_user | 接收评论的目标用户。|
-| reply_user | 评论回复的人。|
+| reply_user | 评论回复的人，没有回复人时该值为0 |
 | body | 评论内容 |
 | commentable_id | 评论来源资源 ID，根据 `commentable_type` 判断是来自何处。|
 | commentable_type | 评论所属资源类型。|
