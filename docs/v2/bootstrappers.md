@@ -67,27 +67,24 @@ Status: 200 OK
         }
     ],
     "site": {
-        "status": true,
+        "open": false,
         "off_reason": "站点维护中请稍后再访问",
         "app": {
-            "status": true
+            "open": false
         },
         "h5": {
-            "status": true
+            "open": false
         },
         "reserved_nickname": "root,admin",
         "client_email": "admin@123.com",
         "gold": {
-            "status": true
+            "open": false
         },
         "reward": {
-            "status": true
+            "open": false,
+            "amounts": "5,10,15"
         },
-        "user_invite_template": "我发现了一个全平台社交系统ThinkSNS+，快来加入吧：http://t.cn/RpFfbbi",
-        "gold_name": {
-            "name": "金币",
-            "unit": "枚"
-        }
+        "user_invite_template": "我发现了一个全平台社交系统ThinkSNS+，快来加入吧：http://t.cn/RpFfbbi"
     },
     "registerSettings": {
         "showTerms": false,
@@ -109,12 +106,13 @@ Status: 200 OK
 | wallet:ratio | 显示金额与服务端金额的转换比例 |  | 显示金额 = 服务端金额 / wallet:ratio |
 | ad | 广告位相关 |  | |
 | site | 系统配置相关 |  | 类型：json对象 |
-| site.status | 站点开关 | true: 开启，false: 关闭 | 类型：boolearn，如果关闭，各个端开关无效 |
-| site.off_reason | 关闭原因 | '由于bug，站点关闭' | 类型：字符串， site.status为false时显示 |
-| site.app.staus | app是否关闭 | true：开启，false：关闭 | 类型：Boolean，site.status 为false时无效 |
-| site.h5.status | 移动网页是否关闭 | true：开启，false：关闭 | 类型：Boolean，site.status 为false时无效 |
-| site.gold:status | 是否开启积分系统 | true：开启，false：关闭 | 控制前端展示相应的积分模块，类型：Boolean |
-| site.reward.status | 是否开启打赏 | true：开启，false：关闭 | 控制平台的打赏开关， 类型：Boolean |
+| site.open | 站点开关 | true: 开启，false: 关闭 | 类型：boolearn，如果关闭，各个端开关无效 |
+| site.off_reason | 关闭原因 | '由于bug，站点关闭' | 类型：字符串， site.open为false时显示 |
+| site.app.open | app是否关闭 | true：开启，false：关闭 | 类型：Boolean，site.status 为false时无效 |
+| site.h5.open | 移动网页是否关闭 | true：开启，false：关闭 | 类型：Boolean，site.status 为false时无效 |
+| site.gold:open | 是否开启积分系统 | true：开启，false：关闭 | 控制前端展示相应的积分模块，类型：Boolean |
+| site.reward.open | 是否开启打赏 | true：开启，false：关闭 | 控制平台的打赏开关， 类型：Boolean |
+| site.reward.amounts | 打赏金额配置 | '5,10,15'... | 打赏金额配置，用半角逗号分隔 |
 | site.gold_name | 积分的展示名称 |  | 积分在前端显示的名称 |
 | site.gold_name.name | 积分昵称 | 金币,豆子,贝壳... |  |
 | site.gold_name.unit | 积分昵称的单位 | 个,枚,粒 |  |
