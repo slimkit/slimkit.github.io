@@ -200,6 +200,7 @@ Status: 200 OK
             "liked": false,
             "collected": false,
             "rewarded": false,
+            "could": false,
             "user": {
                 "id": 1,
                 "name": "baishi",

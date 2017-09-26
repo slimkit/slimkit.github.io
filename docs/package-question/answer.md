@@ -141,6 +141,7 @@ Status: 200
         "watchers_count": 0,
         "likes_count": 0,
         "view_count": 0,
+        "has_adoption": true,
         "created_at": "2017-07-28 08:38:54",
         "updated_at": "2017-08-01 06:03:21",
         "user": {
@@ -217,6 +218,7 @@ Status: 200
 | likes | 喜欢列表，参考「回答喜欢」文档。 |
 | rewarders | 打赏用户列表，参考「回答打赏」文档。 |
 | question | 问题基础数据，参考「问题」文档。 |
+| question.has_adoption | 问题是否已有采纳 true 为所属问题已有采纳 |
 | could | **是否已围观，对于需要围观的答案，会返回本字段为 true 或者 false 来表示用户是否需要付费，对于普通答案不返回这个字段。** |
 
 ## 回答一个提问
