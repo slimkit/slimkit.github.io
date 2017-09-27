@@ -283,6 +283,7 @@ Status: 200 OK
 | created_at | 问题创建时间。 |
 | updated_at | 问题修改时间。 |
 | answer | 问题的最新一条回答，具体数据结构参考「回答」文档，问题没有回答时该字段为null。 |
+| answer.cloud | 该回答是否需要围观，所属问题开启围观时会存在，为 `false` 时回答内容返回为`null` |
 | user | 用户资料，如果是 `anonymity` 是 `1` 则该字段不存在。 |
 
 
@@ -554,6 +555,7 @@ Status: 200 OK
 | watched | 用户是否关注这个问题。 |
 | invitation_answers | 问题邀请用户回答的答案列表，具体数据结构参考「回答」文档。 |
 | invitation_answers.onlookers_count | 该回答被围观人数 |
+| invitation_answers.cloud | 该回答是否需要围观，所属问题开启围观时会存在，为 `false` 时回答内容返回为`null` |
 | adoption_answers | 问题采纳的答案列表，具体数据结构参考「回答」文档。 |
 | topics | 问题话题列表，参考「话题」文档。 |
 | invitations | 问题邀请回答的用户列表，参考「用户」文档。 |
