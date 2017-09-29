@@ -28,5 +28,10 @@
         "name": "问答应用",
         "path": "package-question",
         "include": "/docs/package-question/summary.json"
+    },
+    {
+        "name": "资讯应用",
+        "path": "package-news",
+        "include": "https://github.com/slimkit/plus-component-news/blob/master/docs/summary.json"
     }
 ]
