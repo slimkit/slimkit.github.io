@@ -32,6 +32,6 @@
     {
         "name": "资讯应用",
         "path": "package-news",
-        "include": "https://github.com/slimkit/plus-component-news/blob/master/docs/summary.json"
+        "include": "https://raw.githubusercontent.com/slimkit/plus-component-news/master/docs/summary.json"
     }
 ]
