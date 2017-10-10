@@ -91,7 +91,9 @@ Status: 200 OK
         "registerMode": "all",
         "completeData": true,
         "accountType": "all",
-        "content": "# 服务条款及隐私政策"
+        "content": "# 服务条款及隐私政策",
+        "type": "mobile-only",
+        "method": "invited"
     },
 }
 ```
@@ -125,4 +127,6 @@ Status: 200 OK
 | registerSettings.completeData | 注册完成后是否需要立即完善资料 | true：需要，false：不需要 | 类型：Boolean |
 | registerSettings.accountType | 注册账号类型 | all：邮箱和手机号，mobile-only：仅手机，mail-only：仅邮箱 | 类型：string |
 | registerSettings.content | 用户服务条款及隐私政策 |  | 类型：string，格式：markdown |
+| registerSettings.type | 用户注册方式 | invited: 仅邀请，  all: 全部， thirdPart: 第三方 |
+| registerSettings.method | 用户注册类型 | mobile-only: 仅手机， mail-only: 仅邮箱，all： 邮箱或手机 |
 
