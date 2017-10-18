@@ -67,18 +67,11 @@ Status: 200 OK
         }
     ],
     "site": {
-        "open": false,
-        "off_reason": "站点维护中请稍后再访问",
-        "app": {
-            "open": false
-        },
-        "h5": {
-            "open": false
-        },
+        
         "reserved_nickname": "root,admin",
         "client_email": "admin@123.com",
         "gold": {
-            "open": false
+            "status": false
         },
         "reward": {
             "status": false,
