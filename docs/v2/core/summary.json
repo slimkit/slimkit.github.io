@@ -79,6 +79,11 @@
                     "name": "打赏",
                     "path": "reward",
                     "markdown": "/users/reward.md"
+                },
+                {
+                    "name": "未读消息",
+                    "path": "unread",
+                    "markdown": "/users/unread.md"
                 }
             ]
         },
