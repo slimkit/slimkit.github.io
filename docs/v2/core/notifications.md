@@ -106,7 +106,7 @@ PATCH /user/notifications/:notification?
 
 | 名称 | 类型 | 描述 |
 |:----:|:----:|----:
-| notification | String\|Array | 通知ID，可以是由 `,` 拼接的 IDs 组，也可以是 Array |
+| notification | String\Array | 通知ID，可以是由 `,` 拼接的 IDs 组，也可以是 Array |
 
 #### Response
 
