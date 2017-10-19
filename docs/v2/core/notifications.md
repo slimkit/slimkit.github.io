@@ -12,6 +12,7 @@
 - [通知列表](#通知列表)
 - [读取通知](#读取通知)
 - [标记通知阅读](#标记通知阅读)
+- [标记所有通知已读](#标记所有通知已读)
 - [数据解析](#数据解析)
 
 ## 未读通知数量检查
@@ -106,6 +107,25 @@ PATCH /user/notifications/:notification?
 | 名称 | 类型 | 描述 |
 |:----:|:----:|----:
 | notification | String\|Array | 通知ID，可以是由 `,` 拼接的 IDs 组，也可以是 Array |
+
+#### Response
+
+```
+Status: 201 Created
+```
+```json
+{
+    "message": [
+        "操作成功"
+    ]
+}
+```
+
+## 标记所有通知已读
+
+```
+PUT /user/notifications/all
+```
 
 #### Response
 
