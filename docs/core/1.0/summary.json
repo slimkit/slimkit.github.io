@@ -26,8 +26,8 @@
         "items": [
             {
                 "name": "开发入门",
-                "path": "",
-                "markdown": "/packages/readme.md"
+                "path": "dev",
+                "markdown": "/packages/dev.md"
             },
             {
                 "name": "处理器",
