@@ -65,6 +65,7 @@ GET /files/:file
 | w | float | 需要获取的图片宽度，小数点后两位。|
 | h | float | 需要获取的图片高度，小数点后两位。|
 | q | integer | 可选，`1` <= `q` <= 100，可以和 `w`、`h` 配合使用，也可以单独使用，该参数表示图片质量 |
+| b | Integer | 可选，范围 `0` - `100` ，表示需要高斯模糊的程度。 | 
 | json | mixed | 可选，不存在的情况下资源会使用 `302` 网络状态重定向到真实地址，如果存在则以 `json` 格式返回地址 |
 
 > `q` 参数在「本地 CDN 驱动」中，只针对 `jpeg/jpg` 图像有效，因为 `png` 未无损图像。
@@ -83,6 +84,28 @@ Status: 200 OK
     "url": "https://plus.io/storage/2017/cc/2.png"
 }
 ```
+
+##### 需要付费
+
+```
+Status: 402
+```
+
+```json
+{
+    "message":"请购买文件",
+    "paid_node":1,
+    "amount":1,
+    "url":"http://plus.io/storage/2017/09/27/0832/YWQBIoYtMlvnWvmv7cEuNwZP0hzZDBMk0CePg1vo/26657d5ff9020d2abefe558796b99584.jpeg"
+}
+```
+
+| 字段 | 描述
+|---|:---:|
+| message | 消息 |
+| paid_node | 付费节点 ID |
+| amount | 需要付费的价格。 |
+| url | 前端展示的被重度高斯模糊的图像 |
 
 #### 储存转换规则
 
