@@ -1,6 +1,6 @@
 # 拓展包开发指南
 
-在开发 ThinkSNS+ 之前，你应该阅读 《[Laravel 拓展包开发](https://laravel.com/docs/5.5/packages)》文档，因为 ThinkSNS+ 的拓展包前提是建立在 Laravel 拓展包基础上新增功能。
+在开发 ThinkSNS+ 之前，你应该阅读 《[Laravel 拓展包开发](https://laravel.com/docs/master/packages)》文档，因为 ThinkSNS+ 的拓展包前提是建立在 Laravel 拓展包基础上新增功能。
 
 ## 创建拓展包
 
