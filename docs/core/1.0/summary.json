@@ -19,5 +19,26 @@
                 "markdown": "/getting-started/contributions.md"
             }
         ]
+    },
+    {
+        "name": "拓展包开发",
+        "path": "packages",
+        "items": [
+            {
+                "name": "开发入门",
+                "path": "",
+                "markdown": "/packages/readme.md"
+            },
+            {
+                "name": "处理器",
+                "path": "handler",
+                "markdown": "/packages/handler.md"
+            },
+            {
+                "name": "后台入口",
+                "path": "manager",
+                "markdown": "/packages/manager.md"
+            }
+        ]
     }
 ]
