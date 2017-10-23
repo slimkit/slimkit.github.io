@@ -52,7 +52,11 @@ Status: 200 OK
             }
         }
     ],
-    "likes": []
+    "likes": [],
+    "pinneds": {
+        "news": 0,
+        "feeds": 1
+    }
 }
 ```
 
@@ -67,3 +71,4 @@ Status: 200 OK
 | comments.time | time | 评论时间 |
 | comments.user | array | 评论者信息 |
 | likes | array | 最近几条点赞信息，数据格式同评论 |
+| pinneds | array | 未处理审核统计, 目前可能有 `news` - 未处理的资讯评论置顶, `feeds` - 未处理的动态评论置顶 |
