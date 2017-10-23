@@ -85,27 +85,11 @@ Status: 200 OK
 }
 ```
 
-##### 需要付费
+#### 常规
 
 ```
-Status: 402
+Status: 302 Found
 ```
-
-```json
-{
-    "message":"请购买文件",
-    "paid_node":1,
-    "amount":1,
-    "url":"http://plus.io/storage/2017/09/27/0832/YWQBIoYtMlvnWvmv7cEuNwZP0hzZDBMk0CePg1vo/26657d5ff9020d2abefe558796b99584.jpeg"
-}
-```
-
-| 字段 | 描述
-|---|:---:|
-| message | 消息 |
-| paid_node | 付费节点 ID |
-| amount | 需要付费的价格。 |
-| url | 前端展示的被重度高斯模糊的图像 |
 
 #### 储存转换规则
 
