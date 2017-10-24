@@ -54,8 +54,14 @@ Status: 200 OK
     ],
     "likes": [],
     "pinneds": {
-        "news": 0,
-        "feeds": 1
+        "news": {
+            "time": null,
+            "count": 0
+        },
+        "feeds": {
+            "time": "2017-09-15 10:04:19",
+            "count": 1
+        }
     }
 }
 ```
@@ -72,3 +78,5 @@ Status: 200 OK
 | comments.user | array | 评论者信息 |
 | likes | array | 最近几条点赞信息，数据格式同评论 |
 | pinneds | array | 未处理审核统计, 目前可能有 `news` - 未处理的资讯评论置顶, `feeds` - 未处理的动态评论置顶 |
+| pinneds.*.time | time/null | 最新一条待审核记录的时间 |
+| pinneds.*.count | int | 未操作审核数 |
