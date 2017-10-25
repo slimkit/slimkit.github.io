@@ -40,5 +40,10 @@
                 "markdown": "/packages/manager.md"
             }
         ]
+    },
+    {
+        "name": "配置管理",
+        "path": "configuration",
+        "markdown": "/configuration.md"
     }
 ]
