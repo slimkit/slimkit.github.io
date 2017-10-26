@@ -42,6 +42,7 @@ Status: 200 OK
         "applepay_upacp"
     ]
 }
+```
 
 ## 钱包余额充值
 
