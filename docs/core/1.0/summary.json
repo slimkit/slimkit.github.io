@@ -45,5 +45,16 @@
         "name": "配置管理",
         "path": "configuration",
         "markdown": "/configuration.md"
+    },
+    {
+        "name": "CDN 配置",
+        "path": "cdn",
+        "items": [
+            {
+                "name": "本地公开",
+                "path": "public",
+                "markdown": "cdn/public.md"
+            }
+        ]
     }
 ]
