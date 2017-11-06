@@ -51,9 +51,15 @@
         "path": "cdn",
         "items": [
             {
-                "name": "本地公开",
-                "path": "public",
-                "markdown": "cdn/public.md"
+                "name": "文件系统",
+                "path": "filesystem",
+                "items": [
+                    {
+                        "name": "本地公开",
+                        "path": "public",
+                        "markdown": "filesystem-public.md"
+                    }
+                ]
             }
         ]
     }
