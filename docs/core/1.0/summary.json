@@ -58,6 +58,11 @@
                         "name": "本地公开",
                         "path": "public",
                         "markdown": "filesystem-public.md"
+                    },
+                    {
+                        "name": "本地",
+                        "path": "local",
+                        "markdown": "filesystem-local.md"
                     }
                 ]
             }
