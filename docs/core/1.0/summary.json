@@ -63,6 +63,11 @@
                         "name": "本地",
                         "path": "local",
                         "markdown": "/cdn/filesystem-local.md"
+                    },
+                    {
+                        "name": "AWS S3",
+                        "path": "s3",
+                        "markdown": "/cdn/filesystem-s3.md"
                     }
                 ]
             }
