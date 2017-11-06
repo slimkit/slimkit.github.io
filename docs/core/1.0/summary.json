@@ -75,6 +75,11 @@
                 "name": "七牛",
                 "path": "quniu",
                 "markdown": "/cdn/qiniu.md"
+            },
+            {
+                "name": "CDN 部署推荐方案",
+                "path": "programme",
+                "markdown": "/cdn/programme.md"
             }
         ]
     }
