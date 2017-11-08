@@ -24,7 +24,7 @@ GET /user/followers
 | 名称 | 类型 | 描述 |
 |:----:|:----:|----|
 | limit | Integer | 获取条数，默认 20 |
-| after | Integer | 获取之后数据，默认 0 |
+| offset | Integer | 翻页偏移量，默认 0 |
 
 #### 响应
 
@@ -80,7 +80,7 @@ GET /user/followings
 | 名称 | 类型 | 描述 |
 |:----:|:----:|----|
 | limit | Integer | 获取条数，默认 20 |
-| after | Integer | 获取之后数据，默认 0 |
+| offset | Integer | 翻页偏移量，默认 0 |
 
 #### 响应
 
