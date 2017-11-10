@@ -25,8 +25,8 @@ Status: 200 OK
         "allow_type": "image", // 广告位允许的广告类型 (当前app中只有图片类型) 多个类型将以逗号隔开
         "format": { // 广告数据格式
             "image": {
-                "image": "图片|string",
-                "link": "链接|string"
+                "image": "图片|string|表单描述",
+                "link": "链接|string|表单描述"
             }
         },
         "created_at": "2017-07-27 06:56:36",
@@ -40,8 +40,8 @@ Status: 200 OK
         "allow_type": "image",
         "format": {
             "image": {
-                "image": "图片|string",
-                "link": "链接|string"
+                "image": "图片|string|表单描述",
+                "link": "链接|string|表单描述"
             }
         },
         "created_at": "2017-07-27 07:04:50",
@@ -55,8 +55,8 @@ Status: 200 OK
         "allow_type": "image",
         "format": {
             "image": {
-                "image": "图片|string",
-                "link": "链接|string"
+                "image": "图片|string|表单描述",
+                "link": "链接|string|表单描述"
             }
         },
         "created_at": "2017-07-27 07:04:50",
@@ -70,11 +70,11 @@ Status: 200 OK
         "allow_type": "analog",
         "format": {
             "analog": {
-                "avatar": "头像图|string",
-                "name": "用户名|string",
-                "content": "内容|string",
-                "image": "图片|string",
-                "time": "时间|date"
+                "avatar": "头像图|string|表单描述",
+                "name": "用户名|string|表单描述",
+                "content": "内容|string|表单描述",
+                "image": "图片|string|表单描述",
+                "time": "时间|date|表单描述"
             }
         },
         "created_at": "2017-07-31 03:18:02",
