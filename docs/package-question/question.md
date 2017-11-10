@@ -424,6 +424,7 @@ Status: 200 OK
             "updated_at": "2017-08-01 03:44:04",
             "could": false,
             "onlookers_count": 1,
+            "onlookers_total": 10,
             "user": {
                 "id": 2,
                 "name": "test1",
@@ -555,6 +556,7 @@ Status: 200 OK
 | watched | 用户是否关注这个问题。 |
 | invitation_answers | 问题邀请用户回答的答案列表，具体数据结构参考「回答」文档。 |
 | invitation_answers.onlookers_count | 该回答被围观人数 |
+| invitation_answers.onlookers_total | 被围观总金额 |
 | invitation_answers.cloud | 该回答是否需要围观，所属问题开启围观时会存在，为 `false` 时回答内容返回为`null` |
 | adoption_answers | 问题采纳的答案列表，具体数据结构参考「回答」文档。 |
 | topics | 问题话题列表，参考「话题」文档。 |
