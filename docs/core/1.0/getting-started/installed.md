@@ -1,11 +1,8 @@
-<a name="list"></a>
-# ThinkSNS+ 安装部署 {#list}
+<a href="list"></a>
+# ThinkSNS Plus 安装部署 {#list}
 
 - [环境要求](#manual-need)
-- [下载安装](#manual-install)
-- [优雅链接](#pretty-urls)
-
-这里会讲如何在服务器中或者你的电脑中使用集成环境又或者手动编译环境来对 ThinkSNS+ 进行安装。
+- [安装](#install)
 
 <a name="manual-need"></a>
 ## 环境要求 {#manual-need}
@@ -83,8 +80,8 @@ PostgreSQL 数据库天然支持 Emoji，无需任何版本要求，但是我们
 
 > ThinkSNS+ 不建议使用 SQL Server，但是你仍然可以在系统中使用，出现的 emoji 存储问题自行解决。
 
-<a name="manual-install"></a>
-## 下载安装 {#manual-install}
+<a name="install"></a>
+## 安装 {#install}
 
 需要软件：
 
@@ -115,70 +112,121 @@ Or
 php composer.phar install
 ```
 
-<a name="manual-install-config"></a>
-### 基础配置 {#manual-install-config}
 
-安装完成依赖后，依旧无法运行，因为 ThinkSNS+ 需要使用数据库来存储一些数据。运行：`cp .env.example .env` 将 `.env.example` 复制一份命名为 `.env` 然后我们编辑这个文件，下面我简单描述各个配置用处：
 
-| 配置名称 | 类型 | 描述 |
-|:----:|:----:|----|
-| APP_NAME | String | 应用名称 |
-| APP_ENV | String | 运行环境，可选值 `local`, `production` |
-| APP_DEBUG | Bool | 是否开启 debug，选择 `true` 或者 `false` |
-| APP_LOG | String | 日志分卷，可选 `single`, `daily`, `syslog`, `errorlog` |
-| APP_LOG_LEVEL | String | 记录日志级别，可选 `debug`, `info`, `warning`, `error`, 'critical' |
-| APP_URL | String | 你的网站地址，此项 **必须** 设置，因为生成的所有地址都基于该地址 |
-| DB_CONNECTION | String | 数据库连接方式，可选 `mysql`, `sqlite`, `pgsql`, `sqlsrv` |
-| DB_HOST | String | 数据库连接地址 |
-| DB_PORT | Integer | 数据库连接端口 |
-| DB_DATABASE | String | 数据库名称 |
-| DB_USERNAME | String | 数据库用户名 |
-| DB_PASSWORD | String | 数据库用户密码 |
-| DB_SOCKET | String | Mysql unix socket |
-| CACHE_DRIVER | String | 缓存驱动，可选 `apc`, `array`, `database`, `file`, `memcached`, `redis` |
-| MEMCACHED_PERSISTENT_ID | Any | Memcached 持久 ID |
-| MEMCACHED_USERNAME | String | Memcached 用户名 |
-| MEMCACHED_PASSWORD | String | Memcached 密码 |
-| MEMCACHED_HOST | String | Memcached 连接 host |
-| MEMCACHED_PORT | Integer | Memcached 连接端口 |
-| MAIL_DRIVER | String | 邮件驱动，可选 `smtp`, `sendmail`, `mailgun`, `mandrill`, `ses`, `sparkpost`, `log`, `array` |
-| MAIL_HOST | String | 邮件 SMTP 地址 |
-| MAIL_PORT | Integer | 邮件 SMTP 端口 |
-| MAIL_FROM_ADDRESS | String | 邮件发信地址 |
-| MAIL_FROM_NAME | String | 邮件发信名称 |
-| MAIL_ENCRYPTION | String | 邮件加密方式，可选 `tls`, `ssl` |
-| MAIL_USERNAME | String | SMTP 验证用户名 |
-| MAIL_PASSWORD | String | SMTP 验证密码 |
-| QUEUE_DRIVER | String | 列队驱动，可选 `sync`, `database`, `beanstalkd`, `sqs`, `redis`, `null` |
-| SESSION_DRIVER | String | Session 驱动，可选 `file`, `cookie`, `database`, `apc`, `memcached`, `redis`, `array` |
-| SESSION_COOKIE | String | Session 存储在 Cokkie 的 key |
-| SESSION_DOMAIN | String | Session 作用域 |
+需要软件：
 
-你可以最简单的配置，只需要配置 `APP_URL` 以及 `DB_*` 信息即可。
+- git
+- [Composer](https://getcomposer.org/)
 
-<a name="manual-install-database"></a>
-### 生成数据表 & 填充数据 {#manual-install-database}
+> 之后操作我们拟定目录为 `/var/www`
 
-2. 生成唯一站点加密 Key：
+### 下载 ThinkSNS+
+
+```shell
+git clone https://github.com/slimkit/thinksns-plus
+```
+
+克隆完成后我们进入 `thinksns-plus` 目录：
+
+```shell
+cd thinksns-plus
+```
+
+我们看在已经下载了 ThinkSNS+ 源码，但是这不足以运行，因为 ThinkSNS+ 还依赖了其他的软件包，我们来安装依赖：
+
+```shell
+composer install
+```
+Or
+```shell
+php composer.phar install
+```
+
+### 基础命令执行
+
+生成应用密钥
+
 ```shell
 php artisan key:generate
 ```
-2. 发布拓展包资源：
+
+发布拓展包资源
+
 ```shell
 php artisan vendor:publish --all
 ```
-3. 迁移数据表：
-```shell
-php artisan migrate
+
+### 前端服务器转发配置
+
+配置前端服务器，例如 Nginx、Apache 等。应当将 ThinkSNS Plus 下的 `public` 作为 root 目录。
+
+#### Nginx
+
+
+如果你使用的是 Nginx，在你的站点配置中加入以下内容，它将会将所有请求都引导到 index.php 前端控制器：
+
 ```
-4. 填充数据：
-```shell
-php artisan db:seed
+location / {
+    try_files $uri $uri/ /index.php?$query_string;
+}
 ```
 
-至此，你已安装完成，你可以访问你的域名看看效果吧。
+##### Example
 
-> 后台账号密码都是 `root`
+```
+server {
+    listen 443 ssl http2;
+    server_name plus.io;
+    ssl on;
+    ssl_certificate /var/www/public/public.io.crt;
+    ssl_certificate_key /var/www/public/public.io.key.unsecure;
+    root /var/www/public/public;
+    index index.php index.html index.htm;
+
+    location / {
+         try_files $uri $uri/ /index.php$is_args$args;
+    }
+
+    location ~ \.php$ {
+        try_files $uri /index.php =404;
+        fastcgi_pass php-upstream;
+        fastcgi_index index.php;
+        fastcgi_buffers 16 16k;
+        fastcgi_buffer_size 32k;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+}
+```
+
+#### Apache {#pretty-urls-apache}
+
+在 ThinkSNS+ 中，已经在根目录 `/plulic` 中已经提供了 `.htaccess` 文件，其中已经为您配置好了优雅的地址配置。如果在你的 Apache 中不生效或者由其他位置提供配置，请设置：
+
+```
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+```
+
+#### Caddy {#pretty-urls-caddy}
+
+Caddy 是一个小巧精悍的 http 软件，在开发环境，测试环境等下也是我们推荐使用的软件。因为它无需特殊的安装，无需特殊的配置，您只需下载一个 Caddy 运行文件，写一份你的站点配置即可运行。
+
+```
+rewrite { 
+    to {path} {path}/ /index.php?{query}
+}
+```
+
 
 ### 目录权限 & 公开资源
 
@@ -195,38 +243,6 @@ php artisan db:seed
 php artisan storage:link
 ```
 
-<a name="pretty-urls"></a>
-## 优雅链接 {#pretty-urls}
+### 最后步骤
 
-### Nginx {#pretty-urls-nginx}
-
-如果你使用的是 Nginx，在你的站点配置中加入以下内容，它将会将所有请求都引导到 index.php 前端控制器：
-
-```
-location / {
-    try_files $uri $uri/ /index.php?$query_string;
-}
-```
-
-### Apache {#pretty-urls-apache}
-
-在 ThinkSNS+ 中，已经在根目录 `/plulic` 中已经提供了 `.htaccess` 文件，其中已经为您配置好了优雅的地址配置。如果在你的 Apache 中不生效或者由其他位置提供配置，请设置：
-
-```
-Options +FollowSymLinks
-RewriteEngine On
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.php [L]
-```
-
-### Caddy {#pretty-urls-caddy}
-
-Caddy 是一个小巧精悍的 http 软件，在开发环境，测试环境等下也是我们推荐使用的软件。因为它无需特殊的安装，无需特殊的配置，您只需下载一个 Caddy 运行文件，写一份你的站点配置即可运行。
-
-```
-rewrite { 
-    to {path} {path}/ /index.php?{query}
-}
-```
+以上都设置完成后，请访问 `/installer` 进行引导安装。
