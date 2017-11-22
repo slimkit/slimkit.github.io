@@ -1,0 +1,10 @@
+{
+    "basename": "../package-group",
+    "summary": [
+        {
+            "name": "概述",
+            "path": "",
+            "markdown": "/overview.md"
+        }
+    ]
+}
