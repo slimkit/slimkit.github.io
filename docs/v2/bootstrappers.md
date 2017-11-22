@@ -37,6 +37,12 @@ Status: 200 OK
         "wx_wap", // "微信 WAP 支付",
         "applepay_upacp" // "Apple Pay"
     ],
+    "wallet:cash": {
+        "open": true
+    },
+    "wallet:recharge": {
+        "open": true
+    },
     "ad":[
         {
             "id":1,
@@ -99,6 +105,8 @@ Status: 200 OK
 | im:helper | 聊天助手 |  |  |
 | wallet | 钱包相关 |  |  |
 | wallet:ratio | 显示金额与服务端金额的转换比例 |  | 显示金额 = 服务端金额 / wallet:ratio |
+| wallet:cash | 钱包提现的开关选项 | | |
+| wallet:recharge | 钱包充值的开关选项 | | |
 | ad | 广告位相关 |  | |
 | site | 系统配置相关 |  | 类型：json对象 |
 | site.gold:status | 是否开启积分系统 | true：开启，false：关闭 | 控制前端展示相应的积分模块，类型：Boolean |
