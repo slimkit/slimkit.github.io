@@ -8,12 +8,12 @@
         },
         {
             "name": "圈子分类",
-            "path": "topic",
+            "path": "group-category",
             "markdown": "/group-category.md"
         },
         {
             "name": "圈子",
-            "path": "question",
+            "path": "group",
             "markdown": "/group.md"
         },
         {
