@@ -5,6 +5,37 @@
             "name": "概述",
             "path": "",
             "markdown": "/overview.md"
+        },
+        {
+            "name": "圈子分类",
+            "path": "topic",
+            "markdown": "/group-category.md"
+        },
+        {
+            "name": "圈子",
+            "path": "question",
+            "markdown": "/group.md"
+        },
+        {
+            "name": "帖子",
+            "path": "post",
+            "items": [
+                {
+                    "name": "帖子",
+                    "path": "",
+                    "markdown": "/answer.md"
+                },
+                {
+                    "name": "评论",
+                    "path": "reward",
+                    "markdown": "/answer-reward.md"
+                },
+                {
+                    "name": "点赞",
+                    "path": "onlookers",
+                    "markdown": "/answer-onlookers.md"
+                }
+            ]
         }
     ]
 }
