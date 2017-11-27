@@ -5,7 +5,7 @@
 ## 获取全部圈子分类
 
 ```
-GET /categroies
+GET /categories
 ```
 
 ### 响应
