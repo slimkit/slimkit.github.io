@@ -77,9 +77,9 @@ status 200
 | likes_count | int | 喜欢数量统计 |
 | comments_count | int | 评论数量统计 |
 | views_count | int | 查看数量统计 |
-|type | string| 默认: new, latest_post 最新帖子，latest_reply最新回复|
+|type | string| 默认: latest_post, latest_post 最新帖子，latest_reply最新回复|
 |limit|integer|	默认 20 ，数据返回条数 默认为20|
-|after|integer|	默认 0 ，数据翻页标识|
+|offset|integer|默认 0 ，数据翻页标识|
 
 ## 圈子帖子详情
 
