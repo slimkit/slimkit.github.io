@@ -73,13 +73,13 @@ status 200
 | user_id | int | 发布者 |
 | title | string | 标题 |
 | body | string | markdown 内容 |
-| summary | string | markdown 内容 |
+| summary | string | 列表专用字段，概述，简短内容 |
 | likes_count | int | 喜欢数量统计 |
 | comments_count | int | 评论数量统计 |
 | views_count | int | 查看数量统计 |
 |type | string| 默认: latest_post, latest_post 最新帖子，latest_reply最新回复|
 |limit|integer|	默认 20 ，数据返回条数 默认为20|
-|offset|integer|默认 0 ，数据翻页标识|
+|offset|integer|默认 0 ，数据偏移量，传递之前通过接口获取的总数。|
 
 ## 圈子帖子详情
 
@@ -166,14 +166,88 @@ status 200
 | user_id | int | 发布者 |
 | title | string | 标题 |
 | body | string | markdown 内容 |
-| summary | string | markdown 内容 |
+| summary | string | 列表专用字段，概述，简短内容 |
 | likes_count | int | 喜欢数量统计 |
 | comments_count | int | 评论数量统计 |
 | views_count | int | 查看数量统计 |
 |liked|是否喜欢|true or false|
 
 ## 圈子帖子创建
+
+### 参数说明
+
+```
+POST /groups/:group/posts
+```
+
+| 名称 | 类型 | 说明 |
+|:----:|:-----|:-----|
+| title | int | 必须 帖子标题 |
+| body | int | 必须 帖子内容 |
+| summary | string | 列表专用字段，概述，简短内容 |
+| images | array |  文件id,例如[1,2,3]|
+| sync_feed | int | 同步至动态，同步需要传sync_feed = 1 |
+| feed_from | int | 设备标示 同步动态需要传 1:pc 2:h5 3:ios 4:android 5:其他|
+
+### 响应
+
+```
+status 201
+```
+
+```json
+{
+    "message": "操作成功",
+    "post": {
+        "title": "这是帖11",
+        "body": "这是帖子",
+        "summary": "12321321",
+        "user_id": 1,
+        "group_id": 1,
+        "updated_at": "2017-11-28 09:45:17",
+        "created_at": "2017-11-28 09:45:17",
+        "id": 121
+    }
+}
+```
 ## 圈子帖子更新
+
+### 参数说明
+
+```
+PUT /groups/:group/posts/:post
+```
+
+| 名称 | 类型 | 说明 |
+|:----:|:-----|:-----|
+| title | int | 必须 帖子标题 |
+| body | int | 必须 帖子内容 |
+| summary | string | 列表专用字段，概述，简短内容 |
+| images | array |  文件id,例如[1,2,3]|
+| sync_feed | int | 同步至动态，同步需要传sync_feed = 1 |
+| feed_from | int | 设备标示 同步动态需要传 1:pc 2:h5 3:ios 4:android 5:其他|
+
+### 响应
+
+```
+status 201
+```
+
+```json
+{
+    "message": "操作成功",
+    "post": {
+        "title": "这是帖11",
+        "body": "这是帖子",
+        "summary": "12321321",
+        "user_id": 1,
+        "group_id": 1,
+        "updated_at": "2017-11-28 09:45:17",
+        "created_at": "2017-11-28 09:45:17",
+        "id": 121
+    }
+}
+```
 ## 圈子帖子删除
 ```
 DELETE /groups/:group/posts/:post
