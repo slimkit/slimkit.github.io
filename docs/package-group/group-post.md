@@ -175,6 +175,16 @@ status 200
 ## 圈子帖子创建
 ## 圈子帖子更新
 ## 圈子帖子删除
+```
+DELETE /groups/:group/posts/:post
+```
+
+### 响应
+
+```
+status 204 No Content
+```
+
 
 
 
