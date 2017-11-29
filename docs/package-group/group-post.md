@@ -17,6 +17,13 @@ GET /groups/:group/posts
 ```
 status 200
 ```
+### 参数说明
+
+| 名称 | 类型 | 说明 |
+|:----:|:-----|:-----|
+|type | string| 默认:latest_post, latest_post 最新帖子,latest_reply最新回复|
+|limit|integer| 默认 20 ，数据返回条数 默认为20|
+|offset|integer|默认 0 ，数据偏移量，传递之前通过接口获取的总数。|
 
 ```json
 [
@@ -25,13 +32,24 @@ status 200
         "group_id": 1,
         "user_id": 1,
         "title": "内容标题",
-        "body": "帖子内容",
         "summary": "帖子介绍",
         "likes_count": 0,
         "comments_count": 0,
         "views_count": 0,
+        "liked":true,
+        "collected":true,
         "created_at": "2017-11-28 07:12:20",
         "updated_at": "2017-11-28 07:12:20",
+        "images": [
+            {
+                "id": 113,
+                "size": "397x246"
+            },
+            {
+                "id": 115,
+                "size": "397x246"
+            }
+        ],
         "user": {
             "id": 1,
             "name": "admin",
@@ -72,14 +90,12 @@ status 200
 | gourp_id | int | 所属圈子 |
 | user_id | int | 发布者 |
 | title | string | 标题 |
-| body | string | markdown 内容 |
 | summary | string | 列表专用字段，概述，简短内容 |
 | likes_count | int | 喜欢数量统计 |
 | comments_count | int | 评论数量统计 |
 | views_count | int | 查看数量统计 |
-|type | string| 默认: latest_post, latest_post 最新帖子，latest_reply最新回复|
-|limit|integer|	默认 20 ，数据返回条数 默认为20|
-|offset|integer|默认 0 ，数据偏移量，传递之前通过接口获取的总数。|
+|collected|bool|是否收藏true or false|
+|liked|bool|是否点赞true or false|
 
 ## 圈子帖子详情
 
@@ -107,6 +123,7 @@ status 200
     "created_at": "2017-11-28 06:46:02",
     "updated_at": "2017-11-28 07:16:46",
     "liked": false,
+    "collected": false,
     "group": {
         "id": 1,
         "name": "哈哈哈",
@@ -170,7 +187,8 @@ status 200
 | likes_count | int | 喜欢数量统计 |
 | comments_count | int | 评论数量统计 |
 | views_count | int | 查看数量统计 |
-|liked|是否喜欢|true or false|
+|collected|bool|是否收藏true or false|
+|liked|bool|是否点赞true or false|
 
 ## 圈子帖子创建
 
@@ -188,7 +206,6 @@ POST /groups/:group/posts
 | images | array |  文件id,例如[1,2,3]|
 | sync_feed | int | 同步至动态，同步需要传sync_feed = 1 |
 | feed_from | int | 设备标示 同步动态需要传 1:pc 2:h5 3:ios 4:android 5:其他|
-
 ### 响应
 
 ```
