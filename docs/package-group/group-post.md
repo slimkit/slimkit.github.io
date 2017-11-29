@@ -96,6 +96,7 @@ status 200
 | views_count | int | 查看数量统计 |
 |collected|bool|是否收藏true or false|
 |liked|bool|是否点赞true or false|
+|images|array|附件|
 
 ## 圈子帖子详情
 
