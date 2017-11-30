@@ -28,12 +28,12 @@
                 {
                     "name": "评论",
                     "path": "reward",
-                    "markdown": "/answer-reward.md"
+                    "markdown": "/post-reward.md"
                 },
                 {
                     "name": "点赞",
-                    "path": "onlookers",
-                    "markdown": "/answer-onlookers.md"
+                    "path": "like",
+                    "markdown": "/post-like.md"
                 }
             ]
         }
