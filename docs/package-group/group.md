@@ -4,8 +4,9 @@
 - [全部圈子列表](#全部圈子列表)
 - [推荐圈子列表](#推荐圈子列表)
 - [我的圈子列表](#我的圈子列表)
+- [圈子详情](#圈子详情)
 
-### 响应内容
+### 列表响应内容
 
 ```json
 [
@@ -29,6 +30,8 @@
         "audit": 1,
         "created_at": "2017-11-28 09:45:17",
         "updated_at": "2017-11-28 09:45:17",
+        "join_income_count": 0,
+        "pinned_income_count": 0,
         "joined": {
             "id": 11,
             "group_id": 3,
@@ -44,7 +47,7 @@
 ]
 ```
 
-### 返回参数说明
+### 返回参数
 | 名称 | 类型 | 说明 |
 |:----:|:-----|:-----|
 |id|integer| 圈子唯一id|
@@ -57,7 +60,7 @@
 |geo_hash|string|geoHash|
 |allow_feed|integer|是否允许同步动态，0 不允许 1允许|
 |mode|string|圈子类型:public: 公开，private：私有，paid：付费的|
-|permissions|发帖权限:member,administrator,founder 所有，administrator,founder 管理员和圈主，administrator圈主|
+|permissions|string|发帖权限:member,administrator,founder 所有，administrator,founder 管理员和圈主，administrator圈主|
 |money|string|如果 mode 为 paid 用于标示收费金额|
 |summary|string|简介|
 |notice|string|公告|
@@ -66,10 +69,12 @@
 |audit|integer|审核状态:0 未审核 1 通过 2 拒绝 |
 |created_at|string|创建时间|
 |update_at|string|更新时间|
+|join_income_count|integer|加圈收益统计|
+|pinned_income_count|integer|置顶收益统计|
 |joined|object|是否加入：null未加入|
 |avatar|地址|头像地址|
 
-## 圈子帖子列表
+## 分类下圈子列表
 
 ```
 GET /categories/:category/groups
@@ -146,6 +151,23 @@ status 200
 |limit|integer| 默认 20 ，数据返回条数 默认为20|
 |offset|integer|默认 0 ，数据偏移量，传递之前通过接口获取的总数。|
 |type|string|默认: join, join 我加入 audit 待审核|
+
+## 圈子详情
+
+```
+GET /groups/:group
+```
+
+### 响应
+```
+status 200
+```
+
+
+
+
+
+
 
 
 
