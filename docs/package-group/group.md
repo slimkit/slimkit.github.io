@@ -90,7 +90,7 @@ status 200
 
 | 名称 | 类型 | 说明 |
 |:----:|:-----|:-----|
-|limit|integer| 默认 20 ，数据返回条数 默认为20|
+|limit|integer| 默认 15 ，数据返回条数 默认为15|
 |offset|integer|默认 0 ，数据偏移量，传递之前通过接口获取的总数。|
 
 ## 全部圈子列表
@@ -109,7 +109,7 @@ status 200
 
 | 名称 | 类型 | 说明 |
 |:----:|:-----|:-----|
-|limit|integer| 默认 20 ，数据返回条数 默认为20|
+|limit|integer| 默认 15 ，数据返回条数 默认为15|
 |offset|integer|默认 0 ，数据偏移量，传递之前通过接口获取的总数。|
 |keyword|string|用于搜索圈子，按圈名搜索|
 |category_id|integer|圈子分类id|
