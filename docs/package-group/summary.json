@@ -14,12 +14,23 @@
         {
             "name": "圈子",
             "path": "group",
-            "markdown": "/group.md"
-        },
-        {
-            "name": "圈子",
-            "path": "group",
-            "markdown": "/group.md"
+            "items": [
+                {
+                    "name": "圈子",
+                    "path": "",
+                    "markdown": "/group.md"
+                },
+                {
+                    "name": "管理",
+                    "path": "manage",
+                    "markdown": "/group-manage.md"
+                },
+                {
+                    "name": "举报",
+                    "path": "report",
+                    "markdown": "/group-report.md"
+                }
+            ]
         },
         {
             "name": "帖子",
