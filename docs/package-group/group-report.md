@@ -139,7 +139,7 @@ status 201
 |:----:|:-----|:-----|
 |content | string| 必须 举报内容|
 
-## 举报审核通过
+## 举报通过
 
 ```
 PATCH /reports/:report/accept
@@ -151,7 +151,7 @@ PATCH /reports/:report/accept
 status 204
 ```
 
-## 举报审核拒绝
+## 举报拒绝
 
 ```
 PATCH /reports/:report/reject
