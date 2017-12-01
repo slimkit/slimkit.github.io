@@ -25,7 +25,7 @@ status 200
 
 ```json
 {
-    "pinneds": [],// 同comments结构一样
+    "pinneds": [],// 置顶评论列表，同comments结构一样
     "comments": [ // 帖子评论
         {
             "id": 65, // 评论唯一id
