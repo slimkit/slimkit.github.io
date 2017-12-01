@@ -19,6 +19,8 @@ GET /reports
 status 200
 ```
 
+### 参数
+
 | 名称 | 类型 | 说明 |
 |:----:|:-----|:-----|
 |group_id | integer| 必须 圈子id|
