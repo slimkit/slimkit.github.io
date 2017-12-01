@@ -148,7 +148,7 @@ PATCH /reports/:report/accept
 ### 响应
 
 ```
-status 204
+status 201
 ```
 
 ## 举报拒绝
@@ -160,7 +160,7 @@ PATCH /reports/:report/reject
 ### 响应
 
 ```
-status 204
+status 201
 ```
 
 
