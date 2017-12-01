@@ -17,6 +17,11 @@
             "markdown": "/group.md"
         },
         {
+            "name": "圈子",
+            "path": "group",
+            "markdown": "/group.md"
+        },
+        {
             "name": "帖子",
             "path": "post",
             "items": [
@@ -28,10 +33,15 @@
                 {
                     "name": "评论",
                     "path": "reward",
-                    "markdown": "/post-reward.md"
+                    "markdown": "/post-comment.md"
                 },
                 {
                     "name": "点赞",
+                    "path": "like",
+                    "markdown": "/post-like.md"
+                },
+                {
+                    "name": "收藏",
                     "path": "like",
                     "markdown": "/post-like.md"
                 }
