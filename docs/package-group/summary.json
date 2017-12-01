@@ -42,8 +42,8 @@
                 },
                 {
                     "name": "收藏",
-                    "path": "like",
-                    "markdown": "/post-like.md"
+                    "path": "collection",
+                    "markdown": "/post-collection.md"
                 }
             ]
         }
