@@ -22,7 +22,7 @@ status 200
 | 名称 | 类型 | 说明 |
 |:----:|:-----|:-----|
 |type | string| 默认:latest_post, latest_post 最新帖子,latest_reply最新回复|
-|limit|integer| 默认 20 ，数据返回条数 默认为20|
+|limit|integer| 默认 15 ，数据返回条数 默认为15|
 |offset|integer|默认 0 ，数据偏移量，传递之前通过接口获取的总数。|
 
 ```json
