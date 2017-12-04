@@ -42,7 +42,7 @@ status 200
         "handler": 2,// 审核处理人 id
         "created_at": "2017-11-30 10:21:52",
         "updated_at": "2017-12-01 06:11:24",
-        "resource": null,
+        "resource": null,// 被举报的资源信息
         "user": {// 举报人信息
             "id": 1,
             "name": "admin",
