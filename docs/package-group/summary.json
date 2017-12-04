@@ -65,6 +65,11 @@
                     "name": "打赏",
                     "path": "reward",
                     "markdown": "/post-reward.md"
+                },
+                {
+                    "name": "置顶",
+                    "path": "pinned",
+                    "markdown": "/post-pinned.md"
                 }
             ]
         }
