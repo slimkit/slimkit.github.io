@@ -7,7 +7,7 @@
 - [圈子详情](#圈子详情)
 - [圈子总数](#圈子总数)
 - [加入圈子](#加入圈子)
-
+- [设置圈子权限](#设置圈子权限)
 ### 列表响应内容
 
 ```json
@@ -194,6 +194,26 @@ PUT /groups/:group
 ```
 status 201
 ```
+
+## 设置圈子权限
+
+```json
+PATCH /groups/:group/permissions
+```
+
+### 参数说明
+
+| 名称 | 类型 | 说明 |
+|:----:|:-----|:-----|
+|permissions|array| ['member', 'administrator','founder'] 所有，['administrator', 'founder'] 管理员和圈主，[ 'administrator'] 圈主|
+
+### 响应
+
+```
+status 201
+```
+
+
 
 
 
