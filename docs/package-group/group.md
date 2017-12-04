@@ -10,6 +10,7 @@
 - [设置圈子权限](#设置圈子权限)
 - [退出圈子](#退出圈子)
 - [附近圈子](#附近圈子)
+- [创建圈子](#创建圈子)
 
 ### 响应内容
 
@@ -250,7 +251,33 @@ status 200
 |longitude|strig|必须 经度|
 |latitude|strig|必须 纬度|
 
+## 创建圈子
 
+```
+POST /categories/:category/groups
+```
+
+### 参数
+
+| 名称 | 类型 | 说明 |
+|:----:|:-----|:-----|
+|avatar|file| 必须 圈子头像|
+|name|string|必须 圈子名称|
+|summary|string|圈子简介|
+|notice|string|圈子公告|
+|tags|array| 必须 圈子标签 格式:[{id:1},{id:3}...]|
+|mode|strubf|必须 圈子类别 public: 公开，private：私有，paid：付费的|
+|money|int|如果 mode 为 paid 必须存在|
+|allow_feed|int|是否允许同步动态 同步需要传 1|
+|location|string|地区，当经度，纬度， GeoHash 任意一个存在，则本字段必须存在|
+|latitude|strig|纬度，当经度，地区，GeoHash 任意一个存在，则本字段必须存在|
+|longitude|strig|经度，当纬度，地区 GeoHash 任意一个存在，则本字段必须存在|
+|geo_hash|string|geoHash，当纬度、经度 任意一个存在，则本字段必须存在|
+
+### 响应
+```
+status 201
+```
 
 
 
