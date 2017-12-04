@@ -29,7 +29,12 @@
                     "name": "举报",
                     "path": "report",
                     "markdown": "/group-report.md"
-                }
+                },
+                {
+                    "name": "成员",
+                    "path": "member",
+                    "markdown": "/group-member.md"
+                },
             ]
         },
         {
