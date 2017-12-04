@@ -23,6 +23,7 @@ GET /groups/:group/incomes
 |after|integer|默认 0 ，翻页标识。|
 |start|integer|秒级时间戳，起始筛选时间 |
 |end|integer|秒级时间戳，结束筛选时间|
+|type|string|默认 all, all-全部 join-成员加入 pinned-帖子置顶|
 
 ### 响应
 
