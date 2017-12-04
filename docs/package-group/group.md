@@ -198,7 +198,7 @@ status 201
 
 ## 设置圈子权限
 
-```json
+```
 PATCH /groups/:group/permissions
 ```
 
@@ -214,6 +214,18 @@ PATCH /groups/:group/permissions
 status 201
 ```
 
+
+## 退出圈子
+
+```
+DELETE /groups/:group/exit
+```
+
+### 响应
+
+```
+status 204 no content
+```
 
 
 
