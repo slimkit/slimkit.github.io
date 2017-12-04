@@ -266,8 +266,8 @@ POST /categories/:category/groups
 |summary|string|圈子简介|
 |notice|string|圈子公告|
 |tags|array| 必须 圈子标签 格式:[{id:1},{id:3}...]|
-|mode|strubf|必须 圈子类别 public: 公开，private：私有，paid：付费的|
-|money|int|如果 mode 为 paid 必须存在 入圈金额|
+|mode|string|必须 圈子类别 public: 公开，private：私有，paid：付费的|
+|money|int|收费圈子进圈金额，如果 mode 为 paid 必须存在|
 |allow_feed|int|是否允许同步动态 同步需要传 1|
 |location|string|地区，当经度 纬度， GeoHash 任意一个存在，则本字段必须存在|
 |latitude|strig|纬度，当经度 地区，GeoHash 任意一个存在，则本字段必须存在|
