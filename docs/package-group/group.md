@@ -245,7 +245,7 @@ status 200
 
 | 名称 | 类型 | 说明 |
 |:----:|:-----|:-----|
-|limit|integer| 默认 15 ，数据返回条数 默认为15|
+|limit|integer| 默认 15 ，数据返回条数|
 |offset|integer|默认 0 ，数据偏移量，传递之前通过接口获取的总数。|
 |longitude|strig|必须 经度|
 |latitude|strig|必须 纬度|
