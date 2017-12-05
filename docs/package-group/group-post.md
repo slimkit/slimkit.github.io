@@ -125,6 +125,8 @@ status 200
     "updated_at": "2017-11-28 07:16:46",
     "liked": false,
     "collected": false,
+    "reward_amount": 0,
+    "reward_number": 0,
     "group": {
         "id": 1,
         "name": "哈哈哈",
@@ -188,6 +190,8 @@ status 200
 | likes_count | int | 喜欢数量统计 |
 | comments_count | int | 评论数量统计 |
 | views_count | int | 查看数量统计 |
+| reward_amount | int | 打赏金额统计 |
+| reward_number | int | 打赏人数统计 |
 |collected|bool|是否收藏true or false|
 |liked|bool|是否点赞true or false|
 
