@@ -113,37 +113,13 @@ php composer.phar install
 ```
 
 
-
-需要软件：
-
-- git
-- [Composer](https://getcomposer.org/)
-
-> 之后操作我们拟定目录为 `/var/www`
-
-### 下载 ThinkSNS+
-
-```shell
-git clone https://github.com/slimkit/thinksns-plus
-```
-
-克隆完成后我们进入 `thinksns-plus` 目录：
-
-```shell
-cd thinksns-plus
-```
-
-我们看在已经下载了 ThinkSNS+ 源码，但是这不足以运行，因为 ThinkSNS+ 还依赖了其他的软件包，我们来安装依赖：
-
-```shell
-composer install
-```
-Or
-```shell
-php composer.phar install
-```
-
 ### 基础命令执行
+
+创建默认配置：
+
+```shell
+cp .env.example .env
+```
 
 生成应用密钥
 
