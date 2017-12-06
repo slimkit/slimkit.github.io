@@ -40,12 +40,12 @@
         "join_income_count": 0,
         "pinned_income_count": 0,
         "joined": {
-            "id": 11,
-            "group_id": 3,
-            "user_id": 1,
-            "audit": 2,
-            "role": "member",
-            "disabled": 0,
+            "id": 11,// 成员唯一id
+            "group_id": 3,// 所属圈子id
+            "user_id": 1,// 用户Id
+            "audit": 2,// 0 待审核 1已审核 2驳回
+            "role": "member",// 角色 member-普通成员 administrator - 管理者 founder - 创建者 
+            "disabled": 0,// 是否被拉黑禁用 1-禁用 0-正常
             "created_at": "2017-12-01 03:42:44",
             "updated_at": "2017-12-01 04:01:34"
         },
