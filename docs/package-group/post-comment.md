@@ -37,7 +37,7 @@ status 200
             "commentable_type": "group-posts",// 资源类型
             "created_at": "2017-11-30 03:04:03",
             "updated_at": "2017-11-30 03:04:03",
-            "user": {
+            "user": {// 回复用户信息
                 "id": 1,
                 "name": "admin",
                 "bio": null,
@@ -65,7 +65,37 @@ status 200
                     "checkin_count": 7,
                     "last_checkin_count": 1
                 }
-            }
+            },
+            "reply": {//被回复用户信息
+                "id": 1,
+                "name": "admin",
+                "bio": null,
+                "sex": 2,
+                "location": "四川省 巴中市 南江县",
+                "created_at": "2017-10-23 01:17:34",
+                "updated_at": "2017-11-15 07:36:17",
+                "avatar": "http://thinksns-plus.dev/api/v2/users/1/avatar",
+                "bg": null,
+                "verified": {
+                    "type": "user",
+                    "icon": "http://thinksns-plus.dev/storage/certifications/000/000/0us/er.png",
+                    "description": "1111"
+                },
+                "extra": {
+                    "user_id": 1,
+                    "likes_count": 5,
+                    "comments_count": 13,
+                    "followers_count": 0,
+                    "followings_count": 6,
+                    "updated_at": "2017-11-30 03:04:06",
+                    "feeds_count": 33,
+                    "questions_count": 2,
+                    "answers_count": 0,
+                    "checkin_count": 7,
+                    "last_checkin_count": 1
+                }
+            },
+
         },
     ]
 }
