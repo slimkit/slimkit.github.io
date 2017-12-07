@@ -116,6 +116,11 @@
             "name": "广告位",
             "path": "ad",
             "markdown": "/ad.md"
+        },
+        {
+            "name": "举报",
+            "path": "report",
+            "markdown": "/report.md"
         }
     ]
 }
