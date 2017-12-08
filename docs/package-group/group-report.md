@@ -164,7 +164,7 @@ PATCH /reports/:report/reject
 status 201
 ```
 
-## 举报一条圈子
+## 举报圈子
 
 ```
 POST /groups/:group/reports
