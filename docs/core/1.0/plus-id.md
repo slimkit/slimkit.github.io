@@ -27,6 +27,12 @@ Plus ID 是 ThinkSNS Plus 程序提供的第三方程序接入用户方案，使
 
 > 检查请求地址示例：`http://plus.io/plus-id/clients/1?time=1513068838&sign=00c8aa45b2e85c8238eee0cff658f411&action=auth%2Fresolve`
 
+数据方式：
+
+在 URL 中增加 `redirect=地址` 并且给出一个地址，则表示使用 302 条转进行反馈。
+
+在 url 中增加 `jsonp=函数` 则使用 `jsonp` 方式输出，默认输出 json。
+
 <a name="serve-install"></a>
 ## Serve 安装 {#server-install}
 
