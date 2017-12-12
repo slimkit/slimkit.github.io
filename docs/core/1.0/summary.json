@@ -82,5 +82,10 @@
                 "markdown": "/cdn/programme.md"
             }
         ]
+    },
+    {
+        "name": "Plus ID",
+        "path": "plus-id",
+        "markdown": "/plus-id.md"
     }
 ]
