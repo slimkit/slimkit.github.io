@@ -44,7 +44,7 @@ status 200
         "handler": 2,// 审核处理人 id
         "created_at": "2017-11-30 10:21:52",
         "updated_at": "2017-12-01 06:11:24",
-        "resource": {// 被举报的资源 如果type为comment commentable_id 为帖子id
+        "resource": {// 当资源被删除时为null，不为null 如果type是comment commentable_id 为帖子id，type是post 帖子信息
             "id": 67,
             "user_id": 1,
             "target_user": 1,
