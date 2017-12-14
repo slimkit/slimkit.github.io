@@ -36,15 +36,25 @@ status 200
         "user_id": 1,// 举报人id
         "target_id": 1,// 被举报人 id
         "group_id": 1,// 圈子id
-        "resource_id": 119,// type： post-帖子id comment-评论id
+        "resource_id": 67,// type： post-帖子id comment-评论id
         "content": "哈哈",// 举报内容
-        "type": "post",// 举报类型 post 帖子举报 comment 评论举报
+        "type": "comment",// 举报类型 post 帖子举报 comment 评论举报
         "status": 1, // 举报状态 0 待审核 1 已审核 2 已驳回
         "cause": null,// 驳回原因
         "handler": 2,// 审核处理人 id
         "created_at": "2017-11-30 10:21:52",
         "updated_at": "2017-12-01 06:11:24",
-        "resource": null,// 被举报的资源信息
+        "resource": {// 被举报的资源 如果type为comment commentable_id 为帖子id
+            "id": 67,
+            "user_id": 1,
+            "target_user": 1,
+            "reply_user": 1,
+            "body": "123123",
+            "commentable_id": 121,
+            "commentable_type": "group-posts",
+            "created_at": "2017-12-05 07:03:01",
+            "updated_at": "2017-12-05 07:03:01"
+        },// 被举报的资源信息
         "user": {// 举报人信息
             "id": 1,
             "name": "admin",
