@@ -25,8 +25,9 @@ status 200
 | 名称 | 类型 | 说明 |
 |:----:|:-----|:-----|
 |group_id | integer| 必须 圈子id|
-|limit|integer| 默认 15 ，数据返回条数 默认为15|
-|offset|integer|默认 0 ，数据偏移量，传递之前通过接口获取的总数。|
+|status | integer| 状态 默认全部，0-未处理 1-已处理 2-已驳回|
+|limit|integer| 默认 15 ，数据返回条数|
+|after|integer|默认 0 ，翻页标示|
 
 ```json
 [
