@@ -24,6 +24,8 @@ status 200
 
 | 名称 | 类型 | 说明 |
 |:----:|:-----|:-----|
+|start|integer|秒级时间戳，起始筛选时间 |
+|end|integer|秒级时间戳，结束筛选时间|
 |group_id | integer| 必须 圈子id|
 |status | integer| 状态 默认全部，0-未处理 1-已处理 2-已驳回|
 |limit|integer| 默认 15 ，数据返回条数|
