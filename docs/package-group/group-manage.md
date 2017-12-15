@@ -31,6 +31,61 @@ GET /groups/:group/incomes
 status 200
 ```
 
+```json
+[
+    {
+        "id": 1,
+        "group_id": 1,
+        "subject": "root加入圈子费用",
+        "type": 1,
+        "amount": 200,
+        "user_id": 1,
+        "created_at": "2017-12-04 01:26:10",
+        "updated_at": "2017-12-04 01:26:10",
+        "user": {
+            "id": 1,
+            "name": "root",
+            "bio": null,
+            "sex": 0,
+            "location": null,
+            "created_at": "2017-11-09 08:17:26",
+            "updated_at": "2017-11-09 08:17:26",
+            "avatar": "http://127.0.0.1/duibi/thinksns-plus/public/api/v2/users/1/avatar",
+            "bg": null,
+            "verified": null,
+            "extra": {
+                "user_id": 1,
+                "likes_count": 4,
+                "comments_count": 4,
+                "followers_count": 0,
+                "followings_count": 0,
+                "updated_at": "2017-11-29 06:50:57",
+                "feeds_count": 9,
+                "questions_count": 0,
+                "answers_count": 0,
+                "checkin_count": 0,
+                "last_checkin_count": 0,
+                "live_zans_count": 0,
+                "live_zans_remain": 0,
+                "live_time": 0
+            }
+        }
+    }
+]
+```
+
+#### 返回参数
+
+| 名称 | 类型  | 说明 |
+|:----:|:------|:-----|
+| id   | int   | 收入记录id |
+| group_id | int | 所属圈子id |
+| subject | string | 收入说明 |
+| type | int | 1-加入圈子收入 2-帖子置顶收入 |
+| amount | int | 收入金额，分单位 |
+| user_id | int | 来源用户id |
+| user | array | 来源用户信息 |
+
 ## 移除圈子成员
 
 ```
