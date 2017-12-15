@@ -170,6 +170,139 @@ GET /groups/:group
 status 200
 ```
 
+```json
+{
+    "id": 1,
+    "name": "垃圾",
+    "user_id": 1,
+    "category_id": 1,
+    "location": "啦啦啦",
+    "longitude": "1.1",
+    "latitude": "1.1",
+    "geo_hash": "1212",
+    "allow_feed": 0,
+    "mode": "paid",
+    "money": 200,
+    "summary": "简介",
+    "notice": "公告",
+    "permissions": "member,administrator,founder",
+    "users_count": 1,
+    "posts_count": 0,
+    "audit": 1,
+    "created_at": "2017-11-27 10:26:47",
+    "updated_at": "2017-12-04 01:26:10",
+    "deleted_at": null,
+    "join_income_count": "200",
+    "pinned_income_count": 0,
+    "joined": {
+        "id": 2,
+        "group_id": 1,
+        "user_id": 1,
+        "audit": 1,
+        "role": "founder",
+        "disabled": 0,
+        "created_at": "2017-11-27 17:28:06",
+        "updated_at": "2017-11-27 17:28:06"
+    },
+    "avatar": null,
+    "user": {
+        "id": 1,
+        "name": "root",
+        "bio": null,
+        "sex": 0,
+        "location": null,
+        "created_at": "2017-11-09 08:17:26",
+        "updated_at": "2017-11-09 08:17:26",
+        "avatar": "http://127.0.0.1/duibi/thinksns-plus/public/api/v2/users/1/avatar",
+        "bg": null,
+        "verified": null,
+        "extra": {
+            "user_id": 1,
+            "likes_count": 4,
+            "comments_count": 4,
+            "followers_count": 0,
+            "followings_count": 0,
+            "updated_at": "2017-11-29 06:50:57",
+            "feeds_count": 9,
+            "questions_count": 0,
+            "answers_count": 0,
+            "checkin_count": 0,
+            "last_checkin_count": 0,
+            "live_zans_count": 0,
+            "live_zans_remain": 0,
+            "live_time": 0
+        }
+    },
+    "tags": [
+        {
+            "id": 50,
+            "name": "动漫",
+            "tag_category_id": 5,
+            "weight": 15
+        }
+    ],
+    "category": {
+        "id": 1,
+        "name": "123123",
+        "sort_by": 1000,
+        "status": 0,
+        "created_at": "2017-11-27 10:06:38",
+        "updated_at": "2017-11-27 10:06:40"
+    },
+    "founder": {
+        "id": 2,
+        "group_id": 1,
+        "user_id": 1,
+        "audit": 1,
+        "role": "founder",
+        "disabled": 0,
+        "created_at": "2017-11-27 17:28:06",
+        "updated_at": "2017-11-27 17:28:06",
+        "user": {
+            "id": 1,
+            "name": "root",
+            "bio": null,
+            "sex": 0,
+            "location": null,
+            "created_at": "2017-11-09 08:17:26",
+            "updated_at": "2017-11-09 08:17:26",
+            "avatar": "http://127.0.0.1/duibi/thinksns-plus/public/api/v2/users/1/avatar",
+            "bg": null,
+            "verified": null,
+            "extra": {
+                "user_id": 1,
+                "likes_count": 4,
+                "comments_count": 4,
+                "followers_count": 0,
+                "followings_count": 0,
+                "updated_at": "2017-11-29 06:50:57",
+                "feeds_count": 9,
+                "questions_count": 0,
+                "answers_count": 0,
+                "checkin_count": 0,
+                "last_checkin_count": 0,
+                "live_zans_count": 0,
+                "live_zans_remain": 0,
+                "live_time": 0
+            }
+        }
+    }
+}
+```
+
+### 返回参数
+
+| 名称 | 类型 | 说明 |
+|:----:|:-----|:-----|
+| pinned_income_count | int | 圈子内置顶总收入，分单位，当前用户为圈主时存在该字段 |
+| join_income_count | int | 圈子加人总收入，分单位，当前用户为圈主时存在该字段 |
+| tags | array | 圈子标签列表 |
+| category | array | 圈子所属分类信息 |
+| user | array | 圈子创建者用户信息 |
+| founder | array | 圈主信息 |
+| founder.user | array | 圈主用户信息 |
+
+
 ## 圈子总数
 
 ```
