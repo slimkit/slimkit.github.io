@@ -125,6 +125,7 @@ cp .env.example .env
 
 ```shell
 php artisan key:generate
+php artisan jwt:secret
 ```
 
 发布拓展包资源
