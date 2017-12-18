@@ -416,7 +416,7 @@ status 201
 ## 修改圈子
 
 ```
-PATCH /groups/:group
+POST /groups/:group
 ```
 
 ### 参数
