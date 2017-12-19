@@ -403,6 +403,7 @@ POST /categories/:category/groups
 |mode|string|必须 圈子类别 public: 公开，private：私有，paid：付费的|
 |money|int|收费圈子进圈金额，如果 mode 为 paid 必须存在|
 |allow_feed|int|是否允许同步动态 同步需要传 1|
+|permissions|string|发帖权限:member,administrator,founder 所有，administrator,founder 管理员和圈主，administrator圈主|
 |location|string|地区，当经度 纬度， GeoHash 任意一个存在，则本字段必须存在|
 |latitude|string|纬度，当经度 地区，GeoHash 任意一个存在，则本字段必须存在|
 |longitude|string|经度，当纬度 地区 GeoHash 任意一个存在，则本字段必须存在|
