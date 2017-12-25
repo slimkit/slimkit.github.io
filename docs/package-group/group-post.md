@@ -209,7 +209,7 @@ POST /groups/:group/posts
 |:----:|:-----|:-----|
 | title | int | 必须 帖子标题 |
 | body | int | 必须 帖子内容 |
-| summary | string | 列表专用字段，概述，简短内容 |
+| summary | string | 必须 列表专用字段，概述，简短内容 如果纯图片: [图片][图片]... |
 | images | array |  文件id,例如[1,2,3]|
 | sync_feed | int | 同步至动态，同步需要传sync_feed = 1 |
 | feed_from | int | 设备标示 同步动态需要传 1:pc 2:h5 3:ios 4:android 5:其他|
@@ -246,7 +246,7 @@ PUT /groups/:group/posts/:post
 |:----:|:-----|:-----|
 | title | int | 必须 帖子标题 |
 | body | int | 必须 帖子内容 |
-| summary | string | 列表专用字段，概述，简短内容 |
+| summary | string | 必须 列表专用字段，概述，简短内容 如果纯图片: [图片][图片]...  |
 | images | array |  文件id,例如[1,2,3]|
 | sync_feed | int | 同步至动态，同步需要传sync_feed = 1 |
 | feed_from | int | 设备标示 同步动态需要传 1:pc 2:h5 3:ios 4:android 5:其他|
