@@ -1,7 +1,7 @@
 # 圈子成员
 
 - [某个圈子成员列表](#某个圈子成员列表)
-- [圈子待审核成员列表](#圈子待审核成员列表)
+- [圈子审核成员记录列表](#圈子审核成员记录列表)
 
 ## 某个圈子成员列表
 
@@ -20,7 +20,7 @@ status 200
 |:----:|:-----|:-----|
 |limit|integer| 默认 15 ，数据返回条数 默认为15|
 |after|inegter|默认 0，翻页标示|
-|type|string|默认 all, all-所有, manager-管理员, member-成员, blacklist-黑名单|
+|type|string|默认 all, all-所有, manager-管理员, member-成员, blacklist-黑名单, audit - 带审核|
 
 ```json
 {
@@ -66,7 +66,7 @@ status 200
 }
 ```
 
-## 圈子待审核成员列表
+## 圈子审核成员记录列表
 
 ```
 GET /user-group-audit-members
