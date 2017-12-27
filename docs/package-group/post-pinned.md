@@ -311,7 +311,7 @@ status 201
 ## 圈主和管理员置顶帖子
 
 ```
-PATCH /pinned/posts/:post/create
+POST /pinned/posts/:post/create
 ```
 
 ### 参数说明
