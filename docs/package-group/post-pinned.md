@@ -268,7 +268,7 @@ status 200
 ## 帖子评论申请置顶
 
 ```
-POST /pinned/comments
+POST /pinned/comments/:comment
 ```
 
 ### 参数说明
