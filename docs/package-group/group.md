@@ -68,7 +68,7 @@
 |geo_hash|string|geoHash|
 |allow_feed|integer|是否允许同步动态，0 不允许 1允许|
 |mode|string|圈子类型:public: 公开，private：私有，paid：付费的|
-|permissions|string|发帖权限:member,administrator,founder 所有，administrator,founder 管理员和圈主，administrator圈主|
+|permissions|string|发帖权限:member,administrator,founder 所有，administrator,founder 管理员和圈主，founder圈主|
 |money|string|如果 mode 为 paid 用于标示收费金额|
 |summary|string|简介|
 |notice|string|公告|
