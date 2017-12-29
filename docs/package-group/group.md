@@ -344,7 +344,7 @@ PATCH /groups/:group/permissions
 
 | 名称 | 类型 | 说明 |
 |:----:|:-----|:-----|
-|permissions|array| ['member', 'administrator','founder'] 所有，['administrator', 'founder'] 管理员和圈主，[ 'administrator'] 圈主|
+|permissions|array| ['member', 'administrator','founder'] 所有，['administrator', 'founder'] 管理员和圈主，[ 'founder'] 圈主|
 
 ### 响应
 
