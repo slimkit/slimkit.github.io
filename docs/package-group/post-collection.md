@@ -32,7 +32,7 @@ status 204
 ## 用户帖子收藏列表
 
 ```
-DELETE /user-post-collections
+GET /user-post-collections
 ```
 
 ### 参数说明
