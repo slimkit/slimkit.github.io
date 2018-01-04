@@ -178,6 +178,7 @@ $action = [
     'app' => i,
     'action' => 'user/check',
     'time' => 1513068658,
+    'tc' => 47563, // 计算公式 floor(time() / 300)
 ];
 ksort($action);
 $action = json_encode($action);
