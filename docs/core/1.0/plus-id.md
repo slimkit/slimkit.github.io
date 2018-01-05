@@ -4,7 +4,6 @@ Plus ID 是 ThinkSNS Plus 程序提供的第三方程序接入用户方案，使
 
 > 请求地址 `/plus-id/clients/{client id}`
 
-- [Serve 安装](#serve-install)
 - [接口](#api)
 - [签字算法](#sign)
 - [SDK](#sdk)
@@ -32,21 +31,6 @@ Plus ID 是 ThinkSNS Plus 程序提供的第三方程序接入用户方案，使
 在 URL 中增加 `redirect=地址` 并且给出一个地址，则表示使用 302 条转进行反馈。
 
 在 url 中增加 `jsonp=函数` 则使用 `jsonp` 方式输出，默认输出 json。
-
-<a name="serve-install"></a>
-## Serve 安装 {#server-install}
-
-首选在 Plus 中运行 `composer require slimkit/plus-id` 
-
-然后执行：
-
-```shell
-php artisan package:handle plus-id publish
-php artisan package:handle plus-id migrate
-php artisan package:handle plus-id db-seed
-```
-
-至此，你进入后台在左侧可以看到 Plus ID 导航栏了。
 
 <a name="api"></a>
 ## 接口 {#api}
