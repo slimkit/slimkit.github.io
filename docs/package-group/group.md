@@ -295,6 +295,7 @@ status 200
 
 | 名称 | 类型 | 说明 |
 |:----:|:-----|:-----|
+| blacklist_count | int | 黑名单人数 |
 | pinned_income_count | int | 圈子内置顶总收入，分单位，当前用户为圈主时存在该字段 |
 | join_income_count | int | 圈子加人总收入，分单位，当前用户为圈主时存在该字段 |
 | tags | array | 圈子标签列表 |
