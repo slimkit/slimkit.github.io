@@ -121,6 +121,11 @@
             "name": "举报",
             "path": "report",
             "markdown": "/report.md"
+        },
+        {
+            "name": "新版钱包",
+            "path": "new-wallet",
+            "markdown": "/new-wallet.md"
         }
     ]
 }
