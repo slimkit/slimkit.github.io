@@ -37,7 +37,7 @@ Status: 20o OK
 | token_type | Token 类型 |
 | expires_in | 过期时间，单位秒 |
 
-<a name="login"></a>
+<a name="logout"></a>
 ## 用户退出 {#logout}
 
 ```
@@ -57,7 +57,7 @@ Status: 200 OK
 }
 ```
 
-<a name="login"></a>
+<a name="refresh"></a>
 ## 刷新 Token {#refresh}
 
 ```
