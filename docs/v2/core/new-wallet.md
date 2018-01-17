@@ -92,7 +92,7 @@ Status 200
 | target_id | string | 账户 |
 | title | string | 标题 |
 | body | string | 内容 |
-| type | int | 1 - 收入 -1 - 支出 |
+| type | int | `1` - 收入 `-1` - 支出 |
 | amount | int | 金额，分单位 |
 | state | int | 订单状态，0: 等待，1：成功，-1: 失败 |
 
