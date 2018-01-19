@@ -126,6 +126,11 @@
             "name": "新版钱包",
             "path": "new-wallet",
             "markdown": "/new-wallet.md"
+        },
+        {
+            "name": "积分",
+            "path": "currency",
+            "markdown": "/currency.md"
         }
     ]
 }
