@@ -588,6 +588,7 @@ GET /api/v2/user/questions
 |:----:|:----:|------|
 | limit | int | 数据条数 |
 | after | int | 翻页标识 |
+| user_id | int | 用户id 不传默认为当前用户 |
 | type  | string | 数据筛选类型 `all`-全部 `invitation`-邀请 `reward`-悬赏 `other`-其他 默认全部|
 
 ### 响应

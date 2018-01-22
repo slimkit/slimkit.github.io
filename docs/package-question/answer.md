@@ -326,6 +326,7 @@ GET /user/question-answer
 |:----:|:----:|------|
 | limit | int | 数据返回条数 |
 | after | int | 翻页标识 |
+| user_id | int | 用户id 不传默认为当前用户 |
 | type | string | 数据筛选类型 `all` - 全部，`adoption` - 被采纳的，`invitation` - 被邀请的，`other` - 其他， 默认为全部 |
 
 #### 响应
