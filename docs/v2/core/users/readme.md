@@ -139,6 +139,21 @@ Status: 200 OK
         "created_at": "2017-06-02 08:43:54",
         "updated_at": "2017-07-05 08:29:49",
         "deleted_at": null
+    },    
+    "new_wallet": {
+        "owner_id": 1,
+        "balance": 1000,
+        "total_income": 100,
+        "total_expenses": 100,
+        "created_at": "2018-01-22 10:05:44",
+        "updated_at": "2018-01-22 10:05:45"
+    },
+    "currency": {
+        "owner_id": 1,
+        "type": 1,
+        "sum": 9400,
+        "created_at": "2018-01-17 06:57:18",
+        "updated_at": "2018-01-18 06:57:24"
     }
 }
 ```
@@ -149,6 +164,11 @@ Status: 200 OK
 | email | 用户电子邮箱地址 |
 | wallet.balance | 用户钱包余额。 |
 | wallet.updated_at | 用户上次产生交易时间。 |
+| new_wallet.total_income | 总收入 |
+| new_wallet.total_expenses | 总支出 |
+| currency.sum | 积分 |
+
+> new_wallet 和currency 字段可能为null，为null时可认为余额为0，用户调用相关操作时会重新生成
 
 > 只有认证用户才获取得到钱包信息和手机邮箱等敏感信息。
 
