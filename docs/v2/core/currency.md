@@ -25,7 +25,8 @@ Http Status 200
     "recharge-options": "100, 500, 1000, 2000, 5000, 10000",
     "recharge-max": 10000000,
     "recharge-min": 100,
-    "rule": "123123"
+    "rule": "123123",
+    "cash-rule": "123123"
 }
 ```
 
@@ -36,7 +37,7 @@ Http Status 200
 | recharge-max | int | 单笔最高充值额度 |
 | recharge-min | int | 单笔最小充值额度 |
 | rule | string | 积分规则 |
-
+| cash-rule | string | 积分提现规则 \
 
 ## 积分流水
 
@@ -51,6 +52,7 @@ GET /currency/orders
 | limit | int | 数据返回条数 |
 | after | int | 翻页数据id |
 | action | string | 筛选类型 `recharge` - 充值记录 `cash` - 提现记录  默认为全部|
+| type | int | 收入类型 `1` - 收入， `-1` - 支出 默认为全部 |
 
 ### 响应
 
