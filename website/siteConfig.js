@@ -24,20 +24,15 @@ const siteConfig = {
   noIndex: false,
   headerLinks: [
     {
+      search: true
+    },
+    {
       doc: 'server-getting-started-installation',
-      label: '服务端'
+      label: '文档'
     },
     {
       doc: 'api-v2-overview',
       label: 'REST API v2'
-    },
-    {
-      doc: 'android-started',
-      label: '安卓'
-    },
-    {
-      doc: 'ios-started',
-      label: 'iOS'
     },
     {
       href: 'https://github.com/slimkit',
@@ -72,6 +67,10 @@ const siteConfig = {
   scripts: ['https://buttons.github.io/buttons.js'],
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: 'https://github.com/slimkit/thinksns-plus',
+  algolia: {
+    apiKey: "algolia-key",
+    indexName: "plus-docs"
+  },
 };
 
 module.exports = siteConfig;
