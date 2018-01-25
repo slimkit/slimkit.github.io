@@ -1,0 +1,102 @@
+{
+    "server": {
+        "快速开始": [
+            "server-getting-started-installation"
+        ],
+        "指南": [
+            "server-guides-package",
+            "server-guides-configuration",
+            "server-guides-cdn",
+            "server-guides-plus-id"
+        ]
+    },
+    "api-v2": {
+        "基本": [
+            "api-v2-overview",
+            "api-v2-bootstrappers",
+            "api-v2-jwt-authorization",
+            "api-v2-verification-code",
+            "api-v2-location",
+            "api-v2-tags",
+            "api-v2-notifications",
+            "api-v2-wallet",
+            "api-v2-plus-pay",
+            "api-v2-purchase",
+            "api-v2-files",
+            "api-v2-aboutus",
+            "api-v2-ad",
+            "api-v2-report",
+            "api-v2-currency"
+        ],
+        "用户": [
+            "api-v2-users",
+            "api-v2-users-register",
+            "api-v2-users-comments",
+            "api-v2-users-likes",
+            "api-v2-users-followers",
+            "api-v2-users-tags",
+            "api-v2-users-certification",
+            "api-v2-users-find-people",
+            "api-v2-users-ranks",
+            "api-v2-users-feedback",
+            "api-v2-users-reward",
+            "api-v2-users-unread-notification",
+            "api-v2-users-checkin"
+        ],
+        "动态": [
+            "api-v2-feeds-create",
+            "api-v2-feeds-get",
+            "api-v2-feeds-delete",
+            "api-v2-feeds-comment-pay",
+            "api-v2-feeds-comments",
+            "api-v2-feeds-likes",
+            "api-v2-feeds-collect",
+            "api-v2-feeds-pinned",
+            "api-v2-feeds-reward",
+            "api-v2-feeds-rank",
+            "api-v2-feeds-report"
+        ],
+        "问答": [
+            "api-v2-question-answer",
+            "api-v2-question-answer-topic",
+            "api-v2-question-answer-question",
+            "api-v2-question-answer-comments",
+            "api-v2-question-answer-answer",
+            "api-v2-question-answer-reward",
+            "api-v2-question-answer-onlookers",
+            "api-v2-question-answer-user-question-watch",
+            "api-v2-question-answer-user-answer-likes",
+            "api-v2-question-answer-user-collect-answer",
+            "api-v2-question-answer-user-marrow-question",
+            "api-v2-question-answer-ranks",
+            "api-v2-question-answer-report"
+        ],
+        "资讯": [
+            "api-v2-news",
+            "api-v2-news-cates",
+            "api-v2-news-contribute",
+            "api-v2-news-get",
+            "api-v2-news-comments",
+            "api-v2-news-likes",
+            "api-v2-news-reward",
+            "api-v2-news-pinneds",
+            "api-v2-news-collections",
+            "api-v2-news-ranks",
+            "api-v2-news-report"
+        ],
+        "圈子": [
+            "api-v2-group",
+            "api-v2-group-category",
+            "api-v2-group-group",
+            "api-v2-group-manage",
+            "api-v2-group-report",
+            "api-v2-group-member",
+            "api-v2-group-posts",
+            "api-v2-group-posts-comments",
+            "api-v2-group-posts-likes",
+            "api-v2-group-posts-collection",
+            "api-v2-group-posts-reward",
+            "api-v2-group-posts-pinned"
+        ]
+    }
+}
