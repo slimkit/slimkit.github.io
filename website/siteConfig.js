@@ -17,10 +17,11 @@ const users = [
 
 const siteConfig = {
   title: 'ThinkSNS Plus' /* title for your website */,
-  tagline: 'Use the program developed by Laravel',
+  tagline: '一个使用 Laravel 并健壮的社交系统',
   url: 'https://slimkit.github.io' /* your website url */,
   baseUrl: '/' /* base url for your project */,
-  // projectName: 'plus',
+  editUrl: 'https://github.com/slimkit/slimkit.github.io/edit/source/docs/',
+  noIndex: false,
   headerLinks: [
     {
       doc: 'server-getting-started-installation',
@@ -66,7 +67,7 @@ const siteConfig = {
   projectName: 'slimkit.github.io', // or set an env variable PROJECT_NAME
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: 'default',
+    theme: 'atom-one-dark',
   },
   scripts: ['https://buttons.github.io/buttons.js'],
   // You may provide arbitrary config keys to be used as needed by your template.

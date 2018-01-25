@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "Use the program developed by Laravel",
+    "tagline": "一个使用 Laravel 并健壮的社交系统",
     "android-started": "Overview",
     "api-v2-aboutus": "关于我们",
     "api-v2-ad": "广告",
