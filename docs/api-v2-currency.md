@@ -30,6 +30,7 @@ Http Status 200
     "recharge-options": "100, 500, 1000, 2000, 5000, 10000",
     "recharge-max": 10000000,
     "recharge-min": 100,
+    "recharge-rule": "123123",
     "rule": "123123",
     "cash-rule": "123123"
 }
@@ -42,6 +43,7 @@ Http Status 200
 | recharge-max | int | 单笔最高充值额度 |
 | recharge-min | int | 单笔最小充值额度 |
 | rule | string | 积分规则 |
+| recharge-rule | string | 积分充值规则 |
 | cash-rule | string | 积分提现规则 |
 
 ## 积分流水
