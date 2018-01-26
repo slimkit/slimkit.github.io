@@ -83,7 +83,8 @@
             "api-v2-news-pinneds",
             "api-v2-news-collections",
             "api-v2-news-ranks",
-            "api-v2-news-report"
+            "api-v2-news-report",
+            "api-v2-news-currency"
         ],
         "圈子": [
             "api-v2-group",
