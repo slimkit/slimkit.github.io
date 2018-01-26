@@ -40,6 +40,7 @@
     "api-v2-news-collections": "收藏",
     "api-v2-news-comments": "评论",
     "api-v2-news-contribute": "投稿",
+    "api-v2-news-currency": "资讯部分积分相关新增接口",
     "api-v2-news-get": "获取",
     "api-v2-news-likes": "喜欢",
     "api-v2-news-pinneds": "置顶",
