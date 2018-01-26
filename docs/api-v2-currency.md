@@ -31,6 +31,8 @@ Http Status 200
     "recharge-max": 10000000,
     "recharge-min": 100,
     "recharge-rule": "123123",
+    "cash-max": 10000000,
+    "cash-min": 100,
     "rule": "123123",
     "cash-rule": "123123"
 }
@@ -42,6 +44,8 @@ Http Status 200
 | recharge-options | string | 充值选项，人民币分单位 |
 | recharge-max | int | 单笔最高充值额度 |
 | recharge-min | int | 单笔最小充值额度 |
+| cash-max | int | 单笔最高提现额度 |
+| cash-min | int | 单笔最小提现额度 |
 | rule | string | 积分规则 |
 | recharge-rule | string | 积分充值规则 |
 | cash-rule | string | 积分提现规则 |

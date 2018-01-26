@@ -22,6 +22,7 @@ Status: 200 OK
 ```
 ```json5
 {
+    "server:version": "1.6.0",
     "im:serve": "127.0.0.1:9900" // IM 服务器地址
     "im:helper": [ // IM 聊天助手用户信息
         {
@@ -109,7 +110,7 @@ Status: 200 OK
 
 | 参数名 | 参数含义 | 枚举 | 备注 |
 | :----: | :----: | :----: | :----: |
-| server:version | 服务端版本号 | | |
+| server:version | 服务端版本号 | | string 类型 |
 | im | 聊天相关 |  |  | 
 | im:serve | 聊天服务器地址 |  | 需要im扩展以及IM服务端配合使用 |
 | im:helper | 聊天助手 |  |  |
