@@ -4,12 +4,38 @@ title: 回答 · 打赏
 ---
 
 - [打赏一个回答](#打赏一个回答)
+- [新版打赏一个回答](#新版打赏一个回答)
 - [获取回答打赏列表](#获取回答打赏列表)
 
 ## 打赏一个回答
 
 ```
 POST /api/v2/question-answers/:answer/rewarders
+```
+
+#### 输入
+
+| 名称 | 类型 | 描述 |
+|:----:|:----:|----|
+| amount | Integer | **必须**，用户要打赏的金额。 |
+
+#### 响应
+
+```
+Status: 201 Created
+```
+```json
+{
+    "message": [
+        "操作成功"
+    ]
+}
+```
+
+## 新版打赏一个回答
+
+```
+POST /api/v2/question-answers/:answer/new-rewards
 ```
 
 #### 输入
