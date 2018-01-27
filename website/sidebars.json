@@ -99,7 +99,8 @@
             "api-v2-group-posts-likes",
             "api-v2-group-posts-collection",
             "api-v2-group-posts-reward",
-            "api-v2-group-posts-pinned"
+            "api-v2-group-posts-pinned",
+            "api-v2-group-currency"
         ]
     }
 }

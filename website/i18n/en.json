@@ -32,6 +32,7 @@
     "api-v2-group-posts-pinned": "帖子 · 置顶",
     "api-v2-group-posts-reward": "帖子 · 打赏",
     "api-v2-group-posts": "帖子",
+    "api-v2-group-currency": "圈子部分积分相关新增接口",
     "api-v2-group-report": "圈子 · 举报",
     "api-v2-group": "概述",
     "api-v2-jwt-authorization": "Json Web Token 授权",
