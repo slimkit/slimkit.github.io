@@ -65,6 +65,7 @@
     "api-v2-question-answer-user-marrow-question": "用户 · 申请精选",
     "api-v2-question-answer-user-question-watch": "用户 · 关注问题",
     "api-v2-question-answer": "概述",
+    "api-v2-question-currency":"问答部分积分相关新增接口",
     "api-v2-report": "举报",
     "api-v2-tags": "标签",
     "api-v2-users-certification": "身份认证",

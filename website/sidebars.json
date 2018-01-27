@@ -70,7 +70,8 @@
             "api-v2-question-answer-user-collect-answer",
             "api-v2-question-answer-user-marrow-question",
             "api-v2-question-answer-ranks",
-            "api-v2-question-answer-report"
+            "api-v2-question-answer-report",
+            "api-v2-question-currency"
         ],
         "资讯": [
             "api-v2-news",
