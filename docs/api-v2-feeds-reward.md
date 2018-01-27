@@ -4,12 +4,73 @@ title: 打赏
 ---
 
 - [打赏动态](#打赏动态)
+- [新版打赏动态](#新版打赏动态)
 - [动态打赏列表](#动态打赏列表)
 
 ## 打赏动态
 
 ```
 POST /feeds/{feed}/rewards
+```
+
+### Parameters
+
+| name     | type     | must     | description |
+|----------|:--------:|:--------:|:--------:|
+| amount   | int      | yes      | 打赏金额 |
+
+### Response
+
+Headers
+
+```
+Status: 201 Created
+```
+
+Body
+
+```json5
+{
+    "message": [
+        "打赏成功"
+    ]
+}
+```
+
+## 打赏动态
+
+```
+POST /feeds/{feed}/rewards
+```
+
+### Parameters
+
+| name     | type     | must     | description |
+|----------|:--------:|:--------:|:--------:|
+| amount   | int      | yes      | 打赏金额 |
+
+### Response
+
+Headers
+
+```
+Status: 201 Created
+```
+
+Body
+
+```json5
+{
+    "message": [
+        "打赏成功"
+    ]
+}
+```
+
+## 新版打赏动态
+
+```
+POST /feeds/{feed}/new-rewards
 ```
 
 ### Parameters

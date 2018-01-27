@@ -4,6 +4,7 @@ title: 打赏
 ---
 
 - [打赏资讯](#打赏资讯)
+- [新版打赏资讯](#新版打赏资讯)
 - [资讯打赏列表](#资讯打赏列表)
 - [资讯打赏统计](#资讯打赏统计)
 
@@ -11,6 +12,36 @@ title: 打赏
 
 ```
 POST /news/{news}/rewards
+```
+
+### Parameters
+
+| name     | type     | must     | description |
+|----------|:--------:|:--------:|:--------:|
+| amount   | int      | yes      | 打赏金额 |
+
+### Response
+
+Headers
+
+```
+Status: 201 Created
+```
+
+Body
+
+```json5
+{
+    "message": [
+        "打赏成功"
+    ]
+}
+```
+
+## 新版打赏资讯
+
+```
+POST /news/{news}/new-rewards
 ```
 
 ### Parameters
