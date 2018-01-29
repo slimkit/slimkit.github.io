@@ -113,7 +113,7 @@ Status: 204 No Content
 ## 申请问题精选
 
 ```
-POST /currency-question-application/:question
+POST /user/currency-question-application/:question
 ```
 
 ### 响应
