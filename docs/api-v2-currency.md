@@ -5,13 +5,16 @@ title: 积分
 
 # 积分部分
 
-- [获取积分配置](#获取积分配置)
-- [积分流水](#积分流水)
-- [发起充值](#发起充值)
-- [取回凭据](#取回凭据)
-- [充值回调](#充值回调)
-- [发起提现](#发起提现)
+- [获取积分配置](#get-currency-config)
+- [积分流水](#orders)
+- [发起充值](#create-order)
+- [取回凭据](#order-retrieve)
+- [充值回调](#webhook)
+- [发起提现](#create-cash)
+- [发起 IAP(in-App Purchase) 充值](#create-apple-iap)
+- [验证 IAP 订单](#verify-apple-iap)
 
+<a name="get-currency-config"></a>
 ## 获取积分配置
 
 ```
@@ -50,6 +53,7 @@ Http Status 200
 | recharge-rule | string | 积分充值规则 |
 | cash-rule | string | 积分提现规则 |
 
+<a name="orders"></a>
 ## 积分流水
 
 ```
@@ -120,6 +124,7 @@ Http Status 200
 | state | int | 订单状态 `0` - 等待、`1` - 完成、`-1` - 失败|
 
 
+<a name="create-order"></a>
 ## 发起充值
 
 ```
@@ -210,7 +215,7 @@ Status: 201 Created
 | wx | App 发起微信支付 |
 | wx_wap | 手机网页发起微信支付 |
 
-
+<a name="order-retrieve"></a>
 ## 取回凭据
 
 ```
@@ -239,7 +244,7 @@ HTTP Status 200
     "updated_at": "2018-01-18 07:57:21"
 }
 ```
-
+<a name="webhook"></a>
 ## 回调通知
 
 ```
@@ -248,6 +253,7 @@ POST /api/v2/currency/webhooks
 
 供给ping++平台回调通知调用的接口
 
+<a name="create-cash"></a>
 ## 发起提现
 
 ```
@@ -273,3 +279,77 @@ Http Status 201
     ]
 }
 ```
+<a name="create-apple-iap"></a>
+## 发起IAP充值
+
+```
+POST /currency/recharge/apple-iap
+```
+
+### 输入参数
+
+| 字段 | 必须 | 类型 | 描述 |
+|----|:----:|:----:|:----:|
+| amount | 是 | int | 用户充值金额，单位为真实货币「分」单位，充值完成后会根据积分兑换比例增加相应数量的积分 |
+
+
+#### 响应
+
+```
+HTTP Status 201
+```
+
+```json
+{
+    "id": 11,
+    "owner_id": 1,
+    "title": "积分充值",
+    "body": "充值积分：200积分",
+    "type": 1,
+    "target_type": "recharge",
+    "target_id": "0",
+    "currency": 1,
+    "amount": 200,
+    "state": 0,
+    "created_at": "2018-01-18 07:57:21",
+    "updated_at": "2018-01-18 07:57:21"
+}
+```
+
+
+<a name="verify-apple-iap"></a>
+## 验证 IAP 充值
+
+```
+POST /currency/orders/:order/apple-iap/verify
+```
+
+## 输入参数
+
+| 字段 | 类型 | 描述 |
+|:----:|:-----|:-----|
+| receipt | array | 数组格式的收据编码 |
+
+### 响应
+
+```
+HTTP Status 200
+```
+
+```json
+{
+    "id": 11,
+    "owner_id": 1,
+    "title": "积分充值",
+    "body": "充值积分：200积分",
+    "type": 1,
+    "target_type": "recharge",
+    "target_id": "0",
+    "currency": 1,
+    "amount": 200,
+    "state": 0,
+    "created_at": "2018-01-18 07:57:21",
+    "updated_at": "2018-01-18 07:57:21"
+}
+```
+
