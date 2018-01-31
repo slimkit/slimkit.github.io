@@ -57,6 +57,13 @@
             "api-v2-feeds-report",
             "api-v2-feeds-currency"
         ],
+        "音乐": [
+            "api-v2-music",
+            "api-v2-music-special",
+            "api-v2-music-like",
+            "api-v2-music-comment",
+            "api-v2-music-collection"
+        ],
         "问答": [
             "api-v2-question-answer",
             "api-v2-question-answer-topic",
