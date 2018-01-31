@@ -68,8 +68,8 @@ const siteConfig = {
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: 'https://github.com/slimkit/thinksns-plus',
   algolia: {
-    apiKey: "algolia-key",
-    indexName: "plus-docs"
+    apiKey: "5e14e81576e97337f567595ea504b651",
+    indexName: "slimkit"
   },
 };
 
