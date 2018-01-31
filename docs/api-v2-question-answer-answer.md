@@ -214,6 +214,7 @@ Status: 200
 | views_count | 回答浏览量统计。 |
 | created_at | 回答创建时间。 |
 | updated_at | 回答更新时间。 |
+| text_body | 回答内容纯文字字段，用于列表显示 |
 | user | 回答的用户资料，参考「用户」文档，如果 `anonymity` 为 `1` 则不存在这个字段或者为 `null` 。 |
 | liked | 是否喜欢这个回答。 |
 | collected | 是否已收藏这个回答。 |
@@ -235,6 +236,7 @@ POST /questions/:question/answers
 | 名称 | 类型 | 描述 |
 |:----:|:----|----|
 | body | String | **必须**，回答的内容，markdown。 |
+| text_body | string | 纯文字回答内容，用于列表显示 |
 | anonymity | Enum: `0` , `1` | 是否匿名。 |
 
 #### 响应
@@ -251,6 +253,7 @@ Status: 201 Created
         "question_id": 1,
         "user_id": 1,
         "body": "哈哈，可以的。",
+        "text_body": "",
         "anonymity": 1,
         "invited": 0,
         "updated_at": "2017-08-01 06:03:21",

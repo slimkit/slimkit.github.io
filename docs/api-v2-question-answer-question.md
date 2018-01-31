@@ -29,6 +29,7 @@ POST /questions
 | look | 枚举：`0` 或者 `1` | 是否开启围观，当问题有采纳或者邀请人已回答，则对外部观众自动开启围观。设置围观必须设置悬赏金额。 |
 | invitations | 数组 | 邀请回答，问题邀请回答的人，数组子节点必须符合 `{ "user": 1 }` 的格式，切不能存在自己。 |
 | automaticity | 枚举：`0` 或者 `1` | 邀请悬赏自动入账，只邀请一个人的情况下，允许悬赏金额自动入账到被邀请回答者钱包中。 |
+| text_body | 字符串 | 纯文字回答内容，用于列表显示 |
 
 #### 响应
 
@@ -50,6 +51,7 @@ Status: 201 Created
         "user_id": 1,
         "updated_at": "2017-08-01 06:06:37",
         "created_at": "2017-08-01 06:06:37",
+        "text_body": "12312",
         "id": 2
     }
 }
@@ -70,6 +72,7 @@ PATCH /questions/:question
 | anonymity | `1` or `0` | **当 `subject` / `body` / `topics` / `amount` 不存在时，`anonymity` 为必须**，是否匿名。 |
 | topics | 数组 | **当 `subject` / `anonymity` / `body` / `amount` 不存在时，`topics` 为必须**，问题关联话题，数组子节点必须符合 `{ "id": 1 }` 的格式。 |
 | ammount | int | **当 `subject` / `anonymity` / `body` / `topics` 不存在时，`amount` 为必须**，悬赏金额。 |
+| text_body | 字符串 | 纯文字回答内容，用于列表显示 |
 
 #### 响应
 
@@ -283,6 +286,7 @@ Status: 200 OK
 | watchers_count | 问题关注的人总数统计。 |
 | likes_count | 喜欢问题的人总数统计。 |
 | views_count | 问题查看数量统计。 |
+| text_body | 问题内容纯文字字段，用于列表显示 |
 | created_at | 问题创建时间。 |
 | updated_at | 问题修改时间。 |
 | answer | 问题的最新一条回答，具体数据结构参考「回答」文档，问题没有回答时该字段为null。 |
