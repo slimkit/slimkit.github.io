@@ -69,7 +69,10 @@ const siteConfig = {
   repoUrl: 'https://github.com/slimkit/thinksns-plus',
   algolia: {
     apiKey: "5e14e81576e97337f567595ea504b651",
-    indexName: "slimkit"
+    indexName: "slimkit",
+    algoliaOptions: {
+      hitsPerPage: 20,
+    }
   },
 };
 
