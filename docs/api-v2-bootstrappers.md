@@ -56,6 +56,10 @@ Status: 200 OK
     "currency:recharge": {
         "open": true
     },
+    "currency:recharge": {
+        "open": true,
+        "IAP_only": true,
+    },
     "ad":[
         {
             "id":1,
@@ -123,7 +127,8 @@ Status: 200 OK
 | wallet:recharge | 钱包充值的开关选项 | | |
 | wallet:transform | 钱包余额转换积分的开关选项 | | |
 | currency:cash | 积分提现的开关选项 | | |
-| currency:recharge | 积分充值的开关选项 | | |
+| currency:recharge.open | 积分充值的开关选项 | | |
+| currency:recharge.IAP_only | IOS端只允许IAP充值的开关选项 | | |
 | ad | 广告位相关 |  | |
 | site | 系统配置相关 |  | 类型：json对象 |
 | site.gold:status | 是否开启积分系统 | true：开启，false：关闭 | 控制前端展示相应的积分模块，类型：Boolean |
