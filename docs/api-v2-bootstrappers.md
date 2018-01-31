@@ -47,6 +47,9 @@ Status: 200 OK
     "wallet:recharge": {
         "open": true
     },
+    "wallet:transform": {
+        "open": true
+    },
     "currency:cash": {
         "open": true
     },
@@ -118,6 +121,7 @@ Status: 200 OK
 | wallet:ratio | 显示金额与服务端金额的转换比例 |  | 显示金额 = 服务端金额 / wallet:ratio |
 | wallet:cash | 钱包提现的开关选项 | | |
 | wallet:recharge | 钱包充值的开关选项 | | |
+| wallet:transform | 钱包余额转换积分的开关选项 | | |
 | currency:cash | 积分提现的开关选项 | | |
 | currency:recharge | 积分充值的开关选项 | | |
 | ad | 广告位相关 |  | |
