@@ -37,7 +37,16 @@ Http Status 200
     "cash-max": 10000000,
     "cash-min": 100,
     "rule": "123123",
-    "cash-rule": "123123"
+    "cash-rule": "123123",
+    "cash": [
+        "alipay",
+        "wechat"
+    ],
+    "recharge-type": [
+        "alipay",
+        "alipay_pc_direct",
+        "applepay_upacp"
+    ]
 }
 ```
 
@@ -52,6 +61,8 @@ Http Status 200
 | rule | string | 积分规则 |
 | recharge-rule | string | 积分充值规则 |
 | cash-rule | string | 积分提现规则 |
+| cash | array | 允许的提现方式 |
+| recharge-type | array | 允许的充值方式 |
 
 <a name="orders"></a>
 ## 积分流水
