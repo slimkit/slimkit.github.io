@@ -13,6 +13,7 @@ title: 积分
 - [发起提现](#create-cash)
 - [发起 IAP(in-App Purchase) 充值](#create-apple-iap)
 - [验证 IAP 订单](#verify-apple-iap)
+- [获取苹果IAP商品列表](#get-apple-iap-plist)
 
 <a name="get-currency-config"></a>
 ## 获取积分配置
@@ -364,3 +365,32 @@ HTTP Status 200
 }
 ```
 
+<a name="get-apple-iap-plist"></a>
+## 获取苹果IAP商品列表
+
+```
+GET /currency/apple-iap/products
+```
+
+
+### 响应
+
+```json
+[
+    {
+        "product_id": "1",
+        "name": "积分1",
+        "apple_id": "11211",
+        "amount": "600"
+    }
+]
+```
+
+### 返回参数
+
+| 名称 | 类型 | 描述 |
+|:----:|:-----|:-----|
+| product_id | string | 商品id |
+| name | string | 商品名称 |
+| apple_id | string | |
+| amount | string | 商品金额 |
