@@ -26,6 +26,7 @@ POST /news/categories/:category/news
 | tags | string,array | **必须** 标签id，多个id以逗号隔开或传入数组形式 |
 | from | String | 资讯来源。 |
 | author | String | 作者 |
+| text_content | string | 纯文本字段 |
 
 > 用户投稿时，用户输入`摘要`和`正文`
 
@@ -63,6 +64,7 @@ PATCH /news/categories/:category/news/:news
 | image | Integer | 缩略图。 |
 | from | String | 资讯来源。 |
 | author | String | 作者 |
+| text_content | string | 纯文本字段 |
 
 ##### Response
 
