@@ -14,6 +14,7 @@ title: 积分
 - [发起 IAP(in-App Purchase) 充值](#create-apple-iap)
 - [验证 IAP 订单](#verify-apple-iap)
 - [获取苹果IAP商品列表](#get-apple-iap-plist)
+- [积分商城（待开发）](#currency-shop)
 
 <a name="get-currency-config"></a>
 ## 获取积分配置
@@ -394,3 +395,10 @@ GET /currency/apple-iap/products
 | name | string | 商品名称 |
 | apple_id | string | |
 | amount | string | 商品金额 |
+
+<a name="currency-shop"></a>
+## 积分商城
+
+```
+GET /currency/shop
+```
