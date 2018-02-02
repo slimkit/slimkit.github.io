@@ -40,6 +40,7 @@ Http Status 200
     "cash-min": 100,
     "rule": "123123",
     "cash-rule": "123123",
+    "apple-IAP-rule": "12312",
     "cash": [
         "alipay",
         "wechat"
@@ -63,6 +64,7 @@ Http Status 200
 | rule | string | 积分规则 |
 | recharge-rule | string | 积分充值规则 |
 | cash-rule | string | 积分提现规则 |
+| apple-IAP-rule | string | 苹果IAP积分充值规则 |
 | cash | array | 允许的提现方式 |
 | recharge-type | array | 允许的充值方式 |
 
