@@ -33,6 +33,7 @@ title: 安装
 - `exec`
 - `system`
 - `scandir`
+- `symlink`
 - `shell_exec`
 - `proc_open`
 - `proc_get_status`
