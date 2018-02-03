@@ -35,6 +35,10 @@ const siteConfig = {
       label: 'REST API v2'
     },
     {
+      page: 'new-issue',
+      label: "反馈"
+    },
+    {
       href: 'https://github.com/slimkit',
       label: 'GitHub'
     },
