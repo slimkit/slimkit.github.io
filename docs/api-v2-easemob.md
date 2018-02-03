@@ -11,6 +11,8 @@ title: 环信
 ## 注册环信用户
 
 - [注册单个环信用户](#注册单个环信用户)
+- [批量注册环信用户](#批量注册环信用户);
+- [为未注册环信用户注册环信](#为未注册环信用户注册环信);
 
 ```
 POST /easemob/register/:user_id
@@ -39,6 +41,19 @@ POST /easemob/register
 ```
 Status: 201 OK
 ```
+
+### 为未注册环信用户注册环信
+
+```
+POST /easemob/register-old-users
+```
+
+##### 响应
+
+```
+Status: 201 OK
+```
+
 
 ## 重置用户环信密码
 
