@@ -15,6 +15,7 @@ title: 积分
 - [验证 IAP 订单](#verify-apple-iap)
 - [获取苹果IAP商品列表](#get-apple-iap-plist)
 - [积分商城（待开发）](#currency-shop)
+- [IAP帮助页面](#iap-help)
 
 <a name="get-currency-config"></a>
 ## 获取积分配置
@@ -403,4 +404,12 @@ GET /currency/apple-iap/products
 
 ```
 GET /currency/shop
+```
+
+
+<a name="iap-help"></a>
+## IAP 帮助页面
+
+```
+GET /currency/apple-iap/help
 ```
