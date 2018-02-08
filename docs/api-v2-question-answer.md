@@ -11,3 +11,19 @@ title: 概述
     "question:onlookers_amount": 100  //  围观答案所需支付金额
 }
 ```
+
+### 获取问答基础配置
+
+```
+/api/v2/question-configs
+```
+
+### 响应
+
+```json
+{
+    "apply_amount": 200, // 申请精选费用
+    "onlookers_amount": 100, // 围观费用
+    "anonymity_rule": "匿名规则12321" // 匿名规则
+}
+```
