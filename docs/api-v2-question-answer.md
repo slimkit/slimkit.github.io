@@ -15,7 +15,7 @@ title: 概述
 ### 获取问答基础配置
 
 ```
-/api/v2/question-configs
+GET /api/v2/question-configs
 ```
 
 ### 响应
