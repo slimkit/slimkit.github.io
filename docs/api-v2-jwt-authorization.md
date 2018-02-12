@@ -30,7 +30,8 @@ Status: 20o OK
 {
     "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vcGx1cy5pby9hcGkvdjIvYXV0aC9sb2dpbiIsImlhdCI6MTUxNTU3NDE0MSwiZXhwIjoxNTE1NTc3NzQxLCJuYmYiOjE1MTU1NzQxNDEsImp0aSI6Imx1MWtFcDd1UjZpWnoxV3giLCJzdWIiOjEsInBydiI6IjQ4ZTQ1MzgzMWNlYmE1ZTU3YTQ3NWU2ODY0OWNmZGVlNmU5N2Q4ZDIifQ.0_u1dgb-rSr2o7nIx4Q1n1NNcr1LMAtgTbKsFFdUvmg",
     "token_type": "bearer",
-    "expires_in": 3600
+    "expires_in": 60,
+    "refresh_ttl": 20160
 }
 ```
 
@@ -38,7 +39,8 @@ Status: 20o OK
 |:----:|----|
 | access_token | 授权 Token |
 | token_type | Token 类型 |
-| expires_in | 过期时间，单位秒 |
+| expires_in | 过期时间，单位分 |
+| refresh_ttl | 刷新过期时间，单位分 |
 
 <a name="logout"></a>
 ## 用户退出 
