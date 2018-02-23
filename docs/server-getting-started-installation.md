@@ -5,7 +5,7 @@ title: 安装
 
 - [环境要求](#manual-need)
 - [安装](#install)
-<a name="manual-need"></a>
+<a id="manual-need"></a>
 ## 环境要求
 
 - [PHP & 拓展](#manual-need-php-ext)
@@ -14,7 +14,7 @@ title: 安装
 
 ### PHP & 拓展
 
-- PHP 必须大于或等于 7.0
+- PHP 必须大于或等于 7.1.3
 - 必须安装扩展 dom
 - 必须安装扩展 fileinfo
 - 必须安装扩展 gd
@@ -27,7 +27,7 @@ title: 安装
 - 使用 SQLite 数据库则必须安装 PHP 拓展 pdo_sqlite
 - 使用 SQL Server 数据库则必须安装 PHP 拓展 pdo_dblib
 
-<a name="manual-need-php-functions"></a>
+<a id="manual-need-php-functions"></a>
 ### PHP 函数
 
 - `exec`
@@ -40,7 +40,7 @@ title: 安装
 
 > 这些是在 Console 环境下使用的，尽量确保你的系统没有禁止。
 
-<a name="manual-need-database"></a>
+<a id="manual-need-database"></a>
 ### 数据库
 
 - [MySQL](#manual-need-database-mysql)
@@ -51,38 +51,38 @@ title: 安装
 
 > 推荐使用 PostgreSQL。
 
-<a name="manual-need-database-mysql"></a>
+<a id="manual-need-database-mysql"></a>
 ##### MySql
 
 使用 MySQL 建议使用 `>=5.7` 版本，必须 `>=5.6` 版本，如果你的是 5.6 版本，则自行解决索引过长导致的 SQL 执行错误问题。
 
-<a name="manual-need-database-mariadb"></a>
+<a id="manual-need-database-mariadb"></a>
 ##### MariaDB
 
 使用 MariaDB 必须 `>=10.3` 版本，因为只有该版本是建立在 MySQL 5.6 & 5.7 之上的，得以支持 Emoji。
 
 > 使用 MariaDB 按照 MySQL 进行配置即可。
 
-<a name="manual-need-database-pgsql"></a>
+<a id="manual-need-database-pgsql"></a>
 ##### PostgreSQL
 
 PostgreSQL 数据库天然支持 Emoji，无需任何版本要求，但是我们还是建议使用最新版本的 PostgreSQL 稳定版本的以支持更完善的空间计算。
 
-<a name="manual-need-database-sqlite"></a>
+<a id="manual-need-database-sqlite"></a>
 ##### SQLite
 
 首先，这个数据库不建议使用，因为这种轻量级的数据库适合在 App 中来解决数据本地化需求，服务器应用场景很小。
 
 > 虽然 ThinkSNS+ 不允许使用 SQLite，但是您仍然可以在系统中使用该数据库，但是例如 Emoji 储存等问题自行解决。
 
-<a name="manual-need-database-sql-server"></a>
+<a id="manual-need-database-sql-server"></a>
 ##### Microsoft SQL Server
 
 就像不推荐 SQLite 一样，我们同样不推荐 Microsoft SQL Server 除非你确定你的系统不适用 Emoji 那么你可以无顾虑的使用 Microsoft SQL Server 了，因为 Microsoft SQL Server 同样支持 utf8 字符集，却无法支持四位长度的 Emoji 字符。
 
 > ThinkSNS+ 不建议使用 SQL Server，但是你仍然可以在系统中使用，出现的 emoji 存储问题自行解决。
 
-<a name="install"></a>
+<a id="install"></a>
 ## 安装
 
 需要软件：
