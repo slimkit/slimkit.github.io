@@ -8,9 +8,9 @@
 /* List of projects/orgs using your project for the users page */
 const users = [
   {
-    caption: 'User1',
+    caption: 'ThinkSNS Plus 演示站点',
     image: '/img/plus.png',
-    infoLink: 'https://www.facebook.com',
+    infoLink: 'https://tsplus.zhibocloud.cn',
     pinned: true,
   },
 ];

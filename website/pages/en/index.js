@@ -103,67 +103,47 @@ const Features = props => (
   <Block layout="fourColumn">
     {[
       {
-        content: 'This is the content of my feature',
-        image: imgUrl('docusaurus.svg'),
+        content: '使用 PHP 进行开发，并使用「严格模式」来增强代码的可读性。',
+        image: imgUrl('php-logo.png'),
         imageAlign: 'top',
-        title: 'Feature One',
+        title: 'PHP 7',
       },
       {
-        content: 'The content of my second feature',
-        image: imgUrl('docusaurus.svg'),
+        content: '采用 Laravel 进行开发，并以目前 Laravel 半年升级发布计划，进行版本升级管理。',
+        image: imgUrl('laravel.jpeg'),
         imageAlign: 'top',
-        title: 'Feature Two',
+        title: 'Laravel',
       },
     ]}
   </Block>
 );
 
-const FeatureCallout = props => (
-  <div
-    className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
-    <h2>Feature Callout</h2>
-    <MarkdownBlock>These are features of this project</MarkdownBlock>
-  </div>
-);
-
-const LearnHow = props => (
-  <Block background="light">
-    {[
-      {
-        content: 'Talk about learning how to use this',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Learn How',
-      },
-    ]}
-  </Block>
-);
-
-const TryOut = props => (
-  <Block id="try">
-    {[
-      {
-        content: 'Talk about trying this out',
-        image: imgUrl('plus.png'),
-        imageAlign: 'left',
-        title: 'Try it Out',
-      },
-    ]}
-  </Block>
-);
-
-const Description = props => (
-  <Block background="dark">
-    {[
-      {
-        content: 'This is another description of how this project is useful',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Description',
-      },
-    ]}
-  </Block>
+const InstallVideo = props => (
+  <Container
+    padding={['bottom', 'top']}
+    background="light"
+  >
+    <div className="blockElement imageAlignSide">
+      <div className="blockImage">
+        <video
+          controls
+          src="http://www.thinksns.com/data/upload/ueditor/20180203/5a755820d33d8.mp4"
+          poster={imgUrl('install-video-image.png')}
+          style={{
+            maxWidth: '100%',
+          }}
+        />
+      </div>
+      <div className="blockContent">
+        <h2>
+          <MarkdownBlock>面板安装视频</MarkdownBlock>
+        </h2>
+        <MarkdownBlock>
+          我们为你准备了一个简单的给予面板的安装视频，你可以通过视频了解到在正式环境下，如何安装 Plus 程序
+        </MarkdownBlock>
+      </div>
+    </div>
+  </Container>
 );
 
 const Showcase = props => {
@@ -203,14 +183,11 @@ class Index extends React.Component {
     return (
       <div>
         <HomeSplash language={language} />
-        {/*<div className="mainContainer">
+        <div className="mainContainer">
           <Features />
-          <FeatureCallout />
-          <LearnHow />
-          <TryOut />
-          <Description />
+          <InstallVideo />
           <Showcase language={language} />
-        </div>*/}
+        </div>
       </div>
     );
   }
