@@ -123,7 +123,7 @@ const InstallVideo = props => (
     padding={['bottom', 'top']}
     background="light"
   >
-    <div className="blockElement imageAlignSide">
+    <div className="blockElement imageAlignSide imageAlignLeft">
       <div className="blockImage">
         <video
           controls

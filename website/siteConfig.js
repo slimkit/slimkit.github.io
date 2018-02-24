@@ -75,7 +75,7 @@ const siteConfig = {
     apiKey: "5e14e81576e97337f567595ea504b651",
     indexName: "slimkit",
     algoliaOptions: {
-      hitsPerPage: 20,
+      hitsPerPage: 5,
     }
   },
 };
