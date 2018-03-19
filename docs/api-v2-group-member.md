@@ -25,7 +25,7 @@ status 200
 |limit|integer| 默认 15 ，数据返回条数 默认为15|
 |after|inegter|默认 0，翻页标示|
 |name|string|成员名搜索成员，仅搜索传|
-|type|string|默认 all, all-所有, manager-管理员, member-成员, blacklist-黑名单, audit - 带审核，audit_user - 审核通过且未被拉黑成员|
+|type|string|默认 all, all-所有, manager-管理员(包含圈主), member-成员, blacklist-黑名单, audit - 带审核，audit_user - 审核通过且未被拉黑成员|
 
 ```json
 {
