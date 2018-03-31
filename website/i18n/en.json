@@ -176,6 +176,7 @@
     "data-fields-wallet": "wallet",
     "data-fields-wallets": "wallets",
     "data-fields": "数据字典",
+    "server-config-guides": "服务端配项说明",
     "server-getting-started-installation": "安装",
     "server-guides-cdn": "CDN",
     "server-guides-configuration": "配置管理",

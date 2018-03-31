@@ -8,7 +8,8 @@
             "server-guides-configuration",
             "server-guides-cdn",
             "server-guides-plus-id",
-            "data-fields"
+            "data-fields",
+            "server-config-guides"
         ]
     },
     "api-v2": {
