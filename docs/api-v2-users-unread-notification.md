@@ -66,6 +66,9 @@ Status: 200 OK
             "count": 1
         }
     }
+    "system": {
+        ... // 参考系统消息列表接口
+    }
 }
 ```
 
@@ -73,7 +76,7 @@ Status: 200 OK
 
 | 名称 | 类型 | 描述 |
 |:----:|:----:|----|
-| counts | array/null | 用户未读消息统计，未产生任何记录时为null |
+| counts | Object | 用户未读消息统计，未产生任何记录时为null |
 | counts.unread_comments_count | int | 未读评论数 |
 | counts.unread_likes_count | int | 未读点赞数 |
 | comments | array | 最近几条评论信息 |
@@ -83,3 +86,4 @@ Status: 200 OK
 | pinneds | array | 未处理审核统计, 目前可能有 `news` - 未处理的资讯评论置顶, `feeds` - 未处理的动态评论置顶 |
 | pinneds.*.time | time/null | 最新一条待审核记录的时间 |
 | pinneds.*.count | int | 未操作审核数 |
+| system | Object | 最新的系统消息 |
