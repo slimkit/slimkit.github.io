@@ -23,14 +23,6 @@ Status: 200 OK
 ```json5
 {
     "server:version": "1.6.0",
-    "im:serve": "127.0.0.1:9900" // IM 服务器地址
-    "im:helper": [ // IM 聊天助手用户信息
-        {
-            "uid": 1, // 用户ID
-            "url": "https://plus.io/users/1" // 主页地址 URL
-        }
-        // ...
-    ],
     "wallet:ratio": 200, // 转换显示余额的比例，百分比。（200 就表示 200%）
     "wallet:recharge-type": [ // 此配置支持全平台的支付方式，不同平台更具自身平台对应值判断是非支持该支付方式。
         "alipay", // "支付宝 APP 支付",
@@ -111,6 +103,7 @@ Status: 200 OK
         "type": "mobile-only",
         "method": "invited"
     },
+    "im:helper-user": 1
 }
 ```
 ## 参数详解
@@ -118,9 +111,6 @@ Status: 200 OK
 | 参数名 | 参数含义 | 枚举 | 备注 |
 | :----: | :----: | :----: | :----: |
 | server:version | 服务端版本号 | | string 类型 |
-| im | 聊天相关 |  |  | 
-| im:serve | 聊天服务器地址 |  | 需要im扩展以及IM服务端配合使用 |
-| im:helper | 聊天助手 |  |  |
 | wallet | 钱包相关 |  |  |
 | wallet:ratio | 显示金额与服务端金额的转换比例 |  | 显示金额 = 服务端金额 / wallet:ratio |
 | wallet:cash | 钱包提现的开关选项 | | |
@@ -146,3 +136,4 @@ Status: 200 OK
 | registerSettings.content | 用户服务条款及隐私政策 |  | 类型：string，格式：markdown |
 | registerSettings.type | 用户注册方式 | invited: 仅邀请，  all: 全部， thirdPart: 第三方 |  注册方式控制类型：string |
 | registerSettings.method | 用户注册类型 | mobile-only: 仅手机， mail-only: 仅邮箱，all： 邮箱或手机 |  类型：string |
+| im:helper-user | 聊天小助手用户 ID | | Int |
