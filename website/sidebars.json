@@ -59,7 +59,8 @@
             "api-v2-feeds-reward",
             "api-v2-feeds-rank",
             "api-v2-feeds-report",
-            "api-v2-feeds-currency"
+            "api-v2-feeds-currency",
+            "api-v2-feeds-topics"
         ],
         "音乐": [
             "api-v2-music",
