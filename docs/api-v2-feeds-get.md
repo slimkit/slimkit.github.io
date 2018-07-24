@@ -74,6 +74,12 @@ Status: 201 OK
             "created_at": "2017-07-12 08:09:07",
             "updated_at": "2017-07-12 08:09:07"
         }
+    ],
+    "topics": [ // 话题数据
+        {
+            "id": 1,            // 话题 ID
+            "name": "第一个话题" // 话题名称
+        }
     ]
 }
 ```
@@ -149,46 +155,18 @@ Status: 200 OK
                     "created_at": "2017-08-05 03:29:55",
                     "updated_at": "2017-08-05 03:29:55",
                     "pinned": true
-                },
-                {
-                    "id": 3,
-                    "user_id": 1,
-                    "target_user": 1,
-                    "reply_user": 0,
-                    "body": "辣鸡啊啊啊啊",
-                    "commentable_id": 1,
-                    "commentable_type": "feeds",
-                    "created_at": "2017-08-05 03:29:53",
-                    "updated_at": "2017-08-05 03:29:53",
-                    "pinned": true
-                },
-                {
-                    "id": 3,
-                    "user_id": 1,
-                    "target_user": 1,
-                    "reply_user": 0,
-                    "body": "辣鸡啊啊啊啊",
-                    "commentable_id": 1,
-                    "commentable_type": "feeds",
-                    "created_at": "2017-08-05 03:29:53",
-                    "updated_at": "2017-08-05 03:29:53"
-                },
-                {
-                    "id": 2,
-                    "user_id": 1,
-                    "target_user": 1,
-                    "reply_user": 0,
-                    "body": "辣鸡啊啊啊啊",
-                    "commentable_id": 1,
-                    "commentable_type": "feeds",
-                    "created_at": "2017-08-05 03:29:51",
-                    "updated_at": "2017-08-05 03:29:51"
                 }
             ],
             "has_collect": false,
             "has_like": false,
             "images": [],
-            "paid_node": null
+            "paid_node": null,
+            "topics": [ // 话题数据
+                {
+                    "id": 1,            // 话题 ID
+                    "name": "第一个话题" // 话题名称
+                }
+            ]
         }
     ]
 }
@@ -223,5 +201,6 @@ Status: 200 OK
 | has_like | bool | 是否已赞 |
 | images | array | 图片信息 同单条动态数据结构一致 |
 | paid_node | array | 付费节点信息 同单条动态数据结构一致 不存在时为null |
+| `topics` | `Array` | 参考「动态详情」，内容一致。 |
 
 > `feed_content` 字段在列表中，如果是收费动态则只返回 100 个文字。
