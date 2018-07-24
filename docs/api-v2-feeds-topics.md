@@ -73,3 +73,15 @@ PUT /user/feed-topics/:topicID
 ```
 Status: 204 No Content
 ```
+
+## Unfollow a topic（取消关注一个话题）
+
+```
+DELETE /user/feed-topics/:topicID
+```
+
+响应：
+
+```
+Status: 204 No Content
+```
