@@ -61,3 +61,15 @@ Status: 201 Created
     "id": 1 // 话题创建成功后的 ID 标识
 }
 ```
+
+## Follow a topic（关注一个话题）
+
+```
+PUT /user/feed-topics/:topicID
+```
+
+响应：
+
+```
+Status: 204 No Content
+```
