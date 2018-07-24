@@ -8,7 +8,7 @@
 /* List of projects/orgs using your project for the users page */
 const users = [
   {
-    caption: 'ThinkSNS Plus 演示站点',
+    caption: 'ThinkSNS+ 演示站点',
     image: '/img/plus.png',
     infoLink: 'https://tsplus.zhibocloud.cn',
     pinned: true,
@@ -16,7 +16,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'ThinkSNS Plus' /* title for your website */,
+  title: 'Plus (ThinkSNS+)' /* title for your website */,
   tagline: '一个使用 Laravel 并健壮的社交系统',
   url: 'https://slimkit.github.io' /* your website url */,
   baseUrl: '/' /* base url for your project */,
