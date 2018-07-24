@@ -36,3 +36,28 @@ Status: 200 OK
     // ...
 ]
 ```
+
+## Create an topic（创建一个话题）
+
+```
+POST /feed/topics
+```
+
+请求内容参数：
+
+| Name | Type | Description |
+|:----|:----|:----|
+| `name` | `string` | **必须**，话题名称最长 `100` 个字。 |
+| `desc` | `string` | **可选**，话题描述最长 `500` 个字。 |
+| `logo` | `integer` | **可选**，话题 Logo 调用[文件上传](api-v2-files.md)接口返回的 `FileWith` ID 标识。 |
+
+响应：
+
+```
+Status: 201 Created
+```
+```json
+{
+    "id": 1 // 话题创建成功后的 ID 标识
+}
+```
