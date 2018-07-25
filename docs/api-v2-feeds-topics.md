@@ -85,3 +85,48 @@ DELETE /user/feed-topics/:topicID
 ```
 Status: 204 No Content
 ```
+
+## Edit an topic（编辑一个话题）
+
+```
+PATCH /feed/topics/:topicID
+```
+
+请求内容参数：
+
+| Name | Type | Description |
+|:----|:----|:----|
+| `desc` | `string` | **可选**，话题描述最长 `500` 个字。 |
+| `logo` | `integer` | **可选**，话题 Logo 调用《[文件上传](api-v2-files.md)》接口返回的 `FileWith` ID 标识。 |
+
+响应：
+
+```
+Status: 204 No Content
+```
+
+## Get a single topic（获取一个话题详情）
+
+```
+GET /feed/topics/:topicID
+```
+
+> 如果携带 `Authorization` 则会返回关注状态，否则不会返回！
+
+响应：
+
+```
+Status: 200 OK
+```
+```json
+{
+    "id": 1,               // 话题 ID
+    "name": "Plus",        // 话题名称
+    "logo": 1,             // 话题 Logo 对应的 FileWith ID
+    "desc": "啊哈哈",       // 话题描述
+    "creator_user_id": 1,  // 话题创建者 User ID
+    "feeds_count": 2,      // 话题下有都少动态
+    "followers_count": 1,  // 有多少人关注了这个话题
+    "has_followed": true   // 当前 Authorization 用户是否关注了话题
+}
+```
