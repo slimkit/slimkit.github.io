@@ -130,3 +130,25 @@ Status: 200 OK
     "has_followed": true   // 当前 Authorization 用户是否关注了话题
 }
 ```
+
+## List feeds for a topic（获取话题下的动态列表）
+
+```
+GET /feed/topics/:topicID/feeds
+```
+
+请求查询参数：
+
+| Name | Type | Description |
+|:----|:----|:----|
+| `limit` | `integer` | 本次请求请求的数据条数，默认 `15` 条，允许的范围 `1 - 100`。 |
+| `direction` | `string` | 用于基于数据 `index` 字段的排序方向设置，允许 `asc` 或者 `desc`，默认 `desc` |
+| `index` | `integer` | 数据查询定位值，来源于数据 `index` 字段。 |
+
+响应：
+
+```
+Status: 200 OK
+```
+> `Body` 部分和《[动态获取](api-v2-feeds-get.md)》接口保持一直。
+> 保持数据格式一致的做法是为了避免新内容造成客户端重写 Controller 考虑，相比其他接口，本接口数据内容会多出一个 `index` 字段。
