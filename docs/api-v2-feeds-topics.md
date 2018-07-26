@@ -19,6 +19,7 @@ GET /feed/topics
 | `limit` | `integer` | 本次请求请求的数据条数，默认 `15` 条，允许的范围 `1 - 100`。 |
 | `direction` | `string` | 用于基于数据 `id` 字段的排序方向设置，允许 `asc` 或者 `desc`，默认 `desc` |
 | `index` | `integer` | 数据查询定位值，来源于数据 `id` 字段。 |
+| `only` | `string` | **可选**，该字段只有一个固定值 `hot`，当出现 `only` 值的时候其他参数全部失效，转而 API 只返回热门话题数据。 |
 
 响应：
 
