@@ -154,3 +154,30 @@ Status: 200 OK
 ```
 > `Body` 部分和《[动态获取](api-v2-feeds-get.md)》接口保持一直。
 > 保持数据格式一致的做法是为了避免新内容造成客户端重写 Controller 考虑，相比其他接口，本接口数据内容会多出一个 `index` 字段。
+
+## List participants for a topic（获取话题下的参与者列表）
+
+```
+GET /feed/topics/:topicID/participants
+```
+
+请求查询参数：
+
+| Name | Type | Description |
+|:----|:----|:----|
+| `limit` | `integer` | 本次请求的数据条数，默认 `15` 条，允许的范围 `1 - 100`。 |
+| `offset`| `integer` | 本次请求的数据偏移两，默认 `0` 条。 |
+
+响应：
+
+```
+Status: 200 OK
+```
+```json
+[
+    1,
+    2,
+    3,
+    /// ...
+]
+```
