@@ -128,7 +128,8 @@ Status: 200 OK
     "creator_user_id": 1,  // 话题创建者 User ID
     "feeds_count": 2,      // 话题下有都少动态
     "followers_count": 1,  // 有多少人关注了这个话题
-    "has_followed": true   // 当前 Authorization 用户是否关注了话题
+    "has_followed": true,  // 当前 Authorization 用户是否关注了话题
+    "participants": [2, 3, 5] // 最多三个，参与者需求，按照参与时间倒序！
 }
 ```
 
