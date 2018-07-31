@@ -181,3 +181,21 @@ Status: 200 OK
     /// ...
 ]
 ```
+
+## Report a topic（举报一个话题）
+
+```
+PUT /user/report-feed-topics/:topicID
+```
+
+请求内容参数：
+
+| Name | Type | Description |
+|:----|:----|:----|
+| `message` | `string` | **必须**，举报理由，不得超过 255 个字。 |
+
+响应：
+
+```
+Status: 204 No Content
+```
