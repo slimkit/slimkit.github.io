@@ -14,7 +14,7 @@ GET /user/unread-count
 ```
 Status: 200 OK
 ```
-```json
+```json5
 {
     "counts": {
         "user_id": 1,
@@ -23,7 +23,10 @@ Status: 200 OK
         "created_at": "2017-10-19 15:07:46",
         "updated_at": "2017-10-19 15:07:46"
     },
-    "atme": [1, 3, 5], // At 我的人列表，item 为用户 ID。
+    "atme": {
+        "users": ["root"],                  // At 我的用户预览列表
+        "latest_at": "2018-08-13T08:06:54Z" // 最近 at 我的时间
+    },
     "comments": [
         {
             "user_id": 2,
