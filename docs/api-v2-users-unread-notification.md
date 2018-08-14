@@ -6,7 +6,7 @@ title: 未读消息
 - 该未读消息接口记录不含在通知内的消息，如当前用户收到的评论、点赞和未处理的审核等，调用相应的列表和操作接口，讲自动清零
 
 ```
-get /user/unread-count
+GET /user/unread-count
 ```
 
 #### Response
@@ -23,6 +23,7 @@ Status: 200 OK
         "created_at": "2017-10-19 15:07:46",
         "updated_at": "2017-10-19 15:07:46"
     },
+    "atme": [1, 3, 5], // At 我的人列表，item 为用户 ID。
     "comments": [
         {
             "user_id": 2,
@@ -65,7 +66,7 @@ Status: 200 OK
             "time": "2017-09-15 10:04:19",
             "count": 1
         }
-    }
+    },
     "system": {
         ... // 参考系统消息列表接口
     }
