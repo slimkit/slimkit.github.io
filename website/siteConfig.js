@@ -13,11 +13,17 @@ const users = [
     infoLink: 'https://tsplus.zhibocloud.cn',
     pinned: true,
   },
+  {
+    caption: '中国蓝 TV',
+    image: 'https://sns.cztv.com/assets/logo.png',
+    infoLink: 'http://tv.cztv.com/',
+    pinned: true
+  }
 ];
 
 const siteConfig = {
   title: 'Plus (ThinkSNS+)' /* title for your website */,
-  tagline: '一个使用 Laravel 并健壮的社交系统',
+  tagline: '💝The Plus(ThinkSNS+) is a powerful, easy-to-develop social system built with Laravel. ',
   url: 'https://slimkit.github.io' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   editUrl: 'https://github.com/slimkit/slimkit.github.io/edit/source/docs/',
