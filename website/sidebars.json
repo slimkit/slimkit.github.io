@@ -45,7 +45,7 @@
             "api-v2-users-reward",
             "api-v2-users-unread-notification",
             "api-v2-users-checkin",
-            "api-v2-user-counts"
+            "api-v2-user-message"
         ],
         "动态": [
             "api-v2-feeds-create",
