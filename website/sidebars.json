@@ -29,7 +29,8 @@
             "api-v2-ad",
             "api-v2-report",
             "api-v2-currency",
-            "api-v2-easemob"
+            "api-v2-easemob",
+            "api-v2-core-comment"
         ],
         "用户": [
             "api-v2-users",
