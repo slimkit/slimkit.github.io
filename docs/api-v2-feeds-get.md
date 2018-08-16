@@ -112,6 +112,7 @@ GET /feeds
 | search | String | type = `new`时可选，搜索关键字 |
 | user | Integer | type = `users` 时可选，默认值为当前用户id |
 | screen | string | type = `users` 时可选，`paid`-付费动态 `pinned` - 置顶动态 |
+| `id` | `integer` or `string` | **可选**，按照动态 ID 获取动态列表。 |
 
 > 列表为倒序
 
