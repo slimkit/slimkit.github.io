@@ -80,7 +80,9 @@ Status: 201 OK
             "id": 1,            // 话题 ID
             "name": "第一个话题" // 话题名称
         }
-    ]
+    ],
+    "repostable_type": null, // 转发资源类型
+    "repostable_id": null,   // 转发资源 ID
 }
 ```
 

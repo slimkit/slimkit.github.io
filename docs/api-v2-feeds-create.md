@@ -21,6 +21,8 @@ POST /feeds
 | images | array | 结构：`{ id: <id>, amount: <amount>, type: <read,download> }`，**amount 为可选，id 必须存在，amount 为收费金额，单位分, type 为收费方式** |
 | `topics` | `Array` | **可选**，需要关联的话题 ID 数组。 |
 | `topics.*` | `integer` | **如果 `topics` 存在则必须**，话题 ID。 |
+| `repostable_type` | `string` | **可选，如果 `repostable_id` 存在则必须**，转发资源类型标识。 |
+| `repostable_id` | `integer` | **可选，如果 `repostable_type` 存在则必须**，转发资源 ID。 |
 
 
 ### Example
