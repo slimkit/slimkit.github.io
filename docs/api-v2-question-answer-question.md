@@ -116,6 +116,7 @@ GET /questions
 | limit | Integer | 默认 `20` ，获取列表条数，修正值 `1` - `30`。 |
 | offset | integer | 默认 `0` ，数据偏移量，传递之前通过接口获取的总数。 |
 | subject | string | 标题搜索关键字。 |
+| `id` | `string` | 按照问题 ID 返回问题列表，多个采用半角 `,` 进行分割。 |
 
 #### 响应
 

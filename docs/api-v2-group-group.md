@@ -125,6 +125,7 @@ status 200
 |offset|integer|默认 0 ，数据偏移量，传递之前通过接口获取的总数。|
 |keyword|string|用于搜索圈子，按圈名搜索|
 |category_id|integer|圈子分类id|
+| `id` | `string` | 按照圈子 ID 返回列表，多个圈子 ID 可用半角 `,` 进行分割。 |
 
 ## 推荐圈子列表
 
