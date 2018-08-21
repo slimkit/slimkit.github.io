@@ -23,6 +23,7 @@ GET /news
 | key | 搜索关键字 |
 | cate_id | 分类id |
 | recommend | 推荐筛选 =1为筛选推荐资讯列表 |
+| `id` | 需要按照 ID 获取的资讯 ID，多个使用半角 `,` 进行分割 |
 
 #### Response
 
