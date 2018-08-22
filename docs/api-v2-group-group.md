@@ -20,7 +20,7 @@ title: 圈子
 
 ### 响应内容
 
-```json
+```json5
 [
     {
         "id": 4,
@@ -54,7 +54,8 @@ title: 圈子
             "created_at": "2017-12-01 03:42:44",
             "updated_at": "2017-12-01 04:01:34"
         },
-        "avatar": null
+        "avatar": null,
+        "im_group_id": null, // 圈子绑定的群聊 ID
     },
 ]
 ```
@@ -211,6 +212,7 @@ status 200
     "created_at": "2017-11-27 10:26:47",
     "updated_at": "2017-12-04 01:26:10",
     "deleted_at": null,
+    "im_group_id": null, // 圈子绑定的群聊 ID
     "join_income_count": "200",
     "pinned_income_count": 0,
     "joined": {
@@ -467,4 +469,27 @@ status 200
 {
     "protocol": "" // 协议内容，默认为''
 }
+```
+
+## 圈子绑定群聊 ID
+
+```
+PUT /group/groups/:groupID/bind-im-group
+```
+
+变量：
+
+| 变量 | 描述 |
+| `groupID` | 圈子 ID |
+
+表单传递参数：
+
+| 参数 | 类型 | 描述 |
+|----|-----|-----|
+| `id` | `string` | 群聊 ID，环信的群组 ID |
+
+响应：
+
+```
+Status: 204 No Content
 ```
