@@ -19,7 +19,10 @@ POST /auth/login
 | 名称 | 类型 | 描述 |
 |:----:|:----:|----|
 | login | 字符串 | **必须**，用户认证字段，可以是 `name` 、 `email` 和 `phone` 。 |
-| password | 字符串 | **必须**，用户密码。 |
+| password | 字符串 | **可选**，用户密码。 |
+| `verifiable_code` | `string` | **可选**，登录验证码。 |
+
+> `password` 或者 `verifiable_code` 必须选择一个，如果选择 `verifiable_code` 进行登录。那么 `login` 字段只能是 `phone` 或者 `email`。
 
 ### 响应
 
