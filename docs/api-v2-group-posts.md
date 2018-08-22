@@ -45,6 +45,7 @@ status 200
         "collected":true,
         "created_at": "2017-11-28 07:12:20",
         "updated_at": "2017-11-28 07:12:20",
+        "excellent_at": "2018-08-22T06:27:15Z", // 如果存在，则表示精华
         "images": [
             {
                 "id": 113,
@@ -128,6 +129,7 @@ status 200
     "views_count": 0,
     "created_at": "2017-11-28 06:46:02",
     "updated_at": "2017-11-28 07:16:46",
+    "excellent_at": "2018-08-22T06:27:15Z", // 如果存在，则表示精华
     "liked": false,
     "collected": false,
     "reward_amount": 0,
@@ -363,7 +365,7 @@ Status: 200 OK
 PUT /api/v2/group/posts/:postId/toggle-excellent
 ```
 
-可变变量：
+变量：
 
 | 变量 | 描述 |
 | `postId` | 帖子 ID。|
@@ -372,4 +374,47 @@ PUT /api/v2/group/posts/:postId/toggle-excellent
 
 ```
 Status: 204 No Content
+```
+
+## 预览帖子列表接口
+
+这个接口用于用户未加入圈子时展示
+
+```
+GET group/groups/:groupId/preview-posts
+```
+
+变量：
+
+| 变量 | 描述 | 
+|----|----|
+| `groupId` | 圈子 ID |
+
+响应：
+
+```
+Status: 200 OK
+```
+```json5
+[
+    {
+        "id": 1,                                // 帖子 ID
+        "group_id": 1,                          // 所属圈子 ID
+        "user_id": 1,                           // 帖子发布者
+        "title": "haha",                        // 帖子标题
+        "summary": "1",                         // 列表描述内容
+        "likes_count": 0,                       // 点赞量
+        "comments_count": 0,                    // 帖子评论量
+        "views_count": 0,                       // 帖子阅读量
+        "created_at": "2018-08-22T06:27:15Z",   // 帖子发布时间
+        "excellent_at": "2018-08-22T06:27:15Z", // 如果存在，则表示精华
+        "images": [
+            {
+                "id": 1,
+                "size": "160x160"
+            }
+        ],
+        "comments": []                           // 参考评论资源返回（服用的代码，批量获取评论接口返回结构）
+    }
+]
 ```
