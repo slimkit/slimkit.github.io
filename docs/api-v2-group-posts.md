@@ -355,3 +355,21 @@ Status: 200 OK
     }
 ]
 ```
+
+## 设置帖子精华
+## 帖子取消精华
+
+```
+PUT /api/v2/group/posts/:postId/toggle-excellent
+```
+
+可变变量：
+
+| 变量 | 描述 |
+| `postId` | 帖子 ID。|
+
+响应：
+
+```
+Status: 204 No Content
+```
