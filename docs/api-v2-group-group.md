@@ -44,6 +44,7 @@ title: 圈子
         "updated_at": "2017-11-28 09:45:17",
         "join_income_count": 0,
         "pinned_income_count": 0,
+        "excellen_posts_count": 0, // 精华贴数量
         "joined": {
             "id": 11,// 成员唯一id
             "group_id": 3,// 所属圈子id
@@ -190,7 +191,7 @@ GET /groups/:group
 status 200
 ```
 
-```json
+```json5
 {
     "id": 1,
     "name": "垃圾",
@@ -215,6 +216,7 @@ status 200
     "im_group_id": null, // 圈子绑定的群聊 ID
     "join_income_count": "200",
     "pinned_income_count": 0,
+    "excellen_posts_count": 0, // 精华贴数量
     "joined": {
         "id": 2,
         "group_id": 1,
