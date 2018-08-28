@@ -159,6 +159,37 @@ GET /user-groups
 ```
 status 200
 ```
+```json5
+[
+    {
+        "id": 1,
+        "name": "圈子1",
+        "user_id": 1,
+        "category_id": 1,
+        "location": null,
+        "longitude": null,
+        "latitude": null,
+        "geo_hash": null,
+        "allow_feed": 0,
+        "mode": "public",
+        "money": 0,
+        "summary": "111",
+        "notice": "2222",
+        "permissions": "member,administrator,founder",
+        "users_count": 1,
+        "posts_count": 0,
+        "audit": 1,
+        "im_group_id": null,
+        "excellen_posts_count": 0,
+        "created_at": "2018-08-28 04:03:25",
+        "updated_at": "2018-08-28 04:03:25",
+        "deleted_at": null,
+        "joined": null,
+        "join_at": "2018-08-28T04:01:25Z", // 待审核独有，申请加入时间！
+        "avatar": "http://localhost:8000/storage/group/avatars/000/000/000/01.png?v=1534836577"
+    }
+]
+```
 ### 参数说明
 
 | 名称 | 类型 | 说明 |
