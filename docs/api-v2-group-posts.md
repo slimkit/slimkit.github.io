@@ -29,6 +29,7 @@ status 200
 |type | string| 默认:latest_post, latest_post 最新帖子,latest_reply最新回复|
 |limit|integer| 默认 15 ，数据返回条数 默认为15|
 |offset|integer|默认 0 ，数据偏移量，传递之前通过接口获取的总数。|
+| `excellent` | `any` | **可选**，不传递，表示获取全部帖子，传递 `1` 表示获取精华帖子。 |
 
 ```json
 [
