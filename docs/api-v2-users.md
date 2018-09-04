@@ -5,7 +5,7 @@ title: 用户
 
 ## 获取一个用户
 
-- [获取一个用户头像](#获取一个用户头像)
+获取指定用户：
 
 ```
 GET /users/:user
@@ -23,84 +23,7 @@ GET /users/:user
 | following | Integer | 检查请求用户是否关注了指定的用户，传递要检查的用户 ID，默认为当前登录用户。 |
 | follower | Integer | 检查请求用户是否被某个用户关注，传递要检查的用户 ID，默认为当前登录用户。 |
 
-##### 响应
-
-```
-Status: 200 OK
-```
-```json
-{
-    "id": 1,
-    "name": "创始人",
-    "bio": "我是大管理员",
-    "sex": 0,
-    "location": "成都市 四川省 中国",
-    "created_at": "2017-06-02 08:43:54",
-    "updated_at": "2017-07-06 07:04:06",
-    "following": false,
-    "follower": false,
-    "avatar": "http://plus.io/api/v2/users/1/avatar",
-    "bg": null,
-    "verified": {
-        "type": "user",
-        "icon": null,
-        "description": "xxxxx"
-    },
-    "extra": {
-        "user_id": 1,
-        "likes_count": 0,
-        "comments_count": 0,
-        "followers_count": 0,
-        "followings_count": 1,
-        "updated_at": "2017-07-16 09:44:25",
-        "feeds_count": 0
-    }
-}
-```
-
-| 字段 | 描述 |
-|:----:|----|
-| id | 用户 ID。 |
-| name | 用户名 |
-| bio | 用户的个人简介。（用户的简短传记或者描述） |
-| sex | 用户性别, `0` - Unknown, `1` - 男, `2` - 女. |
-| location | 用户的位置信息 |
-| created_at | 用户的注册时间 |
-| updated_at | 用户核心资料更新时间 |
-| following | 这个用户是否关注了你，或者你指定检查的用户。 |
-| follower | 你是否是这个用户的关注者，或者你指定的用户。 |
-| avatar | 用户头像接口地址，没有头像为 `null`。 |
-| bg | 用户背景图片地址，没有背景图片为 `null`。 |
-| extra.likes_count | 用户收到的喜欢（赞）统计总数。 |
-| extra.comments_count | 用户所发出的评论总数统计 |
-| extra.followers_count | 这个用户的关注者总数统计。 |
-| extra.followings_count | 这个用户关注了多少人总数统计。 |
-| extra.updated_at | 用户次要资料更新时间。 |
-| verified | 用户的认证信息，未认证用户该值为 `null`。 |
-| verified.type | 用户认证类型。字符串，`user`、`org` |
-| verified.icon | 用户认证类型的 Icon。图片地址。 |
-| verified.description | 用户认证描述 |
-
-### 获取一个用户头像
-
-```
-GET /users/:user/avatar
-```
-
-#### 参数
-
-| 字段 | 类型 | 描述 |
-|:----:|:----:|----|
-| s | 数字 | 用户尺寸，最小 0，最大 500. |
-
-##### 响应
-
-```
-Status: 302 > 200 | 304
-Etag: "59698999-592a"
-```
-
-## 获取认证用户资料
+获取当前认证用户：
 
 ```
 GET /user
@@ -111,72 +34,66 @@ GET /user
 ```
 Status: 200 OK
 ```
-```json
+
+```json5
 {
-    "id": 1,
-    "name": "创始人",
-    "phone": "18781993582",
-    "email": "shiweidu@outlook.com",
-    "bio": "我是大管理员",
-    "sex": 0,
-    "location": "成都市 四川省 中国",
-    "created_at": "2017-06-02 08:43:54",
-    "updated_at": "2017-07-06 07:04:06",
-    "avatar": "http://plus.io/api/v2/users/1/avatar",
-    "bg": null,
-    "extra": {
-        "user_id": 1,
-        "likes_count": 0,
-        "comments_count": 0,
-        "followers_count": 0,
-        "followings_count": 1,
-        "updated_at": "2017-07-16 09:44:25",
-        "feeds_count": 0
+    "id": 1,                           // 用户 ID
+    "name": "创始人",                   // 用户名
+    "phone": "18364758373",            // 用户手机号码，仅获取自己资料
+    "email": "shiweidu@outlook.com",   // 用户邮箱，仅获取自己资料
+    "bio": "我是大管理员",               // 用户描述
+    "sex": 0,                          // 用户性别，1 男，2 女，0 未知
+    "location": "成都市 四川省 中国",     // 用户地区
+    "created_at": "2017-06-02 08:43:54",// 用户注册时间
+    "updated_at": "2017-07-06 07:04:06",// 用户最后一次更新资料时间
+    "avatar": {                        // 用户头像
+        "vendor": "local",
+        "url": "https://xxxxx",
+        "mize": "image/png",
+        "size": 8674535,
+        "dimension": {
+            "width": 240,
+            "height": 240,
+        }
     },
-    "wallet": {
+    "bg": null,                         // 同 `avatar` 字段
+    "extra": {                          // 用户拓展信息
+        "user_id": 1,
+        "likes_count": 0,               // 喜欢数量
+        "comments_count": 0,            // 评论数量
+        "followers_count": 0,           // 关注者数量
+        "followings_count": 1,          // 关注的人数量
+        "updated_at": "2017-07-16 09:44:25",
+        "feeds_count": 0                 // 动态数量
+    },
+    "wallet": {                          // 钱包信息，仅获取自己资料存在
         "id": 1,
         "user_id": 1,
-        "balance": 90,
+        "balance": 90,                   // 钱包余额
         "created_at": "2017-06-02 08:43:54",
         "updated_at": "2017-07-05 08:29:49",
         "deleted_at": null
     },    
-    "new_wallet": {
+    "new_wallet": {                      // 钱包信息，仅获取自己资料存在
         "owner_id": 1,
-        "balance": 1000,
-        "total_income": 100,
-        "total_expenses": 100,
+        "balance": 1000,                 // 钱包余额
+        "total_income": 100,             // 收入统计
+        "total_expenses": 100,           // 支出统计
         "created_at": "2018-01-22 10:05:44",
         "updated_at": "2018-01-22 10:05:45"
     },
-    "currency": {
+    "currency": {                        // 积分信息，仅获取自己资料存在
         "owner_id": 1,
-        "type": 1,
-        "sum": 9400,
+        "type": 1,                       // 积分类型
+        "sum": 9400,                     // 积分数量
         "created_at": "2018-01-17 06:57:18",
         "updated_at": "2018-01-18 06:57:24"
     }
 }
 ```
 
-| 名称 | 描述 |
-|:----:|----|
-| phone | 用户手机号码。 |
-| email | 用户电子邮箱地址 |
-| wallet.balance | 用户钱包余额。 |
-| wallet.updated_at | 用户上次产生交易时间。 |
-| new_wallet.total_income | 总收入 |
-| new_wallet.total_expenses | 总支出 |
-| currency.sum | 积分 |
-
-> new_wallet 和currency 字段可能为null，为null时可认为余额为0，用户调用相关操作时会重新生成
-
-> 只有认证用户才获取得到钱包信息和手机邮箱等敏感信息。
-
 ## 更新认证用户资料
 
-- [更新认证用户头像](#更新认证用户头像)
-- [更新认证用户背景图片](#更新认证用户背景图片)
 - [更新认证用户的手机号码和邮箱](#更新认证用户的手机号码和邮箱)
 - [更新认证用户密码](#更新认证用户密码)
 
@@ -192,42 +109,8 @@ PATCH /user
 | bio | 字符串 | 用户新的个人传记。 |
 | sex | 数字 | 用户新的性别。 |
 | location | 字符串 | 用户新的位置信息。 |
-
-##### 响应
-
-```
-Status: 204 No Content
-```
-
-### 更新认证用户头像
-
-```
-POST /user/avatar
-```
-
-#### Input
-
-| 字段 | 类型 | 描述 |
-|:----:|:----:|----|
-| avatar | 文件 | 用户新的头像，头像比例为：`1:1`，尺寸范围：`100px - 500px` |
-
-##### 响应
-
-```
-Status: 204 No Content
-```
-
-### 更新认证用户背景图片
-
-```
-POST /user/bg
-```
-
-#### Input
-
-| 字段 | 类型 | 描述 |
-|:----:|:----:|----|
-| image | 文件 | 用户新的背景图片。 |
+| `avatar` | `FILE_STORAGE_NODE<string>` | **可选**，用户头像的 File node 值 |
+| `bg`     | `FILE_STORAGE_NODE<string>` | **可选**，用户背景图片的 File node 值 |
 
 ##### 响应
 
