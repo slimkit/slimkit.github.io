@@ -3,9 +3,6 @@ id: api-v2-feeds-get
 title: 获取动态
 ---
 
-- [单条](#单条)
-- [批量](#批量)
-
 ## 单条
 
 ```
@@ -115,6 +112,7 @@ GET /feeds
 | user | Integer | type = `users` 时可选，默认值为当前用户id |
 | screen | string | type = `users` 时可选，`paid`-付费动态 `pinned` - 置顶动态 |
 | `id` | `integer` or `string` | **可选**，按照动态 ID 获取动态列表。 |
+| `hot` | `integer` | **可选，仅 `type=hot` 时有效**，用于热门数据翻页标记！上次获取数据最后一条的 `hot` 值 |
 
 > 列表为倒序
 
