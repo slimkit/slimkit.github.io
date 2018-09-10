@@ -20,10 +20,11 @@ GET /api/v2/question-configs
 
 ### 响应
 
-```json
+```json5
 {
     "apply_amount": 200, // 申请精选费用
     "onlookers_amount": 100, // 围观费用
-    "anonymity_rule": "匿名规则12321" // 匿名规则
+    "anonymity_rule": "匿名规则12321", // 匿名规则
+    "reward_rule": null,   // 悬赏规则，如果存在其内容为 Markdown
 }
 ```
