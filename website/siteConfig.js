@@ -33,6 +33,10 @@ const siteConfig = {
       search: true
     },
     {
+      href: '/plus/',
+      label: '文档 [New]'
+    },
+    {
       doc: 'server-getting-started-installation',
       label: '文档'
     },
