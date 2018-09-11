@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>服务端配项说明 · Plus (ThinkSNS+)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&gt; 系统配置是开启一切的钥匙"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="服务端配项说明 · Plus (ThinkSNS+)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://slimkit.github.io/index.html"/><meta property="og:description" content="&gt; 系统配置是开启一切的钥匙"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/plus.png" alt="Plus (ThinkSNS+)"/><h2 class="headerTitleWithLogo">Plus (ThinkSNS+)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/plus/" target="_self">文档 [New]</a></li><li class="siteNavGroupActive"><a href="/docs/server-getting-started-installation.html" target="_self">文档</a></li><li class=""><a href="/docs/api-v2-overview.html" target="_self">REST API v2</a></li><li class=""><a href="/en/new-issue.html" target="_self">反馈</a></li><li class=""><a href="https://github.com/slimkit" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>指南</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">快速开始</h3><ul><li class="navListItem"><a class="navItem" href="/docs/server-getting-started-installation.html">安装</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">指南</h3><ul><li class="navListItem"><a class="navItem" href="/docs/server-guides-package.html">拓展包开发指南</a></li><li class="navListItem"><a class="navItem" href="/docs/server-guides-configuration.html">配置管理</a></li><li class="navListItem"><a class="navItem" href="/docs/server-guides-cdn.html">CDN</a></li><li class="navListItem"><a class="navItem" href="/docs/server-guides-plus-id.html">Plus ID</a></li><li class="navListItem"><a class="navItem" href="/docs/data-fields.html">数据字典</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/server-config-guides.html">服务端配项说明</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/slimkit/slimkit.github.io/edit/source/docs/server-config-guides.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">服务端配项说明</h1></header><article><div><span><blockquote>
+<p>系统配置是开启一切的钥匙</p>
+</blockquote>
+<p>为了能让大家能够对各个配置项的作用更加了解, 在此我们对ThinkSNS+的配置项做一个具体的分析</p>
+<p><strong><em>文档中所提到废弃配置, 是已经废弃的配置, 可能在部分老版本中还存在; 并且此配置我们依旧会不停优化, 达到最佳效果</em></strong></p>
+<h3><a class="anchor" aria-hidden="true" id="配置文件所在位置"></a><a href="#配置文件所在位置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>配置文件所在位置</h3>
+<ol>
+<li><p>.env文件 「laravel默认配置文件」
+.env文件详解,请见laravel文档 <a href="https://laravel-china.org/docs/laravel/5.6/configuration">.env「中文」</a> <a href="https://laravel.com/docs/5.6/configuration">.env「英文」</a></p></li>
+<li><p>config目录中的所有文件 「扩展包配置文件」
+请看laravel扩展包相关文档 <a href="https://laravel-china.org/docs/laravel/5.6/packages#package-discovery">扩展包的configuration</a></p></li>
+<li><p>.plus.yml文件 「后台设置存放的配置文件」, <strong><code>配置文件的优先级最高</code></strong>, 然后是config目录中的配置文件, 最后才是.env文件
+这个文件是此文档主要讲解的内容, 请看详解</p></li>
+</ol>
+<blockquote>
+<p>YAML（IPA: /ˈjæməl/，尾音类似camel骆驼）是一个可读性高，用来表达资料序列的编程语言。
+文件后缀 .yml</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="站点设置部分"></a><a href="#站点设置部分" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>站点设置部分</h3>
+<p>对应后台设置中: 系统设置 -&gt; 站点设置</p>
+<pre><code class="hljs"><span class="hljs-attribute">site</span>: <span class="hljs-comment">// 站点标识</span>
+    <span class="hljs-attribute">gold</span>: <span class="hljs-comment">// 积分标识</span>
+        <span class="hljs-attribute">status</span>: true <span class="hljs-comment">// 是否开启积分 Boolean [true, false]</span>
+    <span class="hljs-attribute">reward</span>: <span class="hljs-comment">// 打赏标识</span>
+        <span class="hljs-attribute">status</span>: true <span class="hljs-comment">// 是否开启打赏 Boolean [true, false]</span>
+        <span class="hljs-attribute">amounts</span>: <span class="hljs-string">'100,500,1000'</span> <span class="hljs-comment">// 打赏金额选项, 单位为「分」, 使用「半角逗号」分割</span>
+    <span class="hljs-attribute">reserved_nickname</span>: <span class="hljs-string">'root,admin'</span> <span class="hljs-comment">// 预留站点昵称「半角逗号」分割</span>
+    <span class="hljs-attribute">client_email</span>: admin<span class="hljs-variable">@123</span>.com <span class="hljs-comment">// 客服邮箱</span>
+    <span class="hljs-attribute">user_invite_template</span>: <span class="hljs-string">'我发现了一个全平台社交系统ThinkSNS+，快来加入吧：http://t.cn/RpFfbbi'</span> <span class="hljs-comment">// 客户端[Android, iOS]邀请短信模板, 短链接无法自动生成</span>
+    <span class="hljs-attribute">anonymous</span>: <span class="hljs-comment">// 匿名设置</span>
+        <span class="hljs-attribute">status</span>: true <span class="hljs-comment">// 可匿名状态 [true, false]</span>
+        <span class="hljs-attribute">rule</span>: 可以使用匿名 <span class="hljs-comment">// 匿名规则说明</span>
+    <span class="hljs-attribute">about_url</span>: <span class="hljs-attribute">http</span>:<span class="hljs-comment">//www.thinksns.com</span>
+    <span class="hljs-attribute">status</span>: true <span class="hljs-comment">// 弃用设置</span>
+    <span class="hljs-attribute">off_reason</span>: 站点维护中请稍后再访问 <span class="hljs-comment">// 弃用设置</span>
+    <span class="hljs-attribute">app</span>: <span class="hljs-comment">// 弃用设置</span>
+        <span class="hljs-attribute">status</span>: true <span class="hljs-comment">// 弃用设置</span>
+    <span class="hljs-attribute">h5</span>: <span class="hljs-comment">// 弃用设置</span>
+        <span class="hljs-attribute">status</span>: true <span class="hljs-comment">// `弃用设置`</span>
+    <span class="hljs-attribute">background</span>: 
+        <span class="hljs-attribute">logo</span>: /api/v2/files/<span class="hljs-number">4</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="签到设置"></a><a href="#签到设置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>签到设置</h3>
+<pre><code class="hljs"><span class="hljs-attr">checkin:</span> <span class="hljs-string">//</span> <span class="hljs-string">签到设置</span>
+<span class="hljs-attr">    open:</span> <span class="hljs-literal">true</span> <span class="hljs-string">//</span> <span class="hljs-string">是否开启[true,</span> <span class="hljs-literal">false</span><span class="hljs-string">]</span>
+<span class="hljs-attr">    attach_balance:</span> <span class="hljs-number">1</span> <span class="hljs-string">//</span> <span class="hljs-string">签到后获取的积分</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="pc扩展包设置"></a><a href="#pc扩展包设置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>PC扩展包设置</h3>
+<p>此配置并非TS+主干带有, 需要安装PC扩展包</p>
+<p><strong><code>注: QQ第三方登录 ios &amp;&amp; android客户端使用的是腾讯开放平台, pc &amp;&amp; h5使用的QQ互联, 需要发送邮件至腾讯进行应用合并</code></strong></p>
+<p><strong><code>注: QQ第三方登录 ios &amp;&amp;a ndroid客户端使用的是腾讯开放平台, pc &amp;&amp; h5还使用的QQ互联, 需要发送邮件至腾讯进行应用合并</code></strong></p>
+<p><strong><code>注: QQ第三方登录 ios &amp;&amp; android客户端使用的是腾讯开放平台, pc &amp;&amp; h5使用的QQ互联, 需要发送邮件至腾讯进行应用合并</code></strong></p>
+<hr />
+<p><strong><code>注: 微信第三方登录 IOS &amp;&amp; Android &amp;&amp; PC 使用的微信开放平台, H5使用的是微信公众号授权登录, 需要在开放平台绑定公众号</code></strong></p>
+<p><strong><code>注: 微信第三方登录 IOS &amp;&amp; Android &amp;&amp; PC 使用的微信开放平台, H5使用的是微信公众号授权登录, 需要在开放平台绑定公众号</code></strong></p>
+<p><strong><code>注: 微信第三方登录 IOS &amp;&amp; Android &amp;&amp; PC 使用的微信开放平台, H5使用的是微信公众号授权登录, 需要在开放平台绑定公众号</code></strong></p>
+<p>重要的事情要说三遍</p>
+<pre><code class="hljs"><span class="hljs-attribute">pc</span>: <span class="hljs-comment">// pc扩展包配置</span>
+    <span class="hljs-attribute">installed</span>: true <span class="hljs-comment">// 判断是否安装, 做跳转判断</span>
+    <span class="hljs-attribute">routeName</span>: <span class="hljs-string">'pc:feeds'</span> <span class="hljs-comment">// pc默认跳转路由名称</span>
+    <span class="hljs-attribute">stats_code</span>: null
+    <span class="hljs-attribute">status</span>: <span class="hljs-string">'0'</span> <span class="hljs-comment">// pc扩展包是否开启, 暂未使用</span>
+    <span class="hljs-attribute">logo</span>: <span class="hljs-number">0</span> <span class="hljs-comment">// pc扩展包logo, 为file_with_id</span>
+    <span class="hljs-attribute">loginbg</span>: <span class="hljs-number">0</span> <span class="hljs-comment">// pc扩展包登录页背景图, 为 file_with_id</span>
+    <span class="hljs-attribute">site_name</span>: ThinkSNS+ <span class="hljs-comment">// pc 页面title</span>
+    <span class="hljs-attribute">site_copyright</span>: <span class="hljs-string">'Powered by ThinkSNS ©2017 ZhishiSoft All Rights Reserved.'</span> <span class="hljs-comment">// pc 版权</span>
+    <span class="hljs-attribute">site_technical</span>: ThinkSNS <span class="hljs-comment">// 技术支持提供方</span>
+    <span class="hljs-attribute">weibo</span>: <span class="hljs-comment">// 三方登录: 微博</span>
+        <span class="hljs-attribute">client_id</span>: null <span class="hljs-comment">// 微博开放平台 应用id</span>
+        <span class="hljs-attribute">client_secret</span>: null <span class="hljs-comment">// 微博开放平台 应用密钥</span>
+    <span class="hljs-attribute">wechat</span>: <span class="hljs-comment">// 三方登录: 微信</span>
+        <span class="hljs-attribute">client_id</span>: null <span class="hljs-comment">// 微信开放平台 应用id</span>
+        <span class="hljs-attribute">client_secret</span>: null <span class="hljs-comment">// 微信开放平台 应用密钥</span>
+    <span class="hljs-attribute">qq</span>: <span class="hljs-comment">// 三方登录: QQ</span>
+        <span class="hljs-attribute">client_id</span>: null <span class="hljs-comment">// QQ互联应用id</span>
+        <span class="hljs-attribute">client_secret</span>: null QQ互联 应用密钥
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="注册设置"></a><a href="#注册设置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>注册设置</h3>
+<p>对应后台设置: 用户中心 -&gt; 注册设置</p>
+<pre><code class="hljs">registerSettings: <span class="hljs-comment">// 注册设置</span>
+    showTerms: <span class="hljs-keyword">true</span> <span class="hljs-comment">// 显示注册条款 [true, false]</span>
+    <span class="hljs-function"><span class="hljs-keyword">method</span>:</span> all <span class="hljs-comment">// 账号类型[仅手机, 仅邮箱, 手机和邮箱]</span>
+    fixed: need <span class="hljs-comment">// 是否需要完善资料</span>
+    <span class="hljs-keyword">type</span>: all <span class="hljs-comment">// 注册方式 [all]</span>
+    content: <span class="hljs-string">'# 服务条款及隐私政策'</span> <span class="hljs-comment">// 注册条款</span>
+
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="本地即时聊天配置"></a><a href="#本地即时聊天配置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>本地即时聊天配置</h3>
+<pre><code class="hljs"><span class="hljs-attr">im:</span>
+<span class="hljs-attr">    open:</span> <span class="hljs-literal">true</span> <span class="hljs-string">//</span> <span class="hljs-string">废弃配置</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="基本信息配置"></a><a href="#基本信息配置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>基本信息配置</h3>
+<p>对应后台设置: 系统设置 -&gt; 基本信息</p>
+<pre><code class="hljs"><span class="hljs-symbol">app:</span>
+<span class="hljs-symbol">    name:</span> ThinkSNS+ <span class="hljs-comment">// 站点名称</span>
+<span class="hljs-symbol">    keywords:</span> ThinkSNS+ <span class="hljs-comment">// 站点关键字</span>
+<span class="hljs-symbol">    description:</span> ThinkSNS+ <span class="hljs-comment">// 站点简介</span>
+<span class="hljs-symbol">    icp:</span> 蜀ICP备<span class="hljs-number">-293898923</span> <span class="hljs-comment">// icp备案信息</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="附件管理"></a><a href="#附件管理" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>附件管理</h3>
+<pre><code class="hljs"><span class="hljs-attribute">cdn</span>:
+    <span class="hljs-attribute">default</span>: filesystem <span class="hljs-comment">// 选中的附件存储类型</span>
+    <span class="hljs-attribute">generators</span>:
+        <span class="hljs-attribute">filesystem</span>: <span class="hljs-comment">// 本地文件</span>
+            <span class="hljs-attribute">disk</span>: public 
+        <span class="hljs-attribute">alioss</span>: <span class="hljs-comment">// 阿里OSS</span>
+            <span class="hljs-attribute">bucket</span>: bucket <span class="hljs-comment">// bucket名字</span>
+            <span class="hljs-attribute">endpoint</span>: <span class="hljs-string">'https://img.zhibocloud.cn'</span> <span class="hljs-comment">// 加速域名或者oss自带域名</span>
+            <span class="hljs-attribute">AccessKeyId</span>: access_key 
+            <span class="hljs-attribute">AccessKeySecret</span>: secret_key
+            <span class="hljs-attribute">ssl</span>: true <span class="hljs-comment">// 是否开启ssl协议「需要在oss开启, 并且endpoint需要https」</span>
+            <span class="hljs-attribute">public</span>: false <span class="hljs-comment">// 是否可以公开浏览 [true, false]</span>
+            <span class="hljs-attribute">expires</span>: <span class="hljs-number">3600</span> <span class="hljs-comment">// 私有认证的有效时间 「单位: 秒」</span>
+            <span class="hljs-attribute">cname</span>: true <span class="hljs-comment">// 是否加速 [true, false]</span>
+        <span class="hljs-attribute">qiniu</span>: <span class="hljs-comment">// 七牛云存储</span>
+            <span class="hljs-attribute">domain</span>: <span class="hljs-string">'https://images.zhibocloud.cn'</span> <span class="hljs-comment">// 加速域名</span>
+            <span class="hljs-attribute">sign</span>: false <span class="hljs-comment">// 签名公开与否 [true, flase]</span>
+            <span class="hljs-attribute">expires</span>: <span class="hljs-number">3600</span> <span class="hljs-comment">// 签名有效时间 「单位秒」</span>
+            <span class="hljs-attribute">ak</span>: access_key
+            <span class="hljs-attribute">sk</span>: secret_key
+            <span class="hljs-attribute">type</span>: object <span class="hljs-comment">// 对象存储/融合cdn</span>
+            <span class="hljs-attribute">bucket</span>: bucket <span class="hljs-comment">// 存储bucket</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="动态扩展包"></a><a href="#动态扩展包" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>动态扩展包</h3>
+<pre><code class="hljs"><span class="hljs-attr">feed:</span>
+<span class="hljs-attr">    paycontrol:</span> <span class="hljs-literal">true</span> <span class="hljs-string">//</span> <span class="hljs-string">是否开启付费内容</span>
+<span class="hljs-attr">    limit:</span> <span class="hljs-number">100</span> <span class="hljs-string">//</span> <span class="hljs-string">收费文字长度,</span> <span class="hljs-string">设置收费后有效</span>
+<span class="hljs-attr">    items:</span> <span class="hljs-string">//</span> <span class="hljs-string">付费预设积分选项</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-number">100</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-number">500</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-number">1000</span>
+<span class="hljs-attr">    reward:</span> <span class="hljs-literal">true</span> <span class="hljs-string">//</span> <span class="hljs-string">是否开启打赏</span> <span class="hljs-string">[true,</span> <span class="hljs-literal">false</span><span class="hljs-string">],</span> <span class="hljs-string">打赏预设选项有站点设置控制</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="资讯设置"></a><a href="#资讯设置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>资讯设置</h3>
+<pre><code class="hljs"><span class="hljs-attr">news:</span>
+<span class="hljs-attr">    pay_contribute:</span> <span class="hljs-number">1000</span> <span class="hljs-string">//</span> <span class="hljs-string">投稿所需积分</span> <span class="hljs-string">开启付费投稿有效</span>
+<span class="hljs-attr">    contribute:</span>
+<span class="hljs-attr">        verified:</span> <span class="hljs-literal">true</span> <span class="hljs-string">//</span> <span class="hljs-string">是否开启认证用户投稿</span>
+<span class="hljs-attr">        pay:</span> <span class="hljs-literal">true</span> <span class="hljs-string">//</span> <span class="hljs-string">是否开启付费投稿</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="邮件配置"></a><a href="#邮件配置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>邮件配置</h3>
+<pre><code class="hljs"><span class="hljs-attribute">mail</span>: 
+    <span class="hljs-attribute">driver</span>: smtp <span class="hljs-comment">// 邮件驱动 [smtp, log], log为本地日志记录, 不发送, 用于测试</span>
+    <span class="hljs-attribute">host</span>: smtp.zhibocloud.cn <span class="hljs-comment">// smtp邮件服务器地址</span>
+    <span class="hljs-attribute">port</span>: <span class="hljs-string">'2525'</span> <span class="hljs-comment">// 邮件服务器端口</span>
+    <span class="hljs-attribute">from</span>: <span class="hljs-comment">// 邮件作者设置</span>
+        <span class="hljs-attribute">address</span>: hello<span class="hljs-variable">@example</span>.com
+        <span class="hljs-attribute">name</span>: Example
+    <span class="hljs-attribute">encryption</span>: ssl <span class="hljs-comment">// 传输加密协议 [tls, ssl]</span>
+    <span class="hljs-attribute">username</span>: root <span class="hljs-comment">// 发件账号</span>
+    <span class="hljs-attribute">password</span>: <span class="hljs-string">'123456'</span> <span class="hljs-comment">// 发件密码</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="积分配置"></a><a href="#积分配置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>积分配置</h3>
+<pre><code class="hljs"><span class="hljs-symbol">currency:</span>
+<span class="hljs-symbol">    recharge:</span> <span class="hljs-comment">// 充值</span>
+<span class="hljs-symbol">        IAP:</span> <span class="hljs-comment">// iOS IAP充值</span>
+<span class="hljs-symbol">            only:</span> true <span class="hljs-comment">// 是否开启IAP, 用户app上架</span>
+<span class="hljs-symbol">            rule:</span> ddddd <span class="hljs-comment">// IAP充值规则</span>
+<span class="hljs-symbol">        rule:</span> 积分充值规则 <span class="hljs-comment">// 积分充值规则</span>
+<span class="hljs-symbol">        status:</span> true <span class="hljs-comment">// </span>
+<span class="hljs-symbol">    rule:</span> 积分规则 <span class="hljs-comment">// 积分总则</span>
+<span class="hljs-symbol">    cash:</span>
+<span class="hljs-symbol">        rule:</span> 积分体现规则 <span class="hljs-comment">// 积分提现规则 </span>
+<span class="hljs-symbol">        status:</span> true <span class="hljs-comment">// 是否开启积分转余额</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="附件上传大小设置"></a><a href="#附件上传大小设置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>附件上传大小设置</h3>
+<pre><code class="hljs"><span class="hljs-attribute">files</span>:
+    <span class="hljs-attribute">upload_max_size</span>: <span class="hljs-string">'10240'</span> <span class="hljs-comment">// 单位: K</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="短信设置"></a><a href="#短信设置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>短信设置</h3>
+<pre><code class="hljs"><span class="hljs-symbol">sms:</span>
+<span class="hljs-symbol">    default:</span>
+<span class="hljs-symbol">        allowed_gateways:</span> <span class="hljs-comment">// 默认开启的网关</span>
+            - aliyun
+            - alidayu
+            - yunpian
+<span class="hljs-symbol">        gateways:</span> <span class="hljs-comment">// 开启的网关</span>
+            - aliyun
+            - alidayu
+            - yunpian
+<span class="hljs-symbol">    channels:</span>
+<span class="hljs-symbol">        code:</span> <span class="hljs-comment">// 短信模版ID 有短信供应商提供</span>
+<span class="hljs-symbol">            alidayu:</span>
+<span class="hljs-symbol">                template:</span> xx_123456
+<span class="hljs-symbol">            aliyun:</span>
+<span class="hljs-symbol">                template:</span> sm_123456
+<span class="hljs-symbol">            yunpian:</span>
+<span class="hljs-symbol">                content:</span> xx_123456
+<span class="hljs-symbol">    gateways:</span> <span class="hljs-comment">// 网关配置</span>
+<span class="hljs-symbol">        aliyun:</span>
+<span class="hljs-symbol">            access_key_id:</span> appKey
+<span class="hljs-symbol">            access_key_secret:</span> appSecret
+<span class="hljs-symbol">            sign_name:</span> ThinkSNS+
+<span class="hljs-symbol">        alidayu:</span>
+<span class="hljs-symbol">            app_key:</span> alidayu_app_key
+<span class="hljs-symbol">            app_secret:</span> alidayu_app_secret
+<span class="hljs-symbol">            sign_name:</span> ThinkSNS+
+<span class="hljs-symbol">        yunpian:</span>
+<span class="hljs-symbol">            api_key:</span> yunpian_api_key
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="钱包配置"></a><a href="#钱包配置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>钱包配置</h3>
+<pre><code class="hljs"><span class="hljs-attr">wallet:</span>
+<span class="hljs-attr">    cash:</span>
+<span class="hljs-attr">        status:</span> <span class="hljs-literal">true</span> <span class="hljs-string">//</span> <span class="hljs-string">是否开启提现</span>
+<span class="hljs-attr">    recharge:</span>
+<span class="hljs-attr">        status:</span> <span class="hljs-literal">true</span> <span class="hljs-string">//</span> <span class="hljs-string">是否开启充值</span>
+<span class="hljs-attr">    transform:</span>
+<span class="hljs-attr">        status:</span> <span class="hljs-literal">true</span> <span class="hljs-string">//</span> <span class="hljs-string">是否支持余额购买积分</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="app版本控制"></a><a href="#app版本控制" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>app版本控制</h3>
+<p>暂时只对android有效</p>
+<pre><code class="hljs"><span class="hljs-attr">plus-appversion:</span>
+<span class="hljs-attr">    open:</span> <span class="hljs-literal">false</span> <span class="hljs-string">//</span> <span class="hljs-string">[true,</span> <span class="hljs-literal">false</span><span class="hljs-string">]</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="附近的人设置"></a><a href="#附近的人设置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>附近的人设置</h3>
+<p>基于高德地图</p>
+<pre><code class="hljs">around-<span class="hljs-string">amap:</span>
+    amap-<span class="hljs-string">sig:</span> gao_app_secret <span class="hljs-comment">// app_secret</span>
+    amap-<span class="hljs-string">tableid:</span> map_table_id <span class="hljs-comment">// 高德自定义地图id 申请地址: http://yuntu.amap.com/datamanager</span>
+    amap-<span class="hljs-string">key:</span> gaode_app_key <span class="hljs-comment">// app_key</span>
+    amap-<span class="hljs-string">jssdk:</span> <span class="hljs-string">http:</span><span class="hljs-comment">//webapi.amap.com/maps?v=1.4.4&amp;key=您申请的key值 // jssdk地址, 用于H5</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="圈子设置"></a><a href="#圈子设置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>圈子设置</h3>
+<pre><code class="hljs"><span class="hljs-attr">plus-group:</span>
+<span class="hljs-attr">    group_reward:</span>
+<span class="hljs-attr">        status:</span> <span class="hljs-literal">true</span> <span class="hljs-string">//</span> <span class="hljs-string">是否开启圈内资源打赏</span>
+<span class="hljs-attr">    group_create:</span>
+<span class="hljs-attr">        need_verified:</span> <span class="hljs-literal">true</span> <span class="hljs-string">//</span> <span class="hljs-string">是否开启认证用户创建圈子</span>
+<span class="hljs-attr">    report_handle:</span> <span class="hljs-string">founder</span> <span class="hljs-string">//</span> <span class="hljs-string">圈内举报处理人</span> <span class="hljs-string">['admin'</span> <span class="hljs-string">=&gt;</span> <span class="hljs-string">'网站管理员'</span><span class="hljs-string">,</span> <span class="hljs-string">'founder'</span><span class="hljs-string">=&gt;</span> <span class="hljs-string">'圈主'</span><span class="hljs-string">]</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="问答设置"></a><a href="#问答设置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>问答设置</h3>
+<pre><code class="hljs"><span class="hljs-attribute">question</span>:
+    <span class="hljs-attribute">app</span>:
+        <span class="hljs-attribute">switch</span>: true <span class="hljs-comment">// 是否开启问答</span>
+    <span class="hljs-attribute">apply_amount</span>: <span class="hljs-number">200</span> <span class="hljs-comment">// 申请精选所需金额「单位: 分」</span>
+    <span class="hljs-attribute">onlookers_amount</span>: <span class="hljs-number">100</span> <span class="hljs-comment">// 围观所需金额「单位: 分」</span>
+    <span class="hljs-attribute">anonymity_rule</span>: <span class="hljs-string">''</span> <span class="hljs-comment">// 废弃配置</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/data-fields.html">← 数据字典</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/plus.png" alt="Plus (ThinkSNS+)" width="66" height="58"/></a><div><h5>More</h5><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/slimkit/thinksns-plus" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Chengdu ZhiYiChuangXiang Technology Co., Ltd. All rights reserved.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: '5e14e81576e97337f567595ea504b651',
+                indexName: 'slimkit',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"hitsPerPage":5}
+              });
+            </script></body></html>

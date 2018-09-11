@@ -1,0 +1,366 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Plus Pay（新钱包-支付工具） · Plus (ThinkSNS+)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="和用户余额相关的信息，余额单位都是按照 CNY 的「分」作为单位。"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Plus Pay（新钱包-支付工具） · Plus (ThinkSNS+)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://slimkit.github.io/index.html"/><meta property="og:description" content="和用户余额相关的信息，余额单位都是按照 CNY 的「分」作为单位。"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/plus.png" alt="Plus (ThinkSNS+)"/><h2 class="headerTitleWithLogo">Plus (ThinkSNS+)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/plus/" target="_self">文档 [New]</a></li><li class=""><a href="/docs/server-getting-started-installation.html" target="_self">文档</a></li><li class="siteNavGroupActive"><a href="/docs/api-v2-overview.html" target="_self">REST API v2</a></li><li class=""><a href="/en/new-issue.html" target="_self">反馈</a></li><li class=""><a href="https://github.com/slimkit" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>基本</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">基本</h3><ul><li class="navListItem"><a class="navItem" href="/docs/api-v2-overview.html">概述</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-bootstrappers.html">启动信息</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-jwt-authorization.html">Json Web Token 授权</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-verification-code.html">验证码</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-location.html">位置</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-tags.html">标签</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-notifications.html">消息通知</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-wallet.html">钱包（旧版本）</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/api-v2-plus-pay.html">Plus Pay（新钱包-支付工具）</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-purchase.html">支付能力</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-files.html">文件</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-aboutus.html">关于我们</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-ad.html">广告</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-report.html">举报</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-currency.html">积分</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-easemob.html">环信</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-core-comment.html">评论</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-core-file-storage.html">文件存储</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">用户</h3><ul><li class="navListItem"><a class="navItem" href="/docs/api-v2-users.html">用户</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-users-register.html">注册</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-users-comments.html">收到的评论</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-users-likes.html">收到的喜欢</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-users-followers.html">关注</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-users-tags.html">标签</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-users-certification.html">身份认证</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-users-find-people.html">找人</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-users-ranks.html">排行榜</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-users-feedback.html">反馈</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-users-reward.html">打赏用户</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-users-unread-notification.html">未读消息</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-users-checkin.html">签到</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-user-message.html">消息</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">动态</h3><ul><li class="navListItem"><a class="navItem" href="/docs/api-v2-feeds-create.html">发布动态</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-feeds-get.html">获取动态</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-feeds-delete.html">删除动态</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-feeds-comment-pay.html">设置评论收费</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-feeds-comments.html">评论</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-feeds-likes.html">喜欢</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-feeds-collect.html">收藏</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-feeds-pinned.html">置顶</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-feeds-reward.html">打赏</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-feeds-rank.html">排行榜</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-feeds-report.html">举报</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-feeds-currency.html">积分部分新增接口</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-feeds-topics.html">话题</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">音乐</h3><ul><li class="navListItem"><a class="navItem" href="/docs/api-v2-music.html">音乐</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-music-special.html">专辑</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-music-like.html">点赞</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-music-comment.html">评论</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-music-collection.html">收藏</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">问答</h3><ul><li class="navListItem"><a class="navItem" href="/docs/api-v2-question-answer.html">概述</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-question-answer-topic.html">话题</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-question-answer-question.html">问题</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-question-answer-comments.html">评论</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-question-answer-answer.html">回答</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-question-answer-reward.html">回答 · 打赏</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-question-answer-onlookers.html">回答 · 围观</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-question-answer-user-question-watch.html">用户 · 关注问题</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-question-answer-user-answer-likes.html">用户 · 喜欢回答</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-question-answer-user-collect-answer.html">用户 · 收藏回答</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-question-answer-user-marrow-question.html">用户 · 申请精选</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-question-answer-ranks.html">排行榜</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-question-answer-report.html">举报</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-question-currency.html">问答部分积分相关新增接口</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">资讯</h3><ul><li class="navListItem"><a class="navItem" href="/docs/api-v2-news.html">概述</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-news-cates.html">分类</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-news-contribute.html">投稿</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-news-get.html">获取</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-news-comments.html">评论</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-news-likes.html">喜欢</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-news-reward.html">打赏</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-news-pinneds.html">置顶</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-news-collections.html">收藏</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-news-ranks.html">排行榜</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-news-report.html">举报</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-news-currency.html">资讯部分积分相关新增接口</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">圈子</h3><ul><li class="navListItem"><a class="navItem" href="/docs/api-v2-group.html">概述</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-group-category.html">分类</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-group-group.html">圈子</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-group-manage.html">圈子 · 管理</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-group-report.html">圈子 · 举报</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-group-member.html">圈子 · 成员</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-group-posts.html">帖子</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-group-posts-comments.html">帖子 · 评论</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-group-posts-likes.html">帖子 · 喜欢</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-group-posts-collection.html">帖子 · 收藏</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-group-posts-reward.html">帖子 · 打赏</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-group-posts-pinned.html">帖子 · 置顶</a></li><li class="navListItem"><a class="navItem" href="/docs/api-v2-group-currency.html">圈子部分积分相关新增接口</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/slimkit/slimkit.github.io/edit/source/docs/api-v2-plus-pay.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Plus Pay（新钱包-支付工具）</h1></header><article><div><span><p>和用户余额相关的信息，余额单位都是按照 CNY 的「分」作为单位。</p>
+<p>新版钱包部分只提供跟真实金额有关的操作，充值相关操作暂只对接ping++支付平台</p>
+<h2><a class="anchor" aria-hidden="true" id="敏感操作"></a><a href="#敏感操作" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>敏感操作</h2>
+<p>部分接口将被设置为敏感操作接口，此类接口需要额外传入当前账户密码<code>password</code>作为账户凭据验证</p>
+<h3><a class="anchor" aria-hidden="true" id="接口"></a><a href="#接口" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>接口</h3>
+<ul>
+<li><a href="#钱包流水">钱包流水</a></li>
+<li><a href="#提现列表">提现列表</a></li>
+<li><a href="#发起提现">发起提现</a></li>
+<li><a href="#发起充值">发起充值</a></li>
+<li><a href="#取回凭据">取回凭据</a></li>
+<li><a href="#回调通知">回调通知</a></li>
+<li><a href="#转账">转账</a></li>
+<li><a href="#转换积分">转换积分</a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="钱包流水"></a><a href="#钱包流水" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>钱包流水</h3>
+<pre><code class="hljs">GET <span class="hljs-regexp">/api/</span>v2<span class="hljs-regexp">/plus-pay/</span>orders
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="可选参数"></a><a href="#可选参数" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>可选参数</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">参数</th><th style="text-align:center">类型</th><th style="text-align:left">说明</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">limit</td><td style="text-align:center">int</td><td style="text-align:left">可以设置获取数量</td></tr>
+<tr><td style="text-align:center">after</td><td style="text-align:center">int</td><td style="text-align:left">获取更多数据，上一次获取列表的最后一条 ID</td></tr>
+<tr><td style="text-align:center">action</td><td style="text-align:center">string</td><td style="text-align:left">income - 收入 expenses - 支出</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="响应"></a><a href="#响应" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>响应</h3>
+<pre><code class="hljs"><span class="hljs-keyword">Status</span> <span class="hljs-number">200</span>
+</code></pre>
+<pre><code class="hljs css languages- json">[
+    {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"owner_id"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"target_type"</span>: <span class="hljs-string">"user"</span>,
+        <span class="hljs-attr">"target_id"</span>: <span class="hljs-string">"2"</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-string">"转账"</span>,
+        <span class="hljs-attr">"body"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-number">-1</span>,
+        <span class="hljs-attr">"amount"</span>: <span class="hljs-number">1000</span>,
+        <span class="hljs-attr">"state"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2018-01-02 02:26:33"</span>,
+        <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2018-01-02 02:26:33"</span>
+    },
+    {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">6</span>,
+        <span class="hljs-attr">"owner_id"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"target_type"</span>: <span class="hljs-string">"widthdraw"</span>,
+        <span class="hljs-attr">"target_id"</span>: <span class="hljs-string">"0"</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-string">"提现"</span>,
+        <span class="hljs-attr">"body"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-number">-1</span>,
+        <span class="hljs-attr">"amount"</span>: <span class="hljs-number">1000</span>,
+        <span class="hljs-attr">"state"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2018-01-02 06:00:58"</span>,
+        <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2018-01-02 06:00:58"</span>
+    },
+    {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">19</span>,
+        <span class="hljs-attr">"owner_id"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"target_type"</span>: <span class="hljs-string">"recharge_ping_p_p"</span>,
+        <span class="hljs-attr">"target_id"</span>: <span class="hljs-string">"0"</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-string">"充值"</span>,
+        <span class="hljs-attr">"body"</span>: <span class="hljs-string">"余额充值"</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"amount"</span>: <span class="hljs-number">1000</span>,
+        <span class="hljs-attr">"state"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2018-01-04 07:29:03"</span>,
+        <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2018-01-04 07:29:03"</span>
+    }
+]
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="返回参数"></a><a href="#返回参数" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>返回参数</h4>
+<table>
+<thead>
+<tr><th style="text-align:center">名称</th><th style="text-align:left">类型</th><th style="text-align:left">说明</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">id</td><td style="text-align:left">int</td><td style="text-align:left">记录id</td></tr>
+<tr><td style="text-align:center">owner_id</td><td style="text-align:left">int</td><td style="text-align:left">所属者id</td></tr>
+<tr><td style="text-align:center">target_type</td><td style="text-align:left">string</td><td style="text-align:left">操作类型 <code>recharge_ping_p_p</code> - 充值, <code>widthdraw</code> - 提现, <code>user</code> - 转账, <code>reward</code> - 打赏</td></tr>
+<tr><td style="text-align:center">target_id</td><td style="text-align:left">string</td><td style="text-align:left">账户</td></tr>
+<tr><td style="text-align:center">title</td><td style="text-align:left">string</td><td style="text-align:left">标题</td></tr>
+<tr><td style="text-align:center">body</td><td style="text-align:left">string</td><td style="text-align:left">内容</td></tr>
+<tr><td style="text-align:center">type</td><td style="text-align:left">int</td><td style="text-align:left"><code>1</code> - 收入 <code>-1</code> - 支出</td></tr>
+<tr><td style="text-align:center">amount</td><td style="text-align:left">int</td><td style="text-align:left">金额，分单位</td></tr>
+<tr><td style="text-align:center">state</td><td style="text-align:left">int</td><td style="text-align:left">订单状态，0: 等待，1：成功，-1: 失败</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="提现列表"></a><a href="#提现列表" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>提现列表</h3>
+<pre><code class="hljs">GET <span class="hljs-regexp">/api/</span>v2<span class="hljs-regexp">/plus-pay/</span>cashes
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="请求参数"></a><a href="#请求参数" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>请求参数</h4>
+<table>
+<thead>
+<tr><th style="text-align:center">参数</th><th style="text-align:center">类型</th><th style="text-align:left">说明</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">limit</td><td style="text-align:center">int</td><td style="text-align:left">可以设置获取数量</td></tr>
+<tr><td style="text-align:center">after</td><td style="text-align:center">int</td><td style="text-align:left">获取更多数据，上一次获取列表的最后一条 ID</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="headers"></a><a href="#headers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Headers</h4>
+<pre><code class="hljs"><span class="hljs-symbol">Status:</span> <span class="hljs-number">200</span> OK
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="body"></a><a href="#body" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body</h4>
+<pre><code class="hljs css languages- json5">[
+  {
+    <span class="hljs-string">"id"</span>: <span class="hljs-number">4</span>, <span class="hljs-comment">// 提现记录ID</span>
+    <span class="hljs-string">"value"</span>: <span class="hljs-number">10</span>, <span class="hljs-comment">// 提现金额</span>
+    <span class="hljs-string">"type"</span>: <span class="hljs-string">"alipay"</span>, <span class="hljs-comment">// 提现方式</span>
+    <span class="hljs-string">"account"</span>: <span class="hljs-string">"xxx@alipay.com"</span>, <span class="hljs-comment">// 提现账户</span>
+    <span class="hljs-string">"status"</span>: <span class="hljs-number">0</span>, <span class="hljs-comment">// 提现状态， 0 - 待审批，1 - 已审批，2 - 被拒绝</span>
+    <span class="hljs-string">"remark"</span>: <span class="hljs-literal">null</span>, <span class="hljs-comment">// 备注，审批或者拒绝的时候由管理填写</span>
+    <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2017-06-01 09:30:22"</span> <span class="hljs-comment">// 申请时间</span>
+  },
+  {
+    <span class="hljs-string">"id"</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-string">"value"</span>: <span class="hljs-number">10</span>,
+    <span class="hljs-string">"type"</span>: <span class="hljs-string">"wechat"</span>,
+    <span class="hljs-string">"account"</span>: <span class="hljs-string">"xxxx"</span>,
+    <span class="hljs-string">"status"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">"remark"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2017-06-01 09:29:09"</span>
+  }
+]
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="发起提现"></a><a href="#发起提现" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>发起提现</h3>
+<pre><code class="hljs">POST <span class="hljs-regexp">/api/</span>v2<span class="hljs-regexp">/plus-pay/</span>cashes
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="请求参数-1"></a><a href="#请求参数-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>请求参数</h4>
+<table>
+<thead>
+<tr><th>名称</th><th style="text-align:center">类型</th><th style="text-align:center">描述</th></tr>
+</thead>
+<tbody>
+<tr><td>value</td><td style="text-align:center">int</td><td style="text-align:center">用户需要提现的金额</td></tr>
+<tr><td>type</td><td style="text-align:center">string</td><td style="text-align:center">用户提现账户方式</td></tr>
+<tr><td>account</td><td style="text-align:center">string</td><td style="text-align:center">用户提现账户</td></tr>
+</tbody>
+</table>
+<pre><code class="hljs css languages- json">{
+    <span class="hljs-attr">"value"</span>: <span class="hljs-number">100</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"alipay"</span>
+    <span class="hljs-string">"account"</span>: <span class="hljs-string">"xxx@alipay.com"</span>
+}
+</code></pre>
+<h5><a class="anchor" aria-hidden="true" id="headers-1"></a><a href="#headers-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Headers</h5>
+<pre><code class="hljs"><span class="hljs-symbol">Status:</span> <span class="hljs-number">201</span> Created
+</code></pre>
+<h5><a class="anchor" aria-hidden="true" id="body-1"></a><a href="#body-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body</h5>
+<pre><code class="hljs css languages- json">{
+  <span class="hljs-attr">"value"</span>: [
+    <span class="hljs-string">"请输入提现金额"</span>, // 用户没用输入
+    <span class="hljs-string">"发送的数据错误"</span>, // 发送错误的数据给服务器（非正整数）
+    <span class="hljs-string">"输入的提现金额不合法"</span>, // 发送给服务器小于 <span class="hljs-number">1</span>
+    <span class="hljs-string">"提现金额超出账户余额"</span>, // 用户提现金额超出余额
+  ],
+  <span class="hljs-attr">"type"</span>: [
+    <span class="hljs-string">"请选择提现方式"</span>, // 没有发送提现方式
+    <span class="hljs-string">"你选择的提现方式不支持"</span> // 提现的方式后台设置不允许提现
+  ],
+  <span class="hljs-attr">"account"</span>: [
+    <span class="hljs-string">"请输入你的提现账户"</span> // 没有输入账户
+  ],
+  <span class="hljs-attr">"message"</span>: [
+    <span class="hljs-string">"申请提现成功"</span>, // 成功
+    <span class="hljs-string">"申请失败"</span> // 失败
+  ]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="发起充值"></a><a href="#发起充值" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>发起充值</h3>
+<p>接口使用统一的接口对接所有的充值，对接第三发平台为 Ping++，请先阅读 Ping++ 官方文档。</p>
+<pre><code class="hljs">POST <span class="hljs-regexp">/api/</span>v2<span class="hljs-regexp">/plus-pay/</span>recharge
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="输入"></a><a href="#输入" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>输入</h3>
+<table>
+<thead>
+<tr><th>字段</th><th style="text-align:center">必须</th><th style="text-align:center">类型</th><th style="text-align:center">描述</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td style="text-align:center">是</td><td style="text-align:center">string</td><td style="text-align:center">充值方式 （见「启动信息接口」或者「钱包信息」）</td></tr>
+<tr><td>amount</td><td style="text-align:center">是</td><td style="text-align:center">int</td><td style="text-align:center">用户充值金额，单位为真实货币「分」单位</td></tr>
+<tr><td>extra</td><td style="text-align:center">否</td><td style="text-align:center">object,array</td><td style="text-align:center">拓展信息字段，见 <a href="https://www.pingxx.com/api?language=PHP#支付渠道-extra-参数说明">支付渠道-extra-参数说明</a></td></tr>
+</tbody>
+</table>
+<pre><code class="hljs css languages- json">{
+    "type": "alipay_wap",
+    "amount": 100, // 表示 1.00
+    "extra": {
+        "success_url": "https://plus.io/web/recharge" // 这个字段只是示例，这是 支付宝 wap 支付独有参数。
+    }
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="响应-1"></a><a href="#响应-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>响应</h4>
+<pre><code class="hljs"><span class="hljs-symbol">Status:</span> <span class="hljs-number">201</span> Created
+</code></pre>
+<pre><code class="hljs css languages- json">{
+  "order": {
+    "id": 1,
+    "owner_id": 1,
+    "target_type": "recharge_ping_p_p",
+    "target_id": 1,
+    "title": "充值",
+    "body": "余额充值",
+    "type": -1,
+    "amount": 500,
+    "state": 0,
+    "created_at": "2018-01-04 07:29:57",
+    "updated_at": "2018-01-04 07:29:57"
+  }, // 钱包记录数据信息
+  "pingpp_order": { // Ping++ 凭据
+    "id": "ch_08anD0a9yjPCLyvbTODqXrnT",
+    "object": "charge",
+    "created": 1496819712,
+    "livemode": false,
+    "paid": false,
+    "refunded": false,
+    "app": "app_5anXP4ezfXvL8m5e",
+    "channel": "applepay_upacp",
+    "order_no": "a0000000000000000008",
+    "client_ip": "127.0.0.1",
+    "amount": 500,
+    "amount_settle": 500,
+    "currency": "cny",
+    "subject": "余额充值",
+    "body": "账户余额充值",
+    "extra": {},
+    "time_paid": null,
+    "time_expire": 1496906112,
+    "time_settle": null,
+    "transaction_no": null,
+    "refunds": {
+      "object": "list",
+      "url": "/v1/charges/ch_08anD0a9yjPCLyvbTODqXrnT/refunds",
+      "has_more": false,
+      "data": []
+    },
+    "amount_refunded": 0,
+    "failure_code": null,
+    "failure_msg": null,
+    "metadata": {},
+    "credential": {
+      "object": "credential",
+      "applepay_upacp": {
+        "tn": "201706071515122891443",
+        "mode": "00",
+        "merchant_id": "Your app merchant id"
+      }
+    },
+    "description": null
+  }
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="type-场景"></a><a href="#type-场景" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Type 场景</h4>
+<table>
+<thead>
+<tr><th>name</th><th>描述</th></tr>
+</thead>
+<tbody>
+<tr><td>applepay_upacp</td><td>Apple Pay (仅对 iOS 有效)</td></tr>
+<tr><td>alipay</td><td>App 发起支付宝支付选项</td></tr>
+<tr><td>alipay_wap</td><td>手机网页发起支付宝支付</td></tr>
+<tr><td>alipay_pc_direct</td><td>PC 网页发起支付宝支付</td></tr>
+<tr><td>alipay_qr</td><td>支付宝扫码支付，前度生成二维码</td></tr>
+<tr><td>wx</td><td>App 发起微信支付</td></tr>
+<tr><td>wx_wap</td><td>手机网页发起微信支付</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="取回凭据"></a><a href="#取回凭据" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>取回凭据</h3>
+<pre><code class="hljs">GET <span class="hljs-meta-keyword">/api/</span>v2<span class="hljs-meta-keyword">/plus-pay/</span>orders<span class="hljs-class">/{order}
+</span></code></pre>
+<h4><a class="anchor" aria-hidden="true" id="响应-2"></a><a href="#响应-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>响应</h4>
+<pre><code class="hljs">HTTP <span class="hljs-keyword">Status</span> <span class="hljs-number">200</span>
+</code></pre>
+<pre><code class="hljs css languages- json">{
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"owner_id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"target_type"</span>: <span class="hljs-string">"recharge_ping_p_p"</span>,
+    <span class="hljs-attr">"target_id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"充值"</span>,
+    <span class="hljs-attr">"body"</span>: <span class="hljs-string">"余额充值"</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-number">-1</span>,
+    <span class="hljs-attr">"amount"</span>: <span class="hljs-number">500</span>,
+    <span class="hljs-attr">"state"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2018-01-04 07:29:57"</span>,
+    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2018-01-04 07:29:57"</span> 
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="回调通知"></a><a href="#回调通知" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>回调通知</h3>
+<pre><code class="hljs">POST <span class="hljs-regexp">/api/</span>v2<span class="hljs-regexp">/plus-pay/</span>webhooks
+</code></pre>
+<p>供给ping++平台回调通知调用的接口</p>
+<h3><a class="anchor" aria-hidden="true" id="转账"></a><a href="#转账" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>转账</h3>
+<pre><code class="hljs">POST <span class="hljs-regexp">/api/</span>v2<span class="hljs-regexp">/plus-pay/</span>transfer
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="输入参数"></a><a href="#输入参数" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>输入参数</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">名称</th><th style="text-align:left">类型</th><th style="text-align:left">说明</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">user</td><td style="text-align:left">int</td><td style="text-align:left">用户id</td></tr>
+<tr><td style="text-align:center">amount</td><td style="text-align:left">int</td><td style="text-align:left">转账金额，分单位</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="响应-3"></a><a href="#响应-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>响应</h3>
+<pre><code class="hljs"><span class="hljs-keyword">Status</span> <span class="hljs-number">201</span>
+</code></pre>
+<pre><code class="hljs css languages- json">{
+    <span class="hljs-attr">"message"</span>: ['转账成功']
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="转换积分"></a><a href="#转换积分" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>转换积分</h2>
+<pre><code class="hljs">POST <span class="hljs-regexp">/plus-pay/</span>transform
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="输入参数-1"></a><a href="#输入参数-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>输入参数</h3>
+<table>
+<thead>
+<tr><th style="text-align:center">名称</th><th style="text-align:left">类型</th><th style="text-align:left">说明</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">amount</td><td style="text-align:left">int</td><td style="text-align:left">转账金额，分单位</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="响应-4"></a><a href="#响应-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>响应</h3>
+<pre><code class="hljs"><span class="hljs-keyword">Status</span> <span class="hljs-number">201</span>
+</code></pre>
+<pre><code class="hljs css languages- json">{
+    <span class="hljs-attr">"message"</span>: ['操作成功']
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api-v2-wallet.html">← 钱包（旧版本）</a><a class="docs-next button" href="/docs/api-v2-purchase.html">支付能力 →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#敏感操作">敏感操作</a><ul class="toc-headings"><li><a href="#接口">接口</a></li><li><a href="#钱包流水">钱包流水</a></li><li><a href="#可选参数">可选参数</a></li><li><a href="#响应">响应</a></li><li><a href="#提现列表">提现列表</a></li><li><a href="#发起提现">发起提现</a></li><li><a href="#发起充值">发起充值</a></li><li><a href="#输入">输入</a></li><li><a href="#取回凭据">取回凭据</a></li><li><a href="#回调通知">回调通知</a></li><li><a href="#转账">转账</a></li><li><a href="#输入参数">输入参数</a></li><li><a href="#响应-3">响应</a></li></ul></li><li><a href="#转换积分">转换积分</a><ul class="toc-headings"><li><a href="#输入参数-1">输入参数</a></li><li><a href="#响应-4">响应</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/plus.png" alt="Plus (ThinkSNS+)" width="66" height="58"/></a><div><h5>More</h5><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/slimkit/thinksns-plus" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Chengdu ZhiYiChuangXiang Technology Co., Ltd. All rights reserved.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: '5e14e81576e97337f567595ea504b651',
+                indexName: 'slimkit',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"hitsPerPage":5}
+              });
+            </script></body></html>

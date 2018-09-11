@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>数据字典 · Plus (ThinkSNS+)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="1. [abilities - 所有权限节点](/docs/data-fields-abilities.html)"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="数据字典 · Plus (ThinkSNS+)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://slimkit.github.io/index.html"/><meta property="og:description" content="1. [abilities - 所有权限节点](/docs/data-fields-abilities.html)"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/plus.png" alt="Plus (ThinkSNS+)"/><h2 class="headerTitleWithLogo">Plus (ThinkSNS+)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/plus/" target="_self">文档 [New]</a></li><li class="siteNavGroupActive"><a href="/docs/server-getting-started-installation.html" target="_self">文档</a></li><li class=""><a href="/docs/api-v2-overview.html" target="_self">REST API v2</a></li><li class=""><a href="/en/new-issue.html" target="_self">反馈</a></li><li class=""><a href="https://github.com/slimkit" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>指南</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">快速开始</h3><ul><li class="navListItem"><a class="navItem" href="/docs/server-getting-started-installation.html">安装</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">指南</h3><ul><li class="navListItem"><a class="navItem" href="/docs/server-guides-package.html">拓展包开发指南</a></li><li class="navListItem"><a class="navItem" href="/docs/server-guides-configuration.html">配置管理</a></li><li class="navListItem"><a class="navItem" href="/docs/server-guides-cdn.html">CDN</a></li><li class="navListItem"><a class="navItem" href="/docs/server-guides-plus-id.html">Plus ID</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/data-fields.html">数据字典</a></li><li class="navListItem"><a class="navItem" href="/docs/server-config-guides.html">服务端配项说明</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/slimkit/slimkit.github.io/edit/source/docs/data-fields.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">数据字典</h1></header><article><div><span><ol>
+<li><a href="/docs/data-fields-abilities.html">abilities - 所有权限节点</a></li>
+<li><a href="/docs/data-fields-ability-rule.html">ability_role - 用户组权限</a></li>
+<li><a href="/docs/data-fields-advertising.html">advertising - 广告列表</a></li>
+<li><a href="/docs/data-fields-advertising-space.html">advertising_space - 广告位</a></li>
+<li><a href="/docs/data-fields-answer-onlooker.html">answer_onlooker - 被围观的答案</a></li>
+<li><a href="/docs/data-fields-answers.html">answers - 答案</a></li>
+<li><a href="/docs/data-fields-areas.html">areas - 地区配置</a></li>
+<li><a href="/docs/data-fields-around-amaps.html">around_amaps - 用户坐标</a></li>
+<li><a href="/docs/data-fields-certification-categories.html">certification_categories - 认证分类</a></li>
+<li><a href="/docs/data-fields-certifications.html">certifications - 用户认证</a></li>
+<li><a href="/docs/data-fields-checkin-logs.html">checkin_logs - 签到记录</a></li>
+<li><a href="/docs/data-fields-client-versions.html">client_versions - 客户端版本控制</a></li>
+<li><a href="/docs/data-fields-collections.html">collections - 收藏</a></li>
+<li><a href="/docs/data-fields-comments.html">comments - 评论</a></li>
+<li><a href="/docs/data-fields-common-configs.html">common_configs - 公共配置</a></li>
+<li><a href="/docs/data-fields-conversations.html">conversations - 用户反馈</a></li>
+<li><a href="/docs/data-fields-currencies.html">currencies - 用户货币</a></li>
+<li><a href="/docs/data-fields-currency-commodities.html">currency_commodities - 货币商品</a></li>
+<li><a href="/docs/data-fields-currency-orders.html">currency_orders - 购买订单</a></li>
+<li><a href="/docs/data-fields-currency-type-transforms.html">currency_type_transforms - 货币兑换关系表</a></li>
+<li><a href="/docs/data-fields-currency-types.html">currency_types - 货币类型</a></li>
+<li>failed_jobs - 失败队列</li>
+<li><a href="/docs/data-fields-famous.html">famous - 注册时被关注的用户</a></li>
+<li><a href="/docs/data-fields-feed-collections.html">feed_collections - 动态收藏</a></li>
+<li><a href="/docs/data-fields-feed-pinneds.html">feed_pinneds - </a></li>
+<li><a href="/docs/data-fields-feeds.html">feeds - 动态</a></li>
+<li><a href="/docs/data-fields-file-withs.html">file_withs - 附件关系表</a></li>
+<li><a href="/docs/data-fields-files.html">files - 附件表</a></li>
+<li><a href="/docs/data-fields-gold-rules.html">gold_rules - 金币规则</a></li>
+<li><a href="/docs/data-fields-gold-types.html">gold_types - 金币类型</a></li>
+<li><a href="/docs/data-fields-group-categories.html">group_categories - 圈子分类</a></li>
+<li><a href="/docs/data-fields-group-incomes.html">group_incomes - 圈子收入</a></li>
+<li><a href="/docs/data-fields-group-member-logs.html">group_member_logs - 加圈记录</a></li>
+<li><a href="/docs/data-fields-group-members.html">group_members - 圈子成员</a></li>
+<li><a href="/docs/data-fields-group-pinneds.html">group_pinneds - 帖子置顶记录</a></li>
+<li><a href="/docs/data-fields-group-posts.html">group_posts - 帖子</a></li>
+<li><a href="/docs/data-fields-group-recommends.html">group_recommends - 推荐圈子</a></li>
+<li><a href="/docs/data-fields-group-reports.html">group_reports - 圈子举报</a></li>
+<li><a href="/docs/data-fields-groups.html">groups - 圈子</a></li>
+<li><a href="data-fields-.md">im_conversations - 忽略</a></li>
+<li><a href="data-fields-.md">im_group - 忽略</a></li>
+<li><a href="data-fields-.md">im_users - 忽略</a></li>
+<li>jobs - 队列表</li>
+<li><a href="/docs/data-fields-jwt-caches.html">jwt_caches - token管理</a></li>
+<li><a href="/docs/data-fields-likes.html">likes - 点赞表</a></li>
+<li>migrations - 迁移表</li>
+<li><a href="/docs/data-fields-music-collections.html">music_collections - 音乐收藏</a></li>
+<li><a href="/docs/data-fields-music-singers.html">music_singers - 歌手</a></li>
+<li><a href="/docs/data-fields-music-special-links.html">music_special_links - 音乐/专辑关联表</a></li>
+<li><a href="/docs/data-fields-music-specials.html">music_specials - 专辑表</a></li>
+<li><a href="/docs/data-fields-musics.html">musics - 音乐表</a></li>
+<li><a href="/docs/data-fields-navigation.html">navigation - pc导航</a></li>
+<li><a href="/docs/data-fields-news.html">news - 资讯</a></li>
+<li><a href="/docs/data-fields-news-cates.html">news_cates - 资讯分类</a></li>
+<li><a href="/docs/data-fields-news-cates-follow.html">news_cates_follow - 订阅的资讯分类</a></li>
+<li><a href="/docs/data-fields-news-cates-links.html">news_cates_links - 资讯/分类关联表</a></li>
+<li><a href="/docs/data-fields-news-collections.html">news_collections - 资讯收藏</a></li>
+<li><a href="/docs/data-fields-news-pinneds.html">news_pinneds - 资讯置顶申请</a></li>
+<li><a href="/docs/data-fields-news-recommend.html">news_recommend - 推荐资讯</a></li>
+<li><a href="/docs/data-fields-notifications.html">notifications - 通知</a></li>
+<li><a href="/docs/data-fields-paid-node-users.html">paid_node_users - 用户已付费节点</a></li>
+<li><a href="/docs/data-fields-paid-nodes.html">paid_nodes - 付费节点</a></li>
+<li><a href="/docs/data-fields-password-resets.html">password_resets - 密码重置记录</a></li>
+<li><a href="/docs/data-fields-plus-id-clients.html">plus_id_clients - </a></li>
+<li><a href="/docs/data-fields-plus-id-notices.html">plus_id_notices</a></li>
+<li><a href="data-fields-question-application.md">question_application - 精华问题</a></li>
+<li><a href="/docs/data-fields-question-invitation.html">question_invitation - 邀请回答</a></li>
+<li><a href="/docs/data-fields-question-topic.html">question_topic - 问答话题</a></li>
+<li><a href="/docs/data-fields-question-watcher.html">question_watcher - 问题关注者</a></li>
+<li><a href="/docs/data-fields-questions.html">questions - 问题</a></li>
+<li><a href="/docs/data-fields-reports.html">reports - 举报</a></li>
+<li><a href="/docs/data-fields-rewards.html">rewards - 打赏</a></li>
+<li><a href="/docs/data-fields-role-user.html">role_user - 用户组拥有权限</a></li>
+<li><a href="/docs/data-fields-roles.html">roles - 权限节点</a></li>
+<li><a href="/docs/data-fields-sensitives.html">sensitives - 敏感词</a></li>
+<li><a href="/docs/data-fields-tag-categories.html">tag_categories - 标签分类</a></li>
+<li><a href="/docs/data-fields-taggables.html">taggables - 标签使用记录</a></li>
+<li><a href="/docs/data-fields-tags.html">tags - 标签</a></li>
+<li><a href="/docs/data-fields-topic-application.html">topic_application - </a></li>
+<li><a href="data-fields-topic-expert.md">topic_expert - 话题下专家列表</a></li>
+<li><a href="data-fields-topic-expert-income.md">topic_expert_income 话题下问题所产生的收入</a></li>
+<li><a href="/docs/data-fields-topic-user.html">topic_user - 问答话题/用户关系表</a></li>
+<li><a href="/docs/data-fields-topics.html">topics - 问答话题</a></li>
+<li><a href="/docs/data-fields-user-extras.html">user_extras - 用户信息</a></li>
+<li><a href="/docs/data-fields-user-follow.html">user_follow - 用户关注关系</a></li>
+<li>user_profile_setting_links - 忽略</li>
+<li>user_profile_settings - 忽略</li>
+<li><a href="/docs/data-fields-user-socialites.html">user_socialites - 用户三方信息绑定</a></li>
+<li><a href="/docs/data-fields-user-unread-counts.html">user_unread_counts - 用户未读信息</a></li>
+<li><a href="/docs/data-fields-users.html">users - 用户</a></li>
+<li><a href="/docs/data-fields-users-recommended.html">users_recommended - 推荐用户</a></li>
+<li><a href="/docs/data-fields-verification-codes.html">verification_codes - 验证码</a></li>
+<li><a href="/docs/data-fields-wallet.html">wallet - 新钱包</a></li>
+<li><a href="/docs/data-fields-wallet-cashes.html">wallet_cashes - 提现记录</a></li>
+<li><a href="/docs/data-fields-wallet-charges.html">wallet_charges - 交易凭据</a></li>
+<li><a href="/docs/data-fields-wallet-orders.html">wallet_orders - 钱包订单</a></li>
+<li><a href="/docs/data-fields-wallets.html">wallets - 旧版钱包, 将会废弃</a></li>
+</ol>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/server-guides-plus-id.html">← Plus ID</a><a class="docs-next button" href="/docs/server-config-guides.html">服务端配项说明 →</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/plus.png" alt="Plus (ThinkSNS+)" width="66" height="58"/></a><div><h5>More</h5><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/slimkit/thinksns-plus" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Chengdu ZhiYiChuangXiang Technology Co., Ltd. All rights reserved.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: '5e14e81576e97337f567595ea504b651',
+                indexName: 'slimkit',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"hitsPerPage":5}
+              });
+            </script></body></html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>安装 · Plus (ThinkSNS+)</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="- [环境要求](#manual-need)"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="安装 · Plus (ThinkSNS+)"/><meta property="og:type" content="website"/><meta property="og:url" content="https://slimkit.github.io/index.html"/><meta property="og:description" content="- [环境要求](#manual-need)"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/plus.png" alt="Plus (ThinkSNS+)"/><h2 class="headerTitleWithLogo">Plus (ThinkSNS+)</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/plus/" target="_self">文档 [New]</a></li><li class="siteNavGroupActive siteNavItemActive"><a href="/docs/server-getting-started-installation.html" target="_self">文档</a></li><li class=""><a href="/docs/api-v2-overview.html" target="_self">REST API v2</a></li><li class=""><a href="/en/new-issue.html" target="_self">反馈</a></li><li class=""><a href="https://github.com/slimkit" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>快速开始</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">快速开始</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/server-getting-started-installation.html">安装</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">指南</h3><ul><li class="navListItem"><a class="navItem" href="/docs/server-guides-package.html">拓展包开发指南</a></li><li class="navListItem"><a class="navItem" href="/docs/server-guides-configuration.html">配置管理</a></li><li class="navListItem"><a class="navItem" href="/docs/server-guides-cdn.html">CDN</a></li><li class="navListItem"><a class="navItem" href="/docs/server-guides-plus-id.html">Plus ID</a></li><li class="navListItem"><a class="navItem" href="/docs/data-fields.html">数据字典</a></li><li class="navListItem"><a class="navItem" href="/docs/server-config-guides.html">服务端配项说明</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/slimkit/slimkit.github.io/edit/source/docs/server-getting-started-installation.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">安装</h1></header><article><div><span><ul>
+<li><a href="#manual-need">环境要求</a></li>
+<li><a href="#install">安装</a>
+<a id="manual-need"></a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="环境要求"></a><a href="#环境要求" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>环境要求</h2>
+<ul>
+<li><a href="#manual-need-php-ext">PHP &amp; 拓展</a></li>
+<li><a href="#manual-need-php-functions">PHP 函数</a></li>
+<li><a href="#manual-need-database">数据库</a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="php-拓展"></a><a href="#php-拓展" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>PHP &amp; 拓展</h3>
+<ul>
+<li>PHP 必须大于或等于 7.1.3</li>
+<li>必须安装扩展 dom</li>
+<li>必须安装扩展 fileinfo</li>
+<li>必须安装扩展 gd</li>
+<li>必须安装扩展 json</li>
+<li>必须安装扩展 mbstring</li>
+<li>必须安装扩展 openssl</li>
+<li>必须安装 PDO</li>
+<li>使用 MySQL 数据库则必须安装 PHP 扩展 pdo_mysql</li>
+<li>使用 PostgreSQL 数据库则必须安装 PHP 扩展 pdo_pgsql</li>
+<li>使用 SQLite 数据库则必须安装 PHP 拓展 pdo_sqlite</li>
+<li>使用 SQL Server 数据库则必须安装 PHP 拓展 pdo_dblib</li>
+</ul>
+<p><a id="manual-need-php-functions"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="php-函数"></a><a href="#php-函数" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>PHP 函数</h3>
+<ul>
+<li><code>exec</code></li>
+<li><code>system</code></li>
+<li><code>scandir</code></li>
+<li><code>symlink</code></li>
+<li><code>shell_exec</code></li>
+<li><code>proc_open</code></li>
+<li><code>proc_get_status</code></li>
+</ul>
+<blockquote>
+<p>这些是在 Console 环境下使用的，尽量确保你的系统没有禁止。</p>
+</blockquote>
+<p><a id="manual-need-database"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="数据库"></a><a href="#数据库" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>数据库</h3>
+<ul>
+<li><a href="#manual-need-database-mysql">MySQL</a></li>
+<li><a href="#manual-need-database-mariadb">MariaDB</a></li>
+<li><a href="#manual-need-database-pgsql">PostgreSQL</a></li>
+<li><a href="#manual-need-database-sqlite">SQLite</a></li>
+<li><a href="#manual-need-database-sql-server">Microsoft SQL Server</a></li>
+</ul>
+<blockquote>
+<p>推荐使用 PostgreSQL。</p>
+</blockquote>
+<p><a id="manual-need-database-mysql"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="mysql"></a><a href="#mysql" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MySql</h5>
+<p>使用 MySQL 建议使用 <code>&gt;=5.7</code> 版本，必须 <code>&gt;=5.6</code> 版本，如果你的是 5.6 版本，则自行解决索引过长导致的 SQL 执行错误问题。</p>
+<p><a id="manual-need-database-mariadb"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="mariadb"></a><a href="#mariadb" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MariaDB</h5>
+<p>使用 MariaDB 必须 <code>&gt;=10.3</code> 版本，因为只有该版本是建立在 MySQL 5.6 &amp; 5.7 之上的，得以支持 Emoji。</p>
+<blockquote>
+<p>使用 MariaDB 按照 MySQL 进行配置即可。</p>
+</blockquote>
+<p><a id="manual-need-database-pgsql"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="postgresql"></a><a href="#postgresql" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>PostgreSQL</h5>
+<p>PostgreSQL 数据库天然支持 Emoji，无需任何版本要求，但是我们还是建议使用最新版本的 PostgreSQL 稳定版本的以支持更完善的空间计算。</p>
+<p><a id="manual-need-database-sqlite"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="sqlite"></a><a href="#sqlite" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SQLite</h5>
+<p>首先，这个数据库不建议使用，因为这种轻量级的数据库适合在 App 中来解决数据本地化需求，服务器应用场景很小。</p>
+<blockquote>
+<p>虽然 ThinkSNS+ 不允许使用 SQLite，但是您仍然可以在系统中使用该数据库，但是例如 Emoji 储存等问题自行解决。</p>
+</blockquote>
+<p><a id="manual-need-database-sql-server"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="microsoft-sql-server"></a><a href="#microsoft-sql-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Microsoft SQL Server</h5>
+<p>就像不推荐 SQLite 一样，我们同样不推荐 Microsoft SQL Server 除非你确定你的系统不适用 Emoji 那么你可以无顾虑的使用 Microsoft SQL Server 了，因为 Microsoft SQL Server 同样支持 utf8 字符集，却无法支持四位长度的 Emoji 字符。</p>
+<blockquote>
+<p>ThinkSNS+ 不建议使用 SQL Server，但是你仍然可以在系统中使用，出现的 emoji 存储问题自行解决。</p>
+</blockquote>
+<p><a id="install"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="安装"></a><a href="#安装" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>安装</h2>
+<p>需要软件：</p>
+<ul>
+<li><a href="https://getcomposer.org/">Composer</a></li>
+</ul>
+<blockquote>
+<p>之后操作我们拟定目录为 <code>/var/www</code></p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="下载-plus-和相关依赖"></a><a href="#下载-plus-和相关依赖" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>下载 Plus 和相关依赖</h3>
+<pre><code class="hljs css languages- shell">composer create-project zhiyicx/thinksns-plus
+</code></pre>
+<p>克隆完成后我们进入 <code>thinksns-plus</code> 目录：</p>
+<h3><a class="anchor" aria-hidden="true" id="发布拓展包资源"></a><a href="#发布拓展包资源" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>发布拓展包资源</h3>
+<pre><code class="hljs css languages- shell">php artisan vendor:publish --all
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="前端服务器转发配置"></a><a href="#前端服务器转发配置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>前端服务器转发配置</h3>
+<p>配置前端服务器，例如 Nginx、Apache 等。应当将 ThinkSNS Plus 下的 <code>public</code> 作为 root 目录。</p>
+<h4><a class="anchor" aria-hidden="true" id="nginx"></a><a href="#nginx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nginx</h4>
+<p>如果你使用的是 Nginx，在你的站点配置中加入以下内容，它将会将所有请求都引导到 index.php 前端控制器：</p>
+<pre><code class="hljs"><span class="hljs-attribute">location</span> / {
+    <span class="hljs-attribute">try_files</span> <span class="hljs-variable">$uri</span> <span class="hljs-variable">$uri</span>/ /index.php?<span class="hljs-variable">$query_string</span>;
+}
+</code></pre>
+<h5><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h5>
+<pre><code class="hljs"><span class="hljs-section">server</span> {
+    <span class="hljs-attribute">listen</span> <span class="hljs-number">443</span> ssl http2;
+    <span class="hljs-attribute">server_name</span> plus.io;
+    <span class="hljs-attribute">ssl</span> <span class="hljs-literal">on</span>;
+    <span class="hljs-attribute">ssl_certificate</span> /var/www/public/public.io.crt;
+    <span class="hljs-attribute">ssl_certificate_key</span> /var/www/public/public.io.key.unsecure;
+    <span class="hljs-attribute">root</span> /var/www/public/public;
+    <span class="hljs-attribute">index</span> index.php index.html index.htm;
+
+    <span class="hljs-attribute">location</span> / {
+         <span class="hljs-attribute">try_files</span> <span class="hljs-variable">$uri</span> <span class="hljs-variable">$uri</span>/ /index.php<span class="hljs-variable">$is_args</span><span class="hljs-variable">$args</span>;
+    }
+
+    <span class="hljs-attribute">location</span> <span class="hljs-regexp">~ \.php$</span> {
+        <span class="hljs-attribute">try_files</span> <span class="hljs-variable">$uri</span> /index.php =<span class="hljs-number">404</span>;
+        <span class="hljs-attribute">fastcgi_pass</span> php-upstream;
+        <span class="hljs-attribute">fastcgi_index</span> index.php;
+        <span class="hljs-attribute">fastcgi_buffers</span> <span class="hljs-number">16</span> <span class="hljs-number">16k</span>;
+        <span class="hljs-attribute">fastcgi_buffer_size</span> <span class="hljs-number">32k</span>;
+        <span class="hljs-attribute">fastcgi_param</span> SCRIPT_FILENAME <span class="hljs-variable">$document_root</span><span class="hljs-variable">$fastcgi_script_name</span>;
+        <span class="hljs-attribute">include</span> fastcgi_params;
+    }
+
+    <span class="hljs-attribute">location</span> <span class="hljs-regexp">~ /\.ht</span> {
+        <span class="hljs-attribute">deny</span> all;
+    }
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="apache"></a><a href="#apache" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Apache</h4>
+<p>在 ThinkSNS+ 中，已经在根目录 <code>/plulic</code> 中已经提供了 <code>.htaccess</code> 文件，其中已经为您配置好了优雅的地址配置。如果在你的 Apache 中不生效或者由其他位置提供配置，请设置：</p>
+<pre><code class="hljs"><span class="hljs-attribute"><span class="hljs-nomarkup">Options</span></span> +FollowSymLinks
+<span class="hljs-attribute"><span class="hljs-nomarkup">RewriteEngine</span></span> <span class="hljs-literal">On</span>
+
+<span class="hljs-attribute"><span class="hljs-nomarkup">RewriteCond</span></span> <span class="hljs-variable">%{REQUEST_FILENAME}</span> !-d
+<span class="hljs-attribute"><span class="hljs-nomarkup">RewriteCond</span></span> <span class="hljs-variable">%{REQUEST_FILENAME}</span> !-f
+<span class="hljs-attribute"><span class="hljs-nomarkup">RewriteRule</span></span> ^ index.php<span class="hljs-meta"> [L]</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="caddy"></a><a href="#caddy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Caddy</h4>
+<p>Caddy 是一个小巧精悍的 http 软件，在开发环境，测试环境等下也是我们推荐使用的软件。因为它无需特殊的安装，无需特殊的配置，您只需下载一个 Caddy 运行文件，写一份你的站点配置即可运行。</p>
+<pre><code class="hljs">rewrite { 
+    to {path} {path}/ /index.php?{query}
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="目录权限-公开资源"></a><a href="#目录权限-公开资源" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>目录权限 &amp; 公开资源</h3>
+<p>大多数时候为了方便，我们在服务器都是使用 <code>root</code> 作为服务器管理账户，可能你在下载 ThinkSNS+ 的时候也适用的 <code>root</code> 账户，这会产生一个问题，php-fpm 或者 nginx 不是运行在 root 账户下的，导致你实际运行站点的时候会出现莫名其妙的错误，你应该将你整个 <code>thinksns-plus</code> 目录指定给 php 或者 nginx 的运行角色：</p>
+<table>
+<thead>
+<tr><th style="text-align:center">目录</th><th>权限</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:center">/*</td><td>0755</td></tr>
+<tr><td style="text-align:center">/storage</td><td>0777</td></tr>
+</tbody>
+</table>
+<p>所有资源都存储在 <code>/storage</code> 目录下，所以你需要将公开资源链接到 <code>/public</code> 目录下，请务必执行：</p>
+<pre><code class="hljs css languages- shell">php artisan storage:link
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="最后步骤"></a><a href="#最后步骤" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>最后步骤</h3>
+<p>以上都设置完成后，请访问 <code>/installer</code> 进行引导安装。</p>
+<blockquote>
+<p>最后步骤很重要！！！</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/server-guides-package.html">拓展包开发指南 →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#环境要求">环境要求</a><ul class="toc-headings"><li><a href="#php-拓展">PHP &amp; 拓展</a></li><li><a href="#php-函数">PHP 函数</a></li><li><a href="#数据库">数据库</a></li></ul></li><li><a href="#安装">安装</a><ul class="toc-headings"><li><a href="#下载-plus-和相关依赖">下载 Plus 和相关依赖</a></li><li><a href="#发布拓展包资源">发布拓展包资源</a></li><li><a href="#前端服务器转发配置">前端服务器转发配置</a></li><li><a href="#目录权限-公开资源">目录权限 &amp; 公开资源</a></li><li><a href="#最后步骤">最后步骤</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/plus.png" alt="Plus (ThinkSNS+)" width="66" height="58"/></a><div><h5>More</h5><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/slimkit/thinksns-plus" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Chengdu ZhiYiChuangXiang Technology Co., Ltd. All rights reserved.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: '5e14e81576e97337f567595ea504b651',
+                indexName: 'slimkit',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"hitsPerPage":5}
+              });
+            </script></body></html>
