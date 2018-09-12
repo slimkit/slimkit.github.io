@@ -45,7 +45,7 @@
     {
         "id": 1,                             // 话题 ID, 主要用于查询定位。
         "name": "Plus",                      // 话题名称
-        "logo": 2,                           // 基于 File With 的话题 Logo
+        "logo": {...},                       // 参考 https://slimkit.github.io/docs/api-v2-core-file-storage.html#文件附带信息
         "created_at": "2018-07-23T15:04:23Z" // Zulu 格式，话题创建时间
     },
     // ...
@@ -62,7 +62,7 @@
 <tbody>
 <tr><td style="text-align:left"><code>name</code></td><td style="text-align:left"><code>string</code></td><td style="text-align:left"><strong>必须</strong>，话题名称最长 <code>100</code> 个字。</td></tr>
 <tr><td style="text-align:left"><code>desc</code></td><td style="text-align:left"><code>string</code></td><td style="text-align:left"><strong>可选</strong>，话题描述最长 <code>500</code> 个字。</td></tr>
-<tr><td style="text-align:left"><code>logo</code></td><td style="text-align:left"><code>integer</code></td><td style="text-align:left"><strong>可选</strong>，话题 Logo 调用<a href="/docs/api-v2-files.html">文件上传</a>接口返回的 <code>FileWith</code> ID 标识。</td></tr>
+<tr><td style="text-align:left"><code>logo</code></td><td style="text-align:left"><code>FILE_STORAGE_NODE&lt;string&gt;</code></td><td style="text-align:left"><strong>可选</strong>，话题 Logo 调用<a href="/docs/api-v2-core-file-storage.html">文件存储</a>接口返回的 <code>node</code> 标识。</td></tr>
 </tbody>
 </table>
 <p>响应：</p>
@@ -94,7 +94,7 @@
 </thead>
 <tbody>
 <tr><td style="text-align:left"><code>desc</code></td><td style="text-align:left"><code>string</code></td><td style="text-align:left"><strong>可选</strong>，话题描述最长 <code>500</code> 个字。</td></tr>
-<tr><td style="text-align:left"><code>logo</code></td><td style="text-align:left"><code>integer</code></td><td style="text-align:left"><strong>可选</strong>，话题 Logo 调用《<a href="/docs/api-v2-files.html">文件上传</a>》接口返回的 <code>FileWith</code> ID 标识。</td></tr>
+<tr><td style="text-align:left"><code>logo</code></td><td style="text-align:left"><code>FILE_STORAGE_NODE&lt;string&gt;</code></td><td style="text-align:left"><strong>可选</strong>，话题 Logo 调用<a href="/docs/api-v2-core-file-storage.html">文件存储</a>接口返回的 <code>node</code> 标识。</td></tr>
 </tbody>
 </table>
 <p>响应：</p>
@@ -112,7 +112,7 @@
 <pre><code class="hljs css languages- json">{
     "id": 1,               // 话题 ID
     "name": "Plus",        // 话题名称
-    "logo": 1,             // 话题 Logo 对应的 FileWith ID
+    "logo": null,
     "desc": "啊哈哈",       // 话题描述
     "creator_user_id": 1,  // 话题创建者 User ID
     "feeds_count": 2,      // 话题下有都少动态
