@@ -31,7 +31,7 @@ Status: 200 OK
     {
         "id": 1,                             // 话题 ID, 主要用于查询定位。
         "name": "Plus",                      // 话题名称
-        "logo": 2,                           // 基于 File With 的话题 Logo
+        "logo": {...},                       // 参考 https://slimkit.github.io/docs/api-v2-core-file-storage.html#文件附带信息
         "created_at": "2018-07-23T15:04:23Z" // Zulu 格式，话题创建时间
     },
     // ...
@@ -50,7 +50,7 @@ POST /feed/topics
 |:----|:----|:----|
 | `name` | `string` | **必须**，话题名称最长 `100` 个字。 |
 | `desc` | `string` | **可选**，话题描述最长 `500` 个字。 |
-| `logo` | `integer` | **可选**，话题 Logo 调用[文件上传](api-v2-files.md)接口返回的 `FileWith` ID 标识。 |
+| `logo` | `FILE_STORAGE_NODE<string>` | **可选**，话题 Logo 调用[文件存储](api-v2-core-file-storage.md)接口返回的 `node` 标识。 |
 
 响应：
 
@@ -98,7 +98,8 @@ PATCH /feed/topics/:topicID
 | Name | Type | Description |
 |:----|:----|:----|
 | `desc` | `string` | **可选**，话题描述最长 `500` 个字。 |
-| `logo` | `integer` | **可选**，话题 Logo 调用《[文件上传](api-v2-files.md)》接口返回的 `FileWith` ID 标识。 |
+ `logo` | `FILE_STORAGE_NODE<string>` | **可选**，话题 Logo 调用[文件存储](api-v2-core-file-storage.md)接口返回的 `node` 标识。 |
+
 
 响应：
 
@@ -123,7 +124,7 @@ Status: 200 OK
 {
     "id": 1,               // 话题 ID
     "name": "Plus",        // 话题名称
-    "logo": 1,             // 话题 Logo 对应的 FileWith ID
+    "logo": null,
     "desc": "啊哈哈",       // 话题描述
     "creator_user_id": 1,  // 话题创建者 User ID
     "feeds_count": 2,      // 话题下有都少动态
