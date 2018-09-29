@@ -26,6 +26,7 @@ POST /news/categories/:category/currency-news
 | tags | string,array | **必须** 标签id，多个id以逗号隔开或传入数组形式 |
 | from | String | 资讯来源。 |
 | author | String | 作者 |
+| `password` | `string` | **根据启动信息决定是否传递**，用户密码，支付需要用户输入密码进行付费支付。） |
 
 > 用户投稿时，用户输入`摘要`和`正文`
 
@@ -64,6 +65,7 @@ POST /news/{news}/currency-pinneds
 |:----:|:-----|:----:|------|
 | day  | int  | Y    | 申请置顶天数 |
 | amout | int | Y    | 申请置顶金额，积分 | 
+| `password` | `string` | **根据启动信息决定是否传递**，用户密码，支付需要用户输入密码进行付费支付。） |
 
 ### Response
 
@@ -100,6 +102,7 @@ POST /news/{news}/comments/{comment}/currency-pinneds
 |:----:|:-----|:----:|------|
 | day  | int  | Y    | 申请置顶天数 |
 | amout | int | Y    | 申请置顶金额,积分 | 
+| `password` | `string` | **根据启动信息决定是否传递**，用户密码，支付需要用户输入密码进行付费支付。） |
 
 ### Response
 

@@ -48,6 +48,7 @@ POST /currency-pinned/posts/:post
 |:----:|:-----|:-----|
 |amount|integer| 必须 置顶金额|
 |day|integer|必须 置顶天数|
+| `password` | `string` | **根据启动信息决定是否传递**，用户密码，支付需要用户输入密码进行付费支付。） |
 
 ### 响应
 

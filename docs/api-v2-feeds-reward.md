@@ -18,6 +18,7 @@ POST /feeds/{feed}/rewards
 | name     | type     | must     | description |
 |----------|:--------:|:--------:|:--------:|
 | amount   | int      | yes      | 打赏金额 |
+| `password` | `string` | **根据启动信息决定是否传递**，用户密码，支付需要用户输入密码进行付费支付。） |
 
 ### Response
 
@@ -48,6 +49,7 @@ POST /feeds/{feed}/rewards
 | name     | type     | must     | description |
 |----------|:--------:|:--------:|:--------:|
 | amount   | int      | yes      | 打赏金额 |
+| `password` | `string` | **根据启动信息决定是否传递**，用户密码，支付需要用户输入密码进行付费支付。） |
 
 ### Response
 
@@ -78,6 +80,7 @@ POST /feeds/{feed}/new-rewards
 | name     | type     | must     | description |
 |----------|:--------:|:--------:|:--------:|
 | amount   | int      | yes      | 打赏金额 |
+| `password` | `string` | **根据启动信息决定是否传递**，用户密码，支付需要用户输入密码进行付费支付。） |
 
 ### Response
 

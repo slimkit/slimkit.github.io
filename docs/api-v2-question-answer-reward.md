@@ -18,6 +18,7 @@ POST /api/v2/question-answers/:answer/rewarders
 | 名称 | 类型 | 描述 |
 |:----:|:----:|----|
 | amount | Integer | **必须**，用户要打赏的金额。 |
+| `password` | `string` | **根据启动信息决定是否传递**，用户密码，支付需要用户输入密码进行付费支付。） |
 
 #### 响应
 
@@ -43,6 +44,7 @@ POST /api/v2/question-answers/:answer/new-rewards
 | 名称 | 类型 | 描述 |
 |:----:|:----:|----|
 | amount | Integer | **必须**，用户要打赏的金额。 |
+| `password` | `string` | **根据启动信息决定是否传递**，用户密码，支付需要用户输入密码进行付费支付。） |
 
 #### 响应
 

@@ -33,6 +33,7 @@ POST /feeds/:feed/currency-pinneds
 |:----:|:----:|----|
 | amount | Integer | 必须，置顶总价格，积分。 |
 | day | Integer | 必须，置顶天数。|
+| `password` | `string` | **根据启动信息决定是否传递**，用户密码，支付需要用户输入密码进行付费支付。） |
 
 #### Response
 
@@ -59,6 +60,7 @@ POST /feeds/:feed/comments/:comment/currency-pinneds
 |:----:|:----:|----|
 | amount | Integer | 必须，置顶总价格，积分。 |
 | day | Integer | 必须，置顶天数。|
+| `password` | `string` | **根据启动信息决定是否传递**，用户密码，支付需要用户输入密码进行付费支付。） |
 
 #### Response
 

@@ -27,6 +27,7 @@ POST /news/categories/:category/news
 | from | String | 资讯来源。 |
 | author | String | 作者 |
 | text_content | string | 纯文本字段 |
+| `password` | `string` | **根据启动信息决定是否传递**，用户密码，支付需要用户输入密码进行付费支付。） |
 
 > 用户投稿时，用户输入`摘要`和`正文`
 

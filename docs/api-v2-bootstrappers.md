@@ -103,7 +103,8 @@ Status: 200 OK
         "type": "mobile-only",
         "method": "invited"
     },
-    "im:helper-user": 1
+    "im:helper-user": 1,
+    "pay-validate-user-password": false, // 是否用户在支付时输入密码，true 为需要，false 为不需要
 }
 ```
 ## 参数详解
