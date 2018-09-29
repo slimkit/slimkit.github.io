@@ -29,6 +29,7 @@ POST /news/{news}/pinneds
 |:----:|:-----|:----:|------|
 | day  | int  | Y    | 申请置顶天数 |
 | amout | int | Y    | 申请置顶金额 | 
+| `password` | `string` | **根据启动信息决定是否传递**，用户密码，支付需要用户输入密码进行付费支付。） |
 
 ### Response
 
