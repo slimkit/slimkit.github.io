@@ -4,7 +4,7 @@ title: 删除动态
 ---
 
 ```
-DELETE /feeds/:feed
+DELETE /feeds/:feed/currency
 ```
 
 #### Response
