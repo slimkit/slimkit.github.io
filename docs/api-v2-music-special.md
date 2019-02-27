@@ -76,6 +76,13 @@ Status: 201 OK
 |:----:|:----:|----|
 | limit | Integer | 可选，默认值 20 ，获取条数 |
 | max_id | Integer | 可选，上次获取到数据最后一条 ID，用于获取该 ID 之后的数据。 |
+| `id` | `array` | **可选**，批量获取专辑。|
+
+E.g:
+
+```
+/music-specials?id[]=1&id[]=2&id[]=3
+```
 
 > 列表为倒序
 
