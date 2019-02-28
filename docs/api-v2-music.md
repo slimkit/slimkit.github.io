@@ -6,6 +6,49 @@ title: 音乐
 - [获取音乐详情](#show-music)
 - [获取已购买的音乐](#get-paid-music)
 - [增加音乐分享数](#refresh-music-share-count)
+- [批量获取音乐](#list-songs)
+
+<a name="list-songs"></a>
+
+## 批量获取音乐
+
+```
+GET /music/songs
+```
+
+请求参数：
+
+| 参数 | 类型 | 描述 |
+|----|----|----|
+| `limit` | `integer` | **可选**，指定获取的数量。|
+| `after` | `integer` | **可选**，获取某ID之后数据 |
+| `id` | `array` | **可选**，获取指定列表音乐 |
+
+响应：
+
+```json5
+Status: 200 OK  
+[
+    {
+        "id":1,
+        "title":"兰花指",
+        "singer":1,
+        "storage":{
+            "id":2
+        },
+        "last_time":234,
+        "lyric":"哈哈哈",
+        "taste_count":0,
+        "share_count":0,
+        "comment_count":0,
+        "sort":0,
+        "created_at":"2019-02-28 03:46:56",
+        "updated_at":"2019-02-28 03:46:56",
+        "deleted_at":null,
+        "has_like":false
+    }
+]
+```
 
 <a name="show-music"></a>
 ## 获取音乐详情
