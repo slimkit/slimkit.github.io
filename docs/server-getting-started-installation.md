@@ -190,9 +190,3 @@ rewrite {
 ```shell
 php artisan storage:link
 ```
-
-### 最后步骤
-
-以上都设置完成后，请访问 `/installer` 进行引导安装。
-
-> 最后步骤很重要！！！

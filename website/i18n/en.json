@@ -4,202 +4,572 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "💝The Plus(ThinkSNS+) is a powerful, easy-to-develop social system built with Laravel. ",
-    "api-v2-aboutus": "关于我们",
-    "api-v2-ad": "广告",
-    "api-v2-bootstrappers": "启动信息",
-    "api-v2-core-comment": "评论",
-    "api-v2-core-file-storage": "文件存储",
-    "api-v2-currency": "积分",
-    "api-v2-easemob": "环信",
-    "api-v2-feeds-collect": "收藏",
-    "api-v2-feeds-comment-pay": "设置评论收费",
-    "api-v2-feeds-comments": "评论",
-    "api-v2-feeds-create": "发布动态",
-    "api-v2-feeds-currency": "积分部分新增接口",
-    "api-v2-feeds-delete": "删除动态",
-    "api-v2-feeds-get": "获取动态",
-    "api-v2-feeds-likes": "喜欢",
-    "api-v2-feeds-pinned": "置顶",
-    "api-v2-feeds-rank": "排行榜",
-    "api-v2-feeds-report": "举报",
-    "api-v2-feeds-reward": "打赏",
-    "api-v2-feeds-topics": "话题",
-    "api-v2-files": "文件",
-    "api-v2-group-category": "分类",
-    "api-v2-group-currency": "圈子部分积分相关新增接口",
-    "api-v2-group-group": "圈子",
-    "api-v2-group-manage": "圈子 · 管理",
-    "api-v2-group-member": "圈子 · 成员",
-    "api-v2-group-posts-collection": "帖子 · 收藏",
-    "api-v2-group-posts-comments": "帖子 · 评论",
-    "api-v2-group-posts-likes": "帖子 · 喜欢",
-    "api-v2-group-posts-pinned": "帖子 · 置顶",
-    "api-v2-group-posts-reward": "帖子 · 打赏",
-    "api-v2-group-posts": "帖子",
-    "api-v2-group-report": "圈子 · 举报",
-    "api-v2-group": "概述",
-    "api-v2-jwt-authorization": "Json Web Token 授权",
-    "api-v2-location": "位置",
-    "api-v2-music-collection": "收藏",
-    "api-v2-music-comment": "评论",
-    "api-v2-music-like": "点赞",
-    "api-v2-music-special": "专辑",
-    "api-v2-music": "音乐",
-    "api-v2-news-cates": "分类",
-    "api-v2-news-collections": "收藏",
-    "api-v2-news-comments": "评论",
-    "api-v2-news-contribute": "投稿",
-    "api-v2-news-currency": "资讯部分积分相关新增接口",
-    "api-v2-news-get": "获取",
-    "api-v2-news-likes": "喜欢",
-    "api-v2-news-pinneds": "置顶",
-    "api-v2-news-ranks": "排行榜",
-    "api-v2-news-report": "举报",
-    "api-v2-news-reward": "打赏",
-    "api-v2-news": "概述",
-    "api-v2-notifications": "消息通知",
-    "api-v2-overview": "概述",
-    "api-v2-plus-pay": "Plus Pay（新钱包-支付工具）",
-    "api-v2-purchase": "支付能力",
-    "api-v2-question-answer-answer": "回答",
-    "api-v2-question-answer-comments": "评论",
-    "api-v2-question-answer-onlookers": "回答 · 围观",
-    "api-v2-question-answer-question": "问题",
-    "api-v2-question-answer-ranks": "排行榜",
-    "api-v2-question-answer-report": "举报",
-    "api-v2-question-answer-reward": "回答 · 打赏",
-    "api-v2-question-answer-topic": "话题",
-    "api-v2-question-answer-user-answer-likes": "用户 · 喜欢回答",
-    "api-v2-question-answer-user-collect-answer": "用户 · 收藏回答",
-    "api-v2-question-answer-user-marrow-question": "用户 · 申请精选",
-    "api-v2-question-answer-user-question-watch": "用户 · 关注问题",
-    "api-v2-question-answer": "概述",
-    "api-v2-question-currency": "问答部分积分相关新增接口",
-    "api-v2-report": "举报",
-    "api-v2-tags": "标签",
-    "api-v2-user-message": "消息",
-    "api-v2-users-certification": "身份认证",
-    "api-v2-users-checkin": "签到",
-    "api-v2-users-comments": "收到的评论",
-    "api-v2-users-feedback": "反馈",
-    "api-v2-users-find-people": "找人",
-    "api-v2-users-followers": "关注",
-    "api-v2-users-likes": "收到的喜欢",
-    "api-v2-users-ranks": "排行榜",
-    "api-v2-users-register": "注册",
-    "api-v2-users-reward": "打赏用户",
-    "api-v2-users-tags": "标签",
-    "api-v2-users-unread-notification": "未读消息",
-    "api-v2-users": "用户",
-    "api-v2-verification-code": "验证码",
-    "api-v2-wallet": "钱包（旧版本）",
-    "data-fields-abilities": "abilities",
-    "data-fields-ability-rule": "ability_rule",
-    "data-fields-advertising-space": "advertising-space",
-    "data-fields-advertising": "advertising",
-    "data-fields-answer-onlooker": "answer_onlooker",
-    "data-fields-answers": "answers",
-    "data-fields-areas": "areas",
-    "data-fields-around-amaps": "around_amaps",
-    "data-fields-certification-categories": "certification_categories",
-    "data-fields-certifications": "certifications",
-    "data-fields-checkin-logs": "checkin_logs",
-    "data-fields-client-versions": "client_versions",
-    "data-fields-collections": "collections",
-    "data-fields-comments": "comments",
-    "data-fields-common-configs": "common_configs",
-    "data-fields-conversations": "conversations",
-    "data-fields-currencies": "currencies",
-    "data-fields-currency-commodities": "currency_commodities",
-    "data-fields-currency-orders": "currenc_orders",
-    "data-fields-currency-type-transforms": "currency_type_transforms",
-    "data-fields-currency-types": "currency_types",
-    "data-fields-famous": "famous",
-    "data-fields-feed-collections": "feed_collections",
-    "data-fields-feed-pinneds": "feed_pinneds",
-    "data-fields-feeds": "feeds",
-    "data-fields-file-withs": "file_withs",
-    "data-fields-files": "files",
-    "data-fields-gold-rules": "gold_rules",
-    "data-fields-gold-types": "gold_types",
-    "data-fields-group-categories": "group_categories",
-    "data-fields-group-incomes": "group_incomes",
-    "data-fields-group-member-logs": "group_member_logs",
-    "data-fields-group-members": "group_members",
-    "data-fields-group-pinneds": "group_pinneds",
-    "data-fields-group-posts": "group_posts",
-    "data-fields-group-recommends": "group_recommends",
-    "data-fields-group-reports": "group_reports",
-    "data-fields-groups": "groups",
-    "data-fields-jwt-caches": "jwt_caches",
-    "data-fields-likes": "likes",
-    "data-fields-music-collections": "music_collections",
-    "data-fields-music-singers": "music_singers",
-    "data-fields-music-special-links": "music_special_links",
-    "data-fields-music-specials": "music_specials",
-    "data-fields-musics": "musics",
-    "data-fields-navigation": "navigation",
-    "data-fields-news-cates-follow": "news_cates_follow",
-    "data-fields-news-cates-links": "news_cates_links",
-    "data-fields-news-cates": "news_cates",
-    "data-fields-news-collections": "news_collections",
-    "data-fields-news-pinneds": "news_pinneds",
-    "data-fields-news-recommend": "news_recommend",
-    "data-fields-news": "news",
-    "data-fields-notifications": "notifications",
-    "data-fields-paid-node-users": "paid_node_users",
-    "data-fields-paid-nodes": "paid_nodes",
-    "data-fields-password-resets": "password_resets",
-    "data-fields-plus-id-clients": "plus_id_clients",
-    "data-fields-plus-id-notices": "plus_id_notices",
-    "data-fields-question-invitation": "question_invitation",
-    "data-fields-question-topic": "question_topic",
-    "data-fields-question-watcher": "question_watcher",
-    "data-fields-questions": "questions",
-    "data-fields-reports": "reports",
-    "data-fields-rewards": "rewards",
-    "data-fields-role-user": "role_user",
-    "data-fields-roles": "roles",
-    "data-fields-sensitives": "sensitives",
-    "data-fields-tag-categories": "tag_categories",
-    "data-fields-taggables": "taggables",
-    "data-fields-tags": "tags",
-    "data-fields-topic-application": "topic_application",
-    "data-fields-topic-user": "topic_user",
-    "data-fields-topics": "topics",
-    "data-fields-user-extras": "user_extras",
-    "data-fields-user-follow": "userfollow",
-    "data-fields-user-socialites": "user_socialites",
-    "data-fields-user-unread-counts": "user_unread_counts",
-    "data-fields-users-recommended": "users_recommended",
-    "data-fields-users": "users",
-    "data-fields-verification-codes": "verification_codes",
-    "data-fields-wallet-cashes": "wallet_cashes",
-    "data-fields-wallet-charges": "wallet_charges",
-    "data-fields-wallet-orders": "wallet_orders",
-    "data-fields-wallet": "wallet",
-    "data-fields-wallets": "wallets",
-    "data-fields": "数据字典",
-    "server-config-guides": "服务端配项说明",
-    "server-getting-started-installation": "安装",
-    "server-guides-cdn": "CDN",
-    "server-guides-configuration": "配置管理",
-    "server-guides-package": "拓展包开发指南",
-    "server-guides-plus-id": "Plus ID",
-    "文档 [New]": "文档 [New]",
-    "文档": "文档",
-    "REST API v2": "REST API v2",
-    "反馈": "反馈",
-    "GitHub": "GitHub",
-    "快速开始": "快速开始",
-    "指南": "指南",
-    "基本": "基本",
-    "用户": "用户",
-    "动态": "动态",
-    "音乐": "音乐",
-    "问答": "问答",
-    "资讯": "资讯",
-    "圈子": "圈子"
+    "docs": {
+      "api-v2-aboutus": {
+        "title": "关于我们"
+      },
+      "api-v2-ad": {
+        "title": "广告"
+      },
+      "api-v2-bootstrappers": {
+        "title": "启动信息"
+      },
+      "api-v2-core-comment": {
+        "title": "评论"
+      },
+      "api-v2-core-file-storage": {
+        "title": "文件存储"
+      },
+      "api-v2-currency": {
+        "title": "积分"
+      },
+      "api-v2-easemob": {
+        "title": "环信"
+      },
+      "api-v2-feeds-collect": {
+        "title": "收藏"
+      },
+      "api-v2-feeds-comment-pay": {
+        "title": "设置评论收费"
+      },
+      "api-v2-feeds-comments": {
+        "title": "评论"
+      },
+      "api-v2-feeds-create": {
+        "title": "发布动态"
+      },
+      "api-v2-feeds-currency": {
+        "title": "积分部分新增接口"
+      },
+      "api-v2-feeds-delete": {
+        "title": "删除动态"
+      },
+      "api-v2-feeds-get": {
+        "title": "获取动态"
+      },
+      "api-v2-feeds-likes": {
+        "title": "喜欢"
+      },
+      "api-v2-feeds-pinned": {
+        "title": "置顶"
+      },
+      "api-v2-feeds-rank": {
+        "title": "排行榜"
+      },
+      "api-v2-feeds-report": {
+        "title": "举报"
+      },
+      "api-v2-feeds-reward": {
+        "title": "打赏"
+      },
+      "api-v2-feeds-topics": {
+        "title": "话题"
+      },
+      "api-v2-files": {
+        "title": "文件"
+      },
+      "api-v2-group-category": {
+        "title": "分类"
+      },
+      "api-v2-group-currency": {
+        "title": "圈子部分积分相关新增接口"
+      },
+      "api-v2-group-group": {
+        "title": "圈子"
+      },
+      "api-v2-group-manage": {
+        "title": "圈子 · 管理"
+      },
+      "api-v2-group-member": {
+        "title": "圈子 · 成员"
+      },
+      "api-v2-group-posts-collection": {
+        "title": "帖子 · 收藏"
+      },
+      "api-v2-group-posts-comments": {
+        "title": "帖子 · 评论"
+      },
+      "api-v2-group-posts-likes": {
+        "title": "帖子 · 喜欢"
+      },
+      "api-v2-group-posts-pinned": {
+        "title": "帖子 · 置顶"
+      },
+      "api-v2-group-posts-reward": {
+        "title": "帖子 · 打赏"
+      },
+      "api-v2-group-posts": {
+        "title": "帖子"
+      },
+      "api-v2-group-report": {
+        "title": "圈子 · 举报"
+      },
+      "api-v2-group": {
+        "title": "概述"
+      },
+      "api-v2-jwt-authorization": {
+        "title": "Json Web Token 授权"
+      },
+      "api-v2-location": {
+        "title": "位置"
+      },
+      "api-v2-music-collection": {
+        "title": "收藏"
+      },
+      "api-v2-music-comment": {
+        "title": "评论"
+      },
+      "api-v2-music-like": {
+        "title": "点赞"
+      },
+      "api-v2-music-special": {
+        "title": "专辑"
+      },
+      "api-v2-music": {
+        "title": "音乐"
+      },
+      "api-v2-news-cates": {
+        "title": "分类"
+      },
+      "api-v2-news-collections": {
+        "title": "收藏"
+      },
+      "api-v2-news-comments": {
+        "title": "评论"
+      },
+      "api-v2-news-contribute": {
+        "title": "投稿"
+      },
+      "api-v2-news-currency": {
+        "title": "资讯部分积分相关新增接口"
+      },
+      "api-v2-news-get": {
+        "title": "获取"
+      },
+      "api-v2-news-likes": {
+        "title": "喜欢"
+      },
+      "api-v2-news-pinneds": {
+        "title": "置顶"
+      },
+      "api-v2-news-ranks": {
+        "title": "排行榜"
+      },
+      "api-v2-news-report": {
+        "title": "举报"
+      },
+      "api-v2-news-reward": {
+        "title": "打赏"
+      },
+      "api-v2-news": {
+        "title": "概述"
+      },
+      "api-v2-notifications": {
+        "title": "消息通知"
+      },
+      "api-v2-overview": {
+        "title": "概述"
+      },
+      "api-v2-plus-pay": {
+        "title": "Plus Pay（新钱包-支付工具）"
+      },
+      "api-v2-purchase": {
+        "title": "支付能力"
+      },
+      "api-v2-question-answer-answer": {
+        "title": "回答"
+      },
+      "api-v2-question-answer-comments": {
+        "title": "评论"
+      },
+      "api-v2-question-answer-onlookers": {
+        "title": "回答 · 围观"
+      },
+      "api-v2-question-answer-question": {
+        "title": "问题"
+      },
+      "api-v2-question-answer-ranks": {
+        "title": "排行榜"
+      },
+      "api-v2-question-answer-report": {
+        "title": "举报"
+      },
+      "api-v2-question-answer-reward": {
+        "title": "回答 · 打赏"
+      },
+      "api-v2-question-answer-topic": {
+        "title": "话题"
+      },
+      "api-v2-question-answer-user-answer-likes": {
+        "title": "用户 · 喜欢回答"
+      },
+      "api-v2-question-answer-user-collect-answer": {
+        "title": "用户 · 收藏回答"
+      },
+      "api-v2-question-answer-user-marrow-question": {
+        "title": "用户 · 申请精选"
+      },
+      "api-v2-question-answer-user-question-watch": {
+        "title": "用户 · 关注问题"
+      },
+      "api-v2-question-answer": {
+        "title": "概述"
+      },
+      "api-v2-question-currency": {
+        "title": "问答部分积分相关新增接口"
+      },
+      "api-v2-report": {
+        "title": "举报"
+      },
+      "api-v2-tags": {
+        "title": "标签"
+      },
+      "api-v2-user-message": {
+        "title": "消息"
+      },
+      "api-v2-users-certification": {
+        "title": "身份认证"
+      },
+      "api-v2-users-checkin": {
+        "title": "签到"
+      },
+      "api-v2-users-comments": {
+        "title": "收到的评论"
+      },
+      "api-v2-users-feedback": {
+        "title": "反馈"
+      },
+      "api-v2-users-find-people": {
+        "title": "找人"
+      },
+      "api-v2-users-followers": {
+        "title": "关注"
+      },
+      "api-v2-users-likes": {
+        "title": "收到的喜欢"
+      },
+      "api-v2-users-ranks": {
+        "title": "排行榜"
+      },
+      "api-v2-users-register": {
+        "title": "注册"
+      },
+      "api-v2-users-reward": {
+        "title": "打赏用户"
+      },
+      "api-v2-users-tags": {
+        "title": "标签"
+      },
+      "api-v2-users-unread-notification": {
+        "title": "未读消息"
+      },
+      "api-v2-users": {
+        "title": "用户"
+      },
+      "api-v2-verification-code": {
+        "title": "验证码"
+      },
+      "api-v2-wallet": {
+        "title": "钱包（旧版本）"
+      },
+      "data-fields-abilities": {
+        "title": "abilities"
+      },
+      "data-fields-ability-rule": {
+        "title": "ability_rule"
+      },
+      "data-fields-advertising-space": {
+        "title": "advertising-space"
+      },
+      "data-fields-advertising": {
+        "title": "advertising"
+      },
+      "data-fields-answer-onlooker": {
+        "title": "answer_onlooker"
+      },
+      "data-fields-answers": {
+        "title": "answers"
+      },
+      "data-fields-areas": {
+        "title": "areas"
+      },
+      "data-fields-around-amaps": {
+        "title": "around_amaps"
+      },
+      "data-fields-certification-categories": {
+        "title": "certification_categories"
+      },
+      "data-fields-certifications": {
+        "title": "certifications"
+      },
+      "data-fields-checkin-logs": {
+        "title": "checkin_logs"
+      },
+      "data-fields-client-versions": {
+        "title": "client_versions"
+      },
+      "data-fields-collections": {
+        "title": "collections"
+      },
+      "data-fields-comments": {
+        "title": "comments"
+      },
+      "data-fields-common-configs": {
+        "title": "common_configs"
+      },
+      "data-fields-conversations": {
+        "title": "conversations"
+      },
+      "data-fields-currencies": {
+        "title": "currencies"
+      },
+      "data-fields-currency-commodities": {
+        "title": "currency_commodities"
+      },
+      "data-fields-currency-orders": {
+        "title": "currenc_orders"
+      },
+      "data-fields-currency-type-transforms": {
+        "title": "currency_type_transforms"
+      },
+      "data-fields-currency-types": {
+        "title": "currency_types"
+      },
+      "data-fields-famous": {
+        "title": "famous"
+      },
+      "data-fields-feed-collections": {
+        "title": "feed_collections"
+      },
+      "data-fields-feed-pinneds": {
+        "title": "feed_pinneds"
+      },
+      "data-fields-feeds": {
+        "title": "feeds"
+      },
+      "data-fields-file-withs": {
+        "title": "file_withs"
+      },
+      "data-fields-files": {
+        "title": "files"
+      },
+      "data-fields-gold-rules": {
+        "title": "gold_rules"
+      },
+      "data-fields-gold-types": {
+        "title": "gold_types"
+      },
+      "data-fields-group-categories": {
+        "title": "group_categories"
+      },
+      "data-fields-group-incomes": {
+        "title": "group_incomes"
+      },
+      "data-fields-group-member-logs": {
+        "title": "group_member_logs"
+      },
+      "data-fields-group-members": {
+        "title": "group_members"
+      },
+      "data-fields-group-pinneds": {
+        "title": "group_pinneds"
+      },
+      "data-fields-group-posts": {
+        "title": "group_posts"
+      },
+      "data-fields-group-recommends": {
+        "title": "group_recommends"
+      },
+      "data-fields-group-reports": {
+        "title": "group_reports"
+      },
+      "data-fields-groups": {
+        "title": "groups"
+      },
+      "data-fields-jwt-caches": {
+        "title": "jwt_caches"
+      },
+      "data-fields-likes": {
+        "title": "likes"
+      },
+      "data-fields-music-collections": {
+        "title": "music_collections"
+      },
+      "data-fields-music-singers": {
+        "title": "music_singers"
+      },
+      "data-fields-music-special-links": {
+        "title": "music_special_links"
+      },
+      "data-fields-music-specials": {
+        "title": "music_specials"
+      },
+      "data-fields-musics": {
+        "title": "musics"
+      },
+      "data-fields-navigation": {
+        "title": "navigation"
+      },
+      "data-fields-news-cates-follow": {
+        "title": "news_cates_follow"
+      },
+      "data-fields-news-cates-links": {
+        "title": "news_cates_links"
+      },
+      "data-fields-news-cates": {
+        "title": "news_cates"
+      },
+      "data-fields-news-collections": {
+        "title": "news_collections"
+      },
+      "data-fields-news-pinneds": {
+        "title": "news_pinneds"
+      },
+      "data-fields-news-recommend": {
+        "title": "news_recommend"
+      },
+      "data-fields-news": {
+        "title": "news"
+      },
+      "data-fields-notifications": {
+        "title": "notifications"
+      },
+      "data-fields-paid-node-users": {
+        "title": "paid_node_users"
+      },
+      "data-fields-paid-nodes": {
+        "title": "paid_nodes"
+      },
+      "data-fields-password-resets": {
+        "title": "password_resets"
+      },
+      "data-fields-plus-id-clients": {
+        "title": "plus_id_clients"
+      },
+      "data-fields-plus-id-notices": {
+        "title": "plus_id_notices"
+      },
+      "data-fields-question-invitation": {
+        "title": "question_invitation"
+      },
+      "data-fields-question-topic": {
+        "title": "question_topic"
+      },
+      "data-fields-question-watcher": {
+        "title": "question_watcher"
+      },
+      "data-fields-questions": {
+        "title": "questions"
+      },
+      "data-fields-reports": {
+        "title": "reports"
+      },
+      "data-fields-rewards": {
+        "title": "rewards"
+      },
+      "data-fields-role-user": {
+        "title": "role_user"
+      },
+      "data-fields-roles": {
+        "title": "roles"
+      },
+      "data-fields-sensitives": {
+        "title": "sensitives"
+      },
+      "data-fields-tag-categories": {
+        "title": "tag_categories"
+      },
+      "data-fields-taggables": {
+        "title": "taggables"
+      },
+      "data-fields-tags": {
+        "title": "tags"
+      },
+      "data-fields-topic-application": {
+        "title": "topic_application"
+      },
+      "data-fields-topic-user": {
+        "title": "topic_user"
+      },
+      "data-fields-topics": {
+        "title": "topics"
+      },
+      "data-fields-user-extras": {
+        "title": "user_extras"
+      },
+      "data-fields-user-follow": {
+        "title": "userfollow"
+      },
+      "data-fields-user-socialites": {
+        "title": "user_socialites"
+      },
+      "data-fields-user-unread-counts": {
+        "title": "user_unread_counts"
+      },
+      "data-fields-users-recommended": {
+        "title": "users_recommended"
+      },
+      "data-fields-users": {
+        "title": "users"
+      },
+      "data-fields-verification-codes": {
+        "title": "verification_codes"
+      },
+      "data-fields-wallet-cashes": {
+        "title": "wallet_cashes"
+      },
+      "data-fields-wallet-charges": {
+        "title": "wallet_charges"
+      },
+      "data-fields-wallet-orders": {
+        "title": "wallet_orders"
+      },
+      "data-fields-wallet": {
+        "title": "wallet"
+      },
+      "data-fields-wallets": {
+        "title": "wallets"
+      },
+      "data-fields": {
+        "title": "数据字典"
+      },
+      "server-config-guides": {
+        "title": "服务端配项说明"
+      },
+      "server-getting-started-installation": {
+        "title": "安装"
+      },
+      "server-guides-cdn": {
+        "title": "CDN"
+      },
+      "server-guides-configuration": {
+        "title": "配置管理"
+      },
+      "server-guides-package": {
+        "title": "拓展包开发指南"
+      },
+      "server-guides-plus-id": {
+        "title": "Plus ID"
+      }
+    },
+    "links": {
+      "文档 [New]": "文档 [New]",
+      "文档": "文档",
+      "REST API v2": "REST API v2",
+      "反馈": "反馈",
+      "GitHub": "GitHub"
+    },
+    "categories": {
+      "快速开始": "快速开始",
+      "指南": "指南",
+      "基本": "基本",
+      "用户": "用户",
+      "动态": "动态",
+      "音乐": "音乐",
+      "问答": "问答",
+      "资讯": "资讯",
+      "圈子": "圈子"
+    }
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",
